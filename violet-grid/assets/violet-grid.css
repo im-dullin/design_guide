@@ -1,0 +1,172 @@
+/* ============================================================
+   Violet Grid Design System — violet-grid.css
+   각진 풀블리드 페이지(바이올렛 · 화이트 · 라이트그레이 · 블랙) 위에
+   거대한 대문자 네오 그로테스크 제목, 좌상단 작은 에디토리얼 본문,
+   모든 장 하단의 헤어라인 러닝 푸터.
+   사용: <body class="deck"> (1280×720 슬라이드) | <body class="doc"> (900px 롱페이지)
+   폰트: Pretendard(한글·본문) + Inter Tight(영문 디스플레이·숫자, Suisse Intl 대체)
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+   ============================================================ */
+
+:root{
+  /* 3색 시스템 — 바이올렛 · 화이트/그레이 · 블랙 */
+  --violet:#8b6cf0;   /* 메인. 풀블리드 페이지 · 강조 글자 · 페이지 번호 */
+  --v2:#a891f4;       /* 차트 틴트 2 */
+  --v3:#c6b8f8;       /* 차트 틴트 3 */
+  --lav:#e4ddfc;      /* 라벤더. 타일 · 칩 배경 · 차트 틴트 4 */
+  --white:#ffffff;
+  --gray:#e9e9e9;     /* 라이트 그레이 페이지 */
+  --black:#0a0a0a;
+  --tile:#1b1b1b;     /* 블랙 위 한 단계 밝은 면 */
+  /* text */
+  --ink:#0a0a0a; --sub:#6f6f6f;
+  --hair:rgba(0,0,0,.18); --hairW:rgba(255,255,255,.22);
+  /* grid */
+  --m:40px;           /* 덱 바깥 여백 */
+  --gut:16px;         /* 12열 거터 */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Pretendard",sans-serif;color:var(--ink);background:#d6d6d6;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;word-break:keep-all}
+
+/* ---------- 1. 페이지 (각진 풀블리드, 라운드 패널 없음) ---------- */
+.pg{position:relative;overflow:hidden}
+.pg.v{background:var(--violet);color:var(--ink)}
+.pg.w{background:var(--white);color:var(--ink)}
+.pg.g{background:var(--gray);color:var(--ink)}
+.pg.k{background:var(--black);color:#f4f4f4}
+
+/* ---------- 2. DECK 1280×720 · 12열 그리드 ---------- */
+@page{size:1280px 720px;margin:0}
+.deck .slide{width:1280px;height:720px;position:relative;overflow:hidden;break-after:page}
+.deck .slide:last-child{break-after:auto}
+.deck .slide>.pg{position:absolute;inset:0}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);column-gap:var(--gut)}
+/* 열 배치 유틸: style="--c:시작열;--s:칸수;top:..px" → 12열 그리드에 정확히 붙는다 */
+.deck{--cw:calc((1280px - 2*var(--m) - 11*var(--gut)) / 12)}
+.at{position:absolute;left:calc(var(--m) + (var(--c,1) - 1) * (var(--cw) + var(--gut)));width:calc(var(--s,12) * var(--cw) + (var(--s,12) - 1) * var(--gut))}
+.deck .stage{position:absolute;left:var(--m);right:var(--m);top:34px;bottom:58px}   /* 본문 영역 */
+/* 좌상단 사이드 노트: 라벨 + 작은 본문 (1–2열 또는 1–3열) */
+.side{position:absolute;left:var(--m);top:34px;width:203px}
+.side.w3{width:304px}
+
+/* 러닝 푸터: 상단 헤어라인 + 워드마크 · 문서명 · 섹션 · 페이지 */
+.rf{position:absolute;left:var(--m);right:var(--m);bottom:20px;border-top:1px solid var(--hair);padding-top:8px;
+  display:grid;grid-template-columns:repeat(12,1fr);column-gap:var(--gut);
+  font-family:"Inter Tight","Pretendard",sans-serif;font-size:10px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;line-height:1}
+.rf>*:nth-child(1){grid-column:1/4;font-weight:600;letter-spacing:.02em}
+.rf>*:nth-child(2){grid-column:4/7}
+.rf>*:nth-child(3){grid-column:7/10}
+.rf>*:nth-child(4){grid-column:10/13;text-align:right;font-variant-numeric:tabular-nums}
+.k .rf{border-color:var(--hairW)}
+.v .rf{border-color:rgba(0,0,0,.28)}
+
+/* ---------- 3. DOC 900px · 섹션을 틈 없이 쌓기 ---------- */
+.doc{font-size:14px;line-height:1.6;background:#d6d6d6}
+.doc .wrap{width:900px;margin:0 auto}
+.doc .pg{padding:36px 36px 30px}
+.doc .rf{position:static;margin-top:44px;left:auto;right:auto;bottom:auto}
+.doc .grid{column-gap:14px}
+
+/* ---------- 4. 타이포 ---------- */
+/* 영문 디스플레이: 대문자 · 타이트 · 행간 0.86 */
+.dsp{font-family:"Inter Tight",sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:-.05em;line-height:.86}
+/* 강조 글자 스왑: 한 단어 안 1~2글자만 바이올렛 이탤릭으로 */
+.dsp em{font-style:italic;font-weight:400;color:var(--violet);letter-spacing:-.04em}
+.v .dsp em{color:var(--white)}
+.dsp .o{color:var(--v3)}                 /* 틴트 스왑(라이트 배경용) */
+/* 한글 디스플레이: Pretendard 600 · 영문 크기의 약 0.72배 · 이탤릭 없음 */
+.kd{font-weight:600;letter-spacing:-.06em;line-height:1.04}
+.kd b{font-weight:600;color:var(--violet)}
+.v .kd b{color:var(--white)} .k .kd b{color:var(--v2)}
+/* 문단형 대형 텍스트(스테이트먼트) */
+.st{font-weight:500;letter-spacing:-.045em;line-height:1.14}
+.st b{font-weight:500;color:var(--white)}
+.w .st b,.g .st b{color:var(--violet)}
+/* 라벨 · 본문 · 숫자 */
+.lbl{font-family:"Inter Tight","Pretendard",sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;line-height:1.2}
+.note{font-size:12px;line-height:1.55;letter-spacing:-.01em;color:rgba(0,0,0,.78)}
+.k .note{color:rgba(255,255,255,.68)}
+.note+.note{margin-top:8px}
+.cols2{column-count:2;column-gap:var(--gut)}
+.cols3{column-count:3;column-gap:var(--gut)}
+.body{font-size:14px;line-height:1.62;letter-spacing:-.015em}
+.num{font-family:"Inter Tight",sans-serif;font-weight:500;letter-spacing:-.05em;line-height:.9;font-variant-numeric:tabular-nums}
+.cap{font-size:11.5px;line-height:1.45;letter-spacing:-.01em;color:var(--sub)}
+.k .cap,.card.k .cap{color:rgba(255,255,255,.55)}
+.v .cap,.card.v .cap{color:rgba(0,0,0,.62)}
+.wm{font-family:"Inter Tight",sans-serif;font-weight:600;letter-spacing:-.035em;text-transform:uppercase;line-height:1}
+.vt{color:var(--violet)} .k .vt{color:var(--v2)}
+
+/* ---------- 5. 목차 TOC: 거대 대문자 항목 + 우측 바이올렛 번호 ---------- */
+.toc>div{display:grid;grid-template-columns:1fr 150px 90px;align-items:baseline}
+.toc .t{font-family:"Inter Tight",sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:-.05em;line-height:.92}
+.toc .c{font-size:12.5px;color:#3a3a3a;font-weight:500;letter-spacing:-.01em}
+.toc .n{font-family:"Inter Tight",sans-serif;font-weight:500;letter-spacing:-.05em;line-height:.92;color:var(--violet);text-align:right;font-variant-numeric:tabular-nums}
+
+/* ---------- 6. 카드 (작은 UI 오브젝트만 라운드 14) ---------- */
+.card{border-radius:14px;padding:18px 20px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.card.w{background:var(--white)}
+.card.k{background:var(--black);color:#f4f4f4}
+.card.t{background:var(--tile);color:#f4f4f4}
+.card.v{background:var(--violet)}
+.card.l{background:var(--lav)}
+.card .hd{display:flex;justify-content:space-between;align-items:flex-start}
+
+/* 스탯 칩: 작은 캡슐형 수치 */
+.chip{display:inline-flex;align-items:center;gap:8px;height:30px;padding:0 14px;border-radius:999px;background:var(--lav);
+  font-family:"Inter Tight",sans-serif;font-weight:500;font-size:14px;letter-spacing:-.02em;white-space:nowrap}
+.chip.v{background:var(--violet);color:var(--ink)}
+.chip.k{background:var(--black);color:#fff}
+
+/* 태그: 아웃라인 대문자 캡슐 (서비스·카테고리) */
+.tag{display:inline-flex;align-items:center;height:26px;padding:0 12px;border:1px solid currentColor;border-radius:999px;
+  font-family:"Inter Tight","Pretendard",sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+.tag.f{background:var(--lav);border-color:var(--lav);color:var(--ink)}
+.tag.fk{background:var(--black);border-color:var(--black);color:#fff}
+
+/* 프로필 필: 큰 캡슐 + 원형 아바타(이니셜, 사진 자리) */
+.prof{display:flex;align-items:center;gap:18px;background:var(--white);border-radius:999px;padding:12px 34px 12px 12px;color:var(--ink)}
+.prof .av{width:64px;height:64px;border-radius:50%;background:var(--black);color:#fff;display:grid;place-items:center;flex:none;
+  font-family:"Inter Tight",sans-serif;font-weight:600;font-size:18px;letter-spacing:-.03em}
+.prof .av.v{background:var(--violet);color:var(--ink)}
+.prof .nm{font-size:17px;font-weight:600;letter-spacing:-.035em;line-height:1.2}
+.prof .ds{font-size:12.5px;color:#a3a3a3;letter-spacing:-.02em;margin-top:3px;line-height:1.35}
+
+/* ---------- 7. 데이터: 세로 막대 · 영역 차트 (바이올렛 틴트만) ---------- */
+.vbars{display:flex;align-items:flex-end;gap:5px}
+.vbars i{display:block;flex:1;background:var(--v3)}
+.vbars i.a{background:var(--violet)} .vbars i.b{background:var(--v2)} .vbars i.d{background:var(--lav)}
+.k .vbars i.d,.card.k .vbars i.d{background:#2a2a2a}
+.area{display:block;width:100%}
+.area .f{fill:var(--violet)} .area .s{fill:none;stroke:var(--violet);stroke-width:2}
+.area .f2{fill:var(--lav)} .area .gl{stroke:rgba(0,0,0,.1);stroke-width:1}
+.k .area .gl,.card.k .area .gl{stroke:rgba(255,255,255,.12)}
+.k .area .s,.card.k .area .s{stroke:var(--v2)}
+.hbar{height:8px;background:rgba(0,0,0,.08)} .hbar i{display:block;height:100%;background:var(--violet)}
+.k .hbar{background:rgba(255,255,255,.12)}
+
+/* ---------- 8. 헤어라인 행 (목록 · 스펙 · 일정) ---------- */
+.rows>div{display:grid;border-top:1px solid var(--hair);align-items:baseline}
+.rows>div:last-child{border-bottom:1px solid var(--hair)}
+.k .rows>div{border-color:var(--hairW)} .v .rows>div{border-color:rgba(0,0,0,.25)}
+
+/* ---------- 9. 아이콘 그리드 (블랙 위 흰 선 아이콘) ---------- */
+.icg{display:grid;grid-template-columns:repeat(6,1fr);row-gap:34px}
+.icg>div{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.ic{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.icg .cap{font-size:11px}
+
+/* ---------- 10. 워드마크 타일 ---------- */
+.wt{display:grid;place-items:center;position:relative}
+.wt.v{background:var(--violet);color:var(--ink)}
+.wt.k{background:var(--black);color:#fff}
+.wt.l{background:var(--lav);color:var(--violet)}
+.wt.w{background:var(--white);color:var(--ink)}
+.wt .lbl{position:absolute;left:14px;top:12px;opacity:.6}
+
+/* ---------- 11. 이미지 자리 (사진 · 3D 대신 평면 플레이스홀더) ---------- */
+.ph{background:var(--lav);outline:1px dashed rgba(0,0,0,.25);outline-offset:-8px;
+  display:grid;place-items:center;font-size:11px;color:rgba(0,0,0,.45);letter-spacing:-.01em}
+.k .ph{background:var(--tile);outline-color:rgba(255,255,255,.2);color:rgba(255,255,255,.4)}

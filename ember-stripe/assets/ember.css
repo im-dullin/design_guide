@@ -1,0 +1,122 @@
+/* ============================================================
+   Ember Stripe Design System — ember.css
+   순수 블랙 위에 엠버(번트 오렌지) 빛이 세로 골유리(fluted glass)를 통과하는
+   런치 덱 스타일. 얇은 네오그로테스크 디스플레이 + 각진 다크 카드 + 큰 숫자.
+   사용: <body class="deck"> (1280×720 슬라이드) | <body class="doc"> (900px 롱페이지)
+   폰트: Pretendard(한글) + Inter(영문 디스플레이·숫자) — <head>에 아래 2줄 필수
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+   빛 효과는 전부 CSS 그라데이션(repeating-linear + radial). filter:blur · 이미지 · mix-blend 사용 금지(PDF에서 빠짐).
+   ============================================================ */
+
+:root{
+  /* surface */
+  --void:#000000;    /* 모든 배경 — 순수 블랙 */
+  --card:#1c1c1c;    /* 스탯 카드 (블랙 위 실효 색) */
+  --card-a:rgba(36,36,36,.78); /* 카드 실제 값 — 블랙 위 #1c1c1c, 글로 위에선 빛이 살짝 비침 */
+  --line:#2a2a2a;    /* 카드 안 구분선 · 비활성 막대 */
+  /* text */
+  --ink:#ffffff;     /* 디스플레이 · 숫자 · 카드 제목 */
+  --body:#a3a3a3;    /* 본문 · 리드 */
+  --sub:#6e6e6e;     /* 캡션 · 라벨 · 워드마크 */
+  --hair:rgba(255,255,255,.12);
+  /* ember — 이 4개 외 유채색 금지 */
+  --ember-deep:#5a1e08; /* 글로 가장자리(어둠으로 녹는 곳) */
+  --ember:#c4521a;      /* 글로 본체 */
+  --ember-hi:#e07a2c;   /* 글로 코어 · 텍스트 강조(화면당 1곳) */
+  --ember-soft:#f0a868; /* 골 하이라이트 색(투명도 .09 이하로만) — 면으로 칠하지 않는다 */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Pretendard",sans-serif;color:var(--ink);background:var(--void);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;word-break:keep-all;
+  -webkit-font-smoothing:antialiased}
+
+/* ---------- 1. 레이아웃: DECK (1280×720) ---------- */
+@page{size:1280px 720px;margin:0}
+.deck .slide{width:1280px;height:720px;position:relative;overflow:hidden;background:var(--void);break-after:page;isolation:isolate}
+.deck .slide:last-child{break-after:auto}
+.deck .hd{position:absolute;left:64px;right:64px;top:44px;display:flex;justify-content:space-between;align-items:center;z-index:4}
+.deck .ft{position:absolute;left:64px;right:64px;bottom:40px;display:flex;justify-content:space-between;align-items:center;z-index:4}
+.deck .body{position:absolute;left:64px;right:64px;top:76px;bottom:96px;z-index:3}
+
+/* ---------- 2. 레이아웃: DOC (900px) ---------- */
+.doc{font-size:15px;line-height:1.6}
+.doc .wrap{width:900px;margin:0 auto;background:var(--void)}
+.doc .sec{position:relative;overflow:hidden;padding:72px 64px;isolation:isolate}
+.doc .sec+.sec{border-top:1px solid var(--hair)}
+
+/* ---------- 3. 시그니처 A: 골유리 엠버 (Cover · Divider · Closing 전용) ----------
+   레이어(위→아래): 좌측 어둠 → 하단 어둠 → 골 음영(28px 주기) → 밝기 변조(불규칙 주기 2겹)
+                    → 어두운 쐐기 → 엠버 글로 2개 → 블랙.
+   .flute 는 position:absolute;inset:0 으로 깔고 그 위에 텍스트를 올린다.            */
+.flute{position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(90deg,#000 0%,rgba(0,0,0,.94) 16%,rgba(0,0,0,.55) 34%,rgba(0,0,0,.08) 54%,rgba(0,0,0,0) 64%),
+  linear-gradient(0deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.35) 20%,rgba(0,0,0,0) 40%),
+  repeating-linear-gradient(90deg,rgba(0,0,0,.30) 0px,rgba(0,0,0,.06) 8px,rgba(255,200,150,.09) 17px,rgba(255,200,150,.02) 24px,rgba(0,0,0,.18) 31px,rgba(0,0,0,.30) 34px),
+  repeating-linear-gradient(90deg,rgba(0,0,0,0) 0px,rgba(0,0,0,.34) 64px,rgba(0,0,0,0) 132px,rgba(255,170,90,.12) 176px,rgba(0,0,0,0) 212px),
+  repeating-linear-gradient(90deg,rgba(0,0,0,0) 0px,rgba(0,0,0,.22) 150px,rgba(0,0,0,0) 310px,rgba(0,0,0,.18) 390px,rgba(0,0,0,0) 460px),
+  radial-gradient(ellipse 22% 60% at 47% 18%,rgba(0,0,0,.75) 0%,rgba(0,0,0,0) 100%),
+  radial-gradient(ellipse 58% 95% at 80% 26%,rgba(232,140,70,.95) 0%,var(--ember-hi) 16%,var(--ember) 38%,var(--ember-deep) 66%,rgba(0,0,0,0) 88%),
+  radial-gradient(ellipse 42% 48% at 34% 104%,rgba(196,82,26,.95) 0%,rgba(90,30,8,.7) 45%,rgba(0,0,0,0) 100%),
+  #000}
+/* 변형: 빛 위치만 바꾼다. 세기는 바꾸지 않는다. */
+.flute.low{background:      /* Closing — 빛이 아래에서 올라온다 */
+  linear-gradient(180deg,#000 0%,rgba(0,0,0,.9) 22%,rgba(0,0,0,.35) 46%,rgba(0,0,0,0) 66%),
+  repeating-linear-gradient(90deg,rgba(0,0,0,.30) 0px,rgba(0,0,0,.06) 8px,rgba(255,200,150,.09) 17px,rgba(255,200,150,.02) 24px,rgba(0,0,0,.18) 31px,rgba(0,0,0,.30) 34px),
+  repeating-linear-gradient(90deg,rgba(0,0,0,0) 0px,rgba(0,0,0,.34) 64px,rgba(0,0,0,0) 132px,rgba(255,170,90,.12) 176px,rgba(0,0,0,0) 212px),
+  repeating-linear-gradient(90deg,rgba(0,0,0,0) 0px,rgba(0,0,0,.22) 150px,rgba(0,0,0,0) 310px,rgba(0,0,0,.18) 390px,rgba(0,0,0,0) 460px),
+  radial-gradient(ellipse 70% 70% at 62% 112%,rgba(232,140,70,.95) 0%,var(--ember-hi) 18%,var(--ember) 40%,var(--ember-deep) 68%,rgba(0,0,0,0) 90%),
+  #000}
+.flute.pane{left:auto;width:46%}  /* Divider — 우측 46%만 골유리 창 */
+.flute.pane{background:
+  linear-gradient(90deg,#000 0%,rgba(0,0,0,.6) 18%,rgba(0,0,0,0) 44%),
+  linear-gradient(0deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 34%),
+  repeating-linear-gradient(90deg,rgba(0,0,0,.30) 0px,rgba(0,0,0,.06) 8px,rgba(255,200,150,.09) 17px,rgba(255,200,150,.02) 24px,rgba(0,0,0,.18) 31px,rgba(0,0,0,.30) 34px),
+  repeating-linear-gradient(90deg,rgba(0,0,0,0) 0px,rgba(0,0,0,.34) 64px,rgba(0,0,0,0) 132px,rgba(255,170,90,.12) 176px,rgba(0,0,0,0) 212px),
+  radial-gradient(ellipse 80% 70% at 64% 34%,rgba(232,140,70,.95) 0%,var(--ember-hi) 16%,var(--ember) 40%,var(--ember-deep) 70%,rgba(0,0,0,0) 92%),
+  #000}
+
+/* ---------- 4. 시그니처 B: 코너 글로 (본문 장 전용, 장당 1개) ----------
+   .glow.bl / .br / .tr / .tl — 760×560 영역, 코어 알파 .62 이하. 줄무늬 없음.          */
+.glow{position:absolute;width:820px;height:600px;z-index:-1;pointer-events:none}
+.glow.bl{left:0;bottom:0;background:radial-gradient(ellipse 100% 100% at 0% 100%,rgba(224,122,44,.62) 0%,rgba(196,82,26,.42) 22%,rgba(90,30,8,.22) 50%,rgba(0,0,0,0) 78%)}
+.glow.br{right:0;bottom:0;background:radial-gradient(ellipse 100% 100% at 100% 100%,rgba(224,122,44,.62) 0%,rgba(196,82,26,.42) 22%,rgba(90,30,8,.22) 50%,rgba(0,0,0,0) 78%)}
+.glow.tr{right:0;top:0;background:radial-gradient(ellipse 100% 100% at 100% 0%,rgba(224,122,44,.55) 0%,rgba(196,82,26,.36) 22%,rgba(90,30,8,.2) 50%,rgba(0,0,0,0) 78%)}
+.glow.tl{left:0;top:0;background:radial-gradient(ellipse 100% 100% at 0% 0%,rgba(224,122,44,.55) 0%,rgba(196,82,26,.36) 22%,rgba(90,30,8,.2) 50%,rgba(0,0,0,0) 78%)}
+.glow.sm{width:560px;height:420px}  /* 문서·좁은 장 */
+
+/* ---------- 5. 타이포 ---------- */
+.disp{font-family:"Inter",sans-serif;font-optical-sizing:auto;font-weight:300;letter-spacing:-.045em;line-height:1.02;color:var(--ink)}
+.h{font-weight:300;font-size:52px;letter-spacing:-.045em;line-height:1.22}       /* 한글 헤드라인(덱) */
+.doc .h{font-size:40px}
+.a{color:var(--ember-hi)}    /* 텍스트 강조 — 화면당 한 구절 */
+.num{font-family:"Inter",sans-serif;font-weight:300;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}
+.lead{color:var(--body);font-size:15px;line-height:1.6;letter-spacing:-.01em}
+.cap{color:var(--body);font-size:13.5px;line-height:1.55;letter-spacing:-.01em}
+.micro{font-family:"Inter","Pretendard",sans-serif;font-size:12.5px;font-weight:400;letter-spacing:0;color:var(--sub)}
+.kick{font-family:"Inter","Pretendard",sans-serif;font-size:15px;font-weight:400;letter-spacing:-.01em;color:rgba(255,255,255,.82)} /* "Launch Plan 2027" 같은 표지 캡션 */
+.wm{font-family:"Inter",sans-serif;font-size:13px;font-weight:500;letter-spacing:.02em;color:rgba(255,255,255,.7)}
+.wm sup{font-size:7px;font-weight:400;margin-left:1px;vertical-align:6px}
+.t{font-weight:600;font-size:18px;letter-spacing:-.03em;line-height:1.3;color:var(--ink)}   /* 카드 제목 */
+
+/* ---------- 6. 스탯 카드 (각진 모서리) ---------- */
+.card{background:var(--card-a);border-radius:0;padding:26px 26px 28px;position:relative;display:flex;flex-direction:column}
+.card .num{align-self:flex-end;font-size:68px}
+.card .t{margin-top:auto}
+.card .cap{margin-top:12px}
+.card.solid{background:var(--card)}  /* 글로가 비치면 안 될 때 */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+
+/* ---------- 7. 헤어라인 행 · 라벨 · 막대 ---------- */
+.rows>div{display:grid;border-top:1px solid var(--hair);align-items:baseline}
+.rows>div:last-child{border-bottom:1px solid var(--hair)}
+.lbl{display:inline-flex;align-items:center;gap:8px;font-family:"Inter","Pretendard",sans-serif;font-size:12.5px;color:var(--body);letter-spacing:0}
+.lbl i{width:6px;height:6px;border-radius:50%;background:var(--ember-hi);display:block}
+.lbl.off i{background:#4a4a4a}
+.bar{height:2px;background:var(--line);position:relative}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:#fff;display:block}
+.bar i.e{background:linear-gradient(90deg,var(--ember),var(--ember-hi))}
+.tick{border-top:1px solid var(--hair);padding-top:18px;position:relative}
+.tick.on{border-top-color:var(--ember-hi)}
+.ft .micro{color:rgba(255,255,255,.55)}
+.tick.on::before{content:"";position:absolute;left:0;top:-4px;width:7px;height:7px;border-radius:50%;background:var(--ember-hi)}

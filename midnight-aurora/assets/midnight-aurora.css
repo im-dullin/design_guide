@@ -1,0 +1,119 @@
+/* ============================================================
+   Midnight Aurora Design System — midnight-aurora.css
+   거의 검정인 슬라이드(#0c0c0d) 위에 가벼운 기하학 산세리프,
+   페일 스카이 블루 한 가지 색, 그리고 '정해진 자리에만' 쓰는 오로라 그라데이션.
+   사용: <body class="deck"> (1280×720 슬라이드) | <body class="doc"> (900px 웹뷰/롱 PDF)
+   폰트: Urbanist(영문 디스플레이·숫자) + Pretendard(한글·본문) — <head>에 아래 2줄 필수
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+   그라데이션은 전부 CSS radial/linear. filter:blur 금지(PDF에서 빠질 수 있음).
+   ============================================================ */
+
+:root{
+  /* surface */
+  --page:#1d1e21;     /* 슬라이드 바깥(차콜) — 문서 섹션 사이 틈 */
+  --night:#0c0c0d;    /* 슬라이드·섹션 바탕 */
+  --bar:#141416;      /* 표 행 바, 입력 바 */
+  --bar2:#1a1b1e;     /* 한 단계 밝은 바(헤더·hover 느낌) */
+  --line:rgba(255,255,255,.09);   /* 프레임 1px 아웃라인 */
+  --hair:rgba(255,255,255,.08);   /* 헤어라인 */
+  /* text */
+  --text:#f2f4f7;
+  --sub:rgba(242,244,247,.58);
+  --mute:rgba(242,244,247,.36);
+  /* accent — 블루 계열 하나만 */
+  --ice:#a9cdf5;      /* 헤드라인 강조 · 대형 숫자 · 디스플레이 */
+  --sky:#7fb2ea;      /* 체크 아이콘 · 막대 하단 · 상태 점 */
+  --deep:#1a222d;     /* 막대 상단(밤하늘 쪽) */
+  /* gradients — 이 4개 외 그라데이션 금지 */
+  --g-bar:linear-gradient(180deg,#171c23 0%,#22324a 38%,#4f7fb5 74%,#86b8ee 100%);
+  --g-col:linear-gradient(180deg,rgba(127,178,234,.34) 0%,rgba(127,178,234,.16) 100%);
+  --g-aurora:
+    radial-gradient(ellipse 52% 70% at 100% 0%, rgba(196,222,252,.92) 0%, rgba(160,198,242,.70) 22%, rgba(110,152,208,.38) 48%, rgba(12,12,13,0) 82%),
+    radial-gradient(ellipse 72% 118% at 104% 6%, rgba(122,164,222,.62) 0%, rgba(86,124,178,.40) 30%, rgba(46,68,102,.20) 56%, rgba(12,12,13,0) 80%),
+    radial-gradient(ellipse 58% 62% at 22% -18%, rgba(128,156,196,.34) 0%, rgba(70,92,124,.14) 48%, rgba(12,12,13,0) 78%),
+    radial-gradient(ellipse 30% 52% at 100% 100%, rgba(120,160,214,.34) 0%, rgba(12,12,13,0) 74%);
+  --g-aurora-low:
+    radial-gradient(ellipse 50% 66% at 100% 100%, rgba(190,218,250,.88) 0%, rgba(150,190,238,.62) 22%, rgba(100,140,196,.32) 48%, rgba(12,12,13,0) 80%),
+    radial-gradient(ellipse 72% 112% at 104% 100%, rgba(110,150,206,.50) 0%, rgba(70,104,152,.26) 40%, rgba(12,12,13,0) 78%),
+    radial-gradient(ellipse 50% 50% at 40% 120%, rgba(110,142,186,.22) 0%, rgba(12,12,13,0) 72%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Pretendard",sans-serif;color:var(--text);background:var(--page);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;word-break:keep-all;
+  -webkit-font-smoothing:antialiased}
+
+/* ---------- 1. 레이아웃: DECK (1280×720) ---------- */
+@page{size:1280px 720px;margin:0}
+.deck .slide{width:1280px;height:720px;position:relative;overflow:hidden;background:var(--night);break-after:page}
+.deck .slide:last-child{break-after:auto}
+.deck .hd{position:absolute;left:64px;right:64px;top:46px;display:flex;justify-content:space-between;align-items:center;z-index:4}
+.deck .ft{position:absolute;left:64px;right:64px;bottom:34px;display:flex;justify-content:space-between;align-items:center;z-index:4}
+.deck .body{position:absolute;left:64px;right:64px;top:104px;bottom:72px}
+
+/* ---------- 2. 레이아웃: DOC (900px 세로 롱페이지) ---------- */
+.doc{font-size:14.5px;line-height:1.6}
+.doc .wrap{width:900px;margin:0 auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.doc .sec{background:var(--night);border-radius:8px;overflow:hidden;padding:52px 56px;position:relative}
+.doc .top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
+
+/* ---------- 3. 오로라 (표지·구분장·마무리 전용, 한 장에 1개) ---------- */
+.aurora{position:absolute;inset:0;background:var(--g-aurora);pointer-events:none;z-index:0}
+.aurora.low{background:var(--g-aurora-low)}
+.aurora + *{position:relative}
+.on-aurora{position:relative;z-index:2}
+
+/* ---------- 4. 타이포 ---------- */
+.disp{font-family:"Urbanist","Pretendard",sans-serif;font-weight:300;letter-spacing:-.03em;line-height:1.02;color:var(--ice)}
+.h{font-family:"Urbanist","Pretendard",sans-serif;font-weight:300;font-size:42px;letter-spacing:-.035em;line-height:1.24;color:var(--text)}
+.h .a,.a{color:var(--ice)}
+.doc .h{font-size:32px}
+.num{font-family:"Urbanist",sans-serif;font-weight:300;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.lbl{font-family:"Urbanist","Pretendard",sans-serif;font-size:12px;font-weight:400;letter-spacing:.01em;color:var(--sub)}   /* 좌상단 섹션 라벨 */
+.wm{font-family:"Urbanist",sans-serif;font-size:19px;font-weight:500;letter-spacing:-.02em;color:var(--text)}  /* 소문자 워드마크 */
+.lead{font-size:17px;font-weight:300;letter-spacing:-.02em;line-height:1.55;color:rgba(242,244,247,.82)}
+.sub{font-size:15px;font-weight:300;letter-spacing:-.015em;line-height:1.65;color:var(--sub)}
+.cap{font-size:12.5px;font-weight:300;letter-spacing:-.01em;line-height:1.5;color:var(--sub)}
+.t{font-size:15px;font-weight:400;letter-spacing:-.02em;color:var(--text)}   /* 행·항목 제목 */
+.ink-ice{color:var(--ice)} .ink-sub{color:var(--sub)} .ink-mute{color:var(--mute)}
+
+/* ---------- 5. 번호 리스트 (01) ---------- */
+.nl{list-style:none;display:flex;flex-direction:column;gap:10px}
+.nl li{display:flex;align-items:baseline;gap:14px;font-size:14px;font-weight:300;letter-spacing:-.02em;color:var(--text)}
+.nl li::before{content:attr(data-n);font-family:"Urbanist",sans-serif;font-size:10.5px;letter-spacing:.06em;color:var(--mute);width:28px;flex:none}
+.nl.lg li{font-size:22px;gap:22px} .nl.lg li::before{font-size:12px;width:34px}
+.nl-t{font-family:"Urbanist","Pretendard",sans-serif;font-size:13.5px;font-weight:400;color:var(--ice);margin-bottom:14px}
+
+/* ---------- 6. 프레임 · 행 바 ---------- */
+.frame{border:1px solid var(--line);border-radius:22px;position:relative;overflow:hidden}
+.rbar{background:var(--bar);border:1px solid rgba(255,255,255,.035);border-radius:10px;height:42px;display:flex;align-items:center;padding:0 22px;font-size:14px;font-weight:300;letter-spacing:-.02em}
+.rows>div{display:grid;align-items:center;border-top:1px solid var(--hair)}
+.rows>div:last-child{border-bottom:1px solid var(--hair)}
+.tag{display:inline-flex;align-items:center;gap:7px;height:28px;padding:0 13px;border:1px solid var(--line);border-radius:999px;font-family:"Urbanist","Pretendard",sans-serif;font-size:12px;font-weight:400;color:var(--sub);white-space:nowrap}
+.tag .dot{width:6px;height:6px;border-radius:50%;background:var(--sky)}
+
+/* ---------- 7. 비교표 (하이라이트 열) ---------- */
+.cmp{position:relative;display:grid;row-gap:6px}
+.cmp .r{display:grid;align-items:center;height:42px;background:var(--bar);border:1px solid rgba(255,255,255,.035);border-radius:10px}
+.cmp .r.head{background:none;border-color:transparent;height:40px}
+.cmp .r>span{text-align:center;display:flex;justify-content:center;position:relative;z-index:2}
+.cmp .r>span:first-child{justify-content:flex-start;padding-left:24px;font-size:14px;font-weight:300;letter-spacing:-.02em}
+.cmp .r.head>span{font-family:"Urbanist","Pretendard",sans-serif;font-size:13px;font-weight:400;color:var(--sub)}
+.cmp .r.head>span.me{color:var(--text)}
+.cmp .hl{position:absolute;top:-6px;bottom:-10px;border-radius:14px;background:var(--g-col);border:1px solid rgba(169,205,245,.22);z-index:1;pointer-events:none}
+
+/* ---------- 8. 체크 아이콘 ---------- */
+.ck{width:16px;height:16px;flex:none}
+.ck circle{fill:var(--sky)} .ck path{fill:none;stroke:var(--night);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.nx{width:16px;height:2px;border-radius:2px;background:rgba(255,255,255,.12)}   /* 미지원: 짧은 대시 */
+
+/* ---------- 9. 막대 차트 (프레임 안, 하단 정렬) ---------- */
+.chart{display:flex;align-items:flex-end;gap:12px;height:100%;padding:0 28px}
+.chart .b{flex:1;border-radius:16px 16px 0 0;background:var(--g-bar);position:relative;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:20px 0 16px}
+.chart .b .v{font-family:"Urbanist",sans-serif;font-weight:300;font-size:38px;letter-spacing:-.02em;color:#fff;line-height:1}
+.chart .b .y{font-family:"Urbanist",sans-serif;font-size:12px;color:rgba(255,255,255,.82)}
+.chart .b.dim{background:linear-gradient(180deg,#15181d,#1f2a38)}   /* 실적(과거)과 전망 구분이 필요할 때만 */
+
+/* ---------- 10. 가로 진행 막대 (보조) ---------- */
+.meter{height:6px;border-radius:999px;background:rgba(255,255,255,.07);overflow:hidden}
+.meter i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#2a4060,var(--sky))}

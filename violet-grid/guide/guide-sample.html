@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Violet Grid · Design Guide</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/violet-grid.css">
+<style>
+  .sw{display:flex;flex-direction:column;justify-content:space-between;padding:14px 14px 16px}
+  .sw .num{font-size:15px;letter-spacing:-.02em}
+  .arch{display:block;width:100%;outline:1px solid var(--hair)}
+  .tr>div{grid-template-columns:110px 1fr 120px;padding:13px 0;align-items:center}
+  .x>div{display:grid;grid-template-columns:22px 1fr;padding:10px 0;font-size:14px;letter-spacing:-.02em;line-height:1.45}
+  .x b{font-family:"Inter Tight";font-weight:600}
+</style>
+</head>
+<body class="deck">
+
+<!-- 01 COVER -->
+<section class="slide"><div class="pg v">
+  <div class="side">
+    <div class="lbl">Design Guide</div>
+    <p class="note" style="margin-top:10px">바이올렛 · 화이트 · 블랙 세 가지 색과 12열 그리드로 만드는 에디토리얼 브랜드북 스타일.</p>
+  </div>
+  <div class="at" style="--c:7;--s:3;top:34px"><div class="lbl">Formats</div><p class="note" style="margin-top:10px">Deck 1280×720<br>Doc 900px</p></div>
+  <div class="at" style="--c:10;--s:3;top:34px;text-align:right"><div class="lbl">Version</div><p class="note" style="margin-top:10px">v1.0<br>2026.11.06</p></div>
+  <div class="at dsp" style="--c:1;--s:12;top:236px;font-size:212px">Vi<em>o</em>let<br>Grid</div>
+  <div class="at kd" style="--c:7;--s:6;top:470px;font-size:30px">세 가지 색, 12열 그리드,<br>거대한 대문자 한 줄</div>
+  <div class="at" style="--c:7;--s:6;top:572px;display:flex;gap:8px"><span class="chip k">3 Colors</span><span class="chip">12 Columns</span><span class="chip">8 Archetypes</span></div>
+  <div class="rf"><span>Violet Grid</span><span>Design Guide v1.0</span><span>Cover</span><span>01 / 06</span></div>
+</div></section>
+
+<!-- 02 COLOR -->
+<section class="slide"><div class="pg w">
+  <div class="side">
+    <div class="lbl">01 — Color</div>
+    <p class="note" style="margin-top:10px">페이지 전체를 한 색으로 칠한다. 바이올렛 · 화이트/그레이 · 블랙을 장마다 돌려 쓰고, 틴트는 차트와 칩에만.</p>
+  </div>
+  <div class="at kd" style="--c:4;--s:9;top:34px;font-size:40px">세 가지 색이 <b>페이지 전체</b>를 칠한다</div>
+  <div class="at" style="--c:4;--s:9;top:150px;height:340px;display:grid;grid-template-columns:1.3fr 1.3fr 1fr 1fr;border:1px solid var(--hair)">
+    <div class="sw" style="background:var(--violet)"><span class="lbl">--violet</span><div><div style="font-size:15px;font-weight:600">Violet</div><div class="num" style="margin-top:4px">#8B6CF0</div></div></div>
+    <div class="sw" style="background:var(--black);color:#fff"><span class="lbl">--black</span><div><div style="font-size:15px;font-weight:600">Black</div><div class="num" style="margin-top:4px;opacity:.7">#0A0A0A</div></div></div>
+    <div class="sw" style="background:var(--gray)"><span class="lbl">--gray</span><div><div style="font-size:15px;font-weight:600">Light gray</div><div class="num" style="margin-top:4px;color:var(--sub)">#E9E9E9</div></div></div>
+    <div class="sw" style="background:#fff"><span class="lbl">--white</span><div><div style="font-size:15px;font-weight:600">White</div><div class="num" style="margin-top:4px;color:var(--sub)">#FFFFFF</div></div></div>
+  </div>
+  <div class="at" style="--c:4;--s:9;top:506px;height:84px;display:grid;grid-template-columns:repeat(4,1fr)">
+    <div class="sw" style="background:var(--violet);padding:10px 12px"><span class="lbl">Tint 1</span><span class="num" style="font-size:13px">#8B6CF0</span></div>
+    <div class="sw" style="background:var(--v2);padding:10px 12px"><span class="lbl">--v2</span><span class="num" style="font-size:13px">#A891F4</span></div>
+    <div class="sw" style="background:var(--v3);padding:10px 12px"><span class="lbl">--v3</span><span class="num" style="font-size:13px">#C6B8F8</span></div>
+    <div class="sw" style="background:var(--lav);padding:10px 12px"><span class="lbl">--lav</span><span class="num" style="font-size:13px">#E4DDFC</span></div>
+  </div>
+  <div class="at" style="--c:1;--s:3;top:506px"><div class="lbl">Chart tints</div><p class="note" style="margin-top:8px">막대 · 영역 차트 · 칩 배경 전용. 페이지 배경으로 쓰는 틴트는 없다.</p></div>
+  <div class="rf"><span>Violet Grid</span><span>Design Guide v1.0</span><span>01 Color</span><span>02 / 06</span></div>
+</div></section>
+
+<!-- 03 TYPE -->
+<section class="slide"><div class="pg k">
+  <div class="side">
+    <div class="lbl">02 — Typography</div>
+    <p class="note" style="margin-top:10px">Suisse Intl 대신 무료 서체 Inter Tight를 쓴다. 한글은 Pretendard. 대문자 · 음수 자간 · 행간 0.86.</p>
+  </div>
+  <div class="at dsp" style="--c:1;--s:6;top:260px;font-size:150px">Int<em>e</em>r<br>Tight</div>
+  <p class="at cap" style="--c:1;--s:5;top:560px;font-size:12px">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz 0123456789 %+→</p>
+  <div class="at rows tr" style="--c:7;--s:6;top:34px">
+    <div><span class="lbl">Display</span><span class="dsp" style="font-size:58px">B<em>oo</em>st</span><span class="cap" style="text-align:right">120–212 · 500</span></div>
+    <div><span class="lbl">Korean</span><span class="kd" style="font-size:32px">남는 <b>사용자</b></span><span class="cap" style="text-align:right">30–48 · 600</span></div>
+    <div><span class="lbl">Number</span><span class="num" style="font-size:44px">23.45<span style="font-size:20px">%</span></span><span class="cap" style="text-align:right">40–80 · 500</span></div>
+    <div><span class="lbl">Statement</span><span class="st" style="font-size:20px">문단형 대형 텍스트</span><span class="cap" style="text-align:right">34–52 · 500</span></div>
+    <div><span class="lbl">Note</span><span class="note">좌상단 에디토리얼 본문 두세 줄</span><span class="cap" style="text-align:right">12 · 400</span></div>
+    <div><span class="lbl">Label</span><span class="lbl">01 — Metrics</span><span class="cap" style="text-align:right">10.5 · 600 · CAPS</span></div>
+    <div><span class="lbl">Footer</span><span class="lbl" style="font-size:10px;font-weight:500">Brand · Doc name · Section</span><span class="cap" style="text-align:right">10 · 500</span></div>
+  </div>
+  <div class="rf"><span>Violet Grid</span><span>Design Guide v1.0</span><span>02 Typography</span><span>03 / 06</span></div>
+</div></section>
+
+<!-- 04 COMPONENTS -->
+<section class="slide"><div class="pg g">
+  <div class="side">
+    <div class="lbl">03 — Components</div>
+    <p class="note" style="margin-top:10px">페이지는 각지고, 페이지 위에 얹는 작은 오브젝트만 라운드 14 또는 캡슐.</p>
+  </div>
+  <div class="at kd" style="--c:4;--s:9;top:34px;font-size:40px">카드 · 칩 · 필 · <b>러닝 푸터</b></div>
+  <div class="at" style="--c:4;--s:9;top:130px;height:470px;display:grid;grid-template-columns:1fr 1fr 1.2fr;grid-template-rows:1fr 1fr;gap:14px">
+    <div class="card k" style="grid-row:span 2">
+      <div class="hd"><span class="lbl">Stat card</span><span class="chip v" style="height:24px;font-size:12px">+8.1p</span></div>
+      <div class="num" style="font-size:60px;margin-top:22px">23.45<span style="font-size:26px">%</span></div>
+      <div class="cap" style="margin-top:8px">라벨 → 큰 숫자 → 캡션 → 차트</div>
+      <svg class="area" viewBox="0 0 300 150" style="margin-top:auto;height:150px" preserveAspectRatio="none">
+        <line class="gl" x1="0" y1="50" x2="300" y2="50"/><line class="gl" x1="0" y1="100" x2="300" y2="100"/>
+        <path class="f" d="M0 150V118L30 112L60 120L90 96L120 102L150 80L180 88L210 60L240 70L270 34L300 42V150Z"/>
+        <path class="s" style="stroke:#fff" d="M0 118L30 112L60 120L90 96L120 102L150 80L180 88L210 60L240 70L270 34L300 42"/>
+      </svg>
+    </div>
+    <div class="card w">
+      <span class="lbl">Bars · Tints</span>
+      <div class="num vt" style="font-size:40px;margin-top:14px">+35.5<span style="font-size:20px">%</span></div>
+      <div class="vbars" style="height:70px;margin-top:auto"><i class="d" style="height:34%"></i><i style="height:48%"></i><i class="b" style="height:66%"></i><i class="a" style="height:100%"></i></div>
+    </div>
+    <div class="card w" style="gap:10px">
+      <span class="lbl">Chip · Tag</span>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px"><span class="chip">+35.5%</span><span class="chip v">12 Weeks</span><span class="chip k">D30</span></div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:auto"><span class="tag">Gaming</span><span class="tag f">Fintech</span><span class="tag fk">Education</span></div>
+    </div>
+    <div class="card l" style="justify-content:space-between">
+      <span class="lbl">Profile pill</span>
+      <div class="prof" style="padding:8px 20px 8px 8px;gap:12px"><div class="av" style="width:46px;height:46px;font-size:14px">HR</div><div><div class="nm" style="font-size:15px">김하린 · 그로스 리드</div><div class="ds" style="font-size:11.5px">사진 대신 이니셜 원</div></div></div>
+    </div>
+    <div class="card k" style="justify-content:space-between">
+      <span class="lbl">Line icons · 1.5px</span>
+      <div style="display:flex;justify-content:space-between"><svg class="ic" viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg><svg class="ic" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg><svg class="ic" viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4l2-2zM10 21h4"/></svg><svg class="ic" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9S9.5 5.5 12 3z"/></svg></div>
+    </div>
+  </div>
+  <div class="rf"><span>Violet Grid</span><span>Design Guide v1.0</span><span>03 Components</span><span>04 / 06</span></div>
+</div></section>
+
+<!-- 05 ARCHETYPES -->
+<section class="slide"><div class="pg w">
+  <div class="side">
+    <div class="lbl">04 — Archetypes</div>
+    <p class="note" style="margin-top:10px">즉흥 레이아웃 대신 여덟 가지 아키타입을 복제해 내용만 바꾼다.</p>
+  </div>
+  <div class="at dsp" style="--c:4;--s:9;top:34px;font-size:92px">8 La<em>y</em>outs</div>
+  <div class="at" style="--c:4;--s:9;top:150px;display:grid;grid-template-columns:repeat(4,1fr);gap:22px 16px">
+    <div><img class="arch" src="arch/s01.png"><div class="lbl" style="margin-top:8px">01 Cover</div></div>
+    <div><img class="arch" src="arch/s02.png"><div class="lbl" style="margin-top:8px">02 Contents</div></div>
+    <div><img class="arch" src="arch/s03.png"><div class="lbl" style="margin-top:8px">03 Divider</div></div>
+    <div><img class="arch" src="arch/s04.png"><div class="lbl" style="margin-top:8px">04 Statement</div></div>
+    <div><img class="arch" src="arch/s05.png"><div class="lbl" style="margin-top:8px">05 Metrics</div></div>
+    <div><img class="arch" src="arch/s06.png"><div class="lbl" style="margin-top:8px">06 Roadmap</div></div>
+    <div><img class="arch" src="arch/s07.png"><div class="lbl" style="margin-top:8px">07 Services</div></div>
+    <div><img class="arch" src="arch/s08.png"><div class="lbl" style="margin-top:8px">08 Closing</div></div>
+  </div>
+  <div class="at" style="--c:1;--s:3;top:470px"><div class="num vt" style="font-size:96px">12</div><div class="lbl" style="margin-top:10px">Columns</div><div class="cap" style="margin-top:4px">여백 40 · 거터 16 · 1280 기준</div></div>
+  <div class="rf"><span>Violet Grid</span><span>Design Guide v1.0</span><span>04 Archetypes</span><span>05 / 06</span></div>
+</div></section>
+
+<!-- 06 DO / DON'T -->
+<section class="slide"><div class="pg v">
+  <div class="side">
+    <div class="lbl">05 — Rules</div>
+    <p class="note" style="margin-top:10px">렌더한 PNG를 직접 보고 넘침 · 겹침 · 줄바꿈을 검수한다.</p>
+  </div>
+  <div class="at dsp" style="--c:1;--s:6;top:330px;font-size:150px">Do &amp;<br>D<em>o</em>n’t</div>
+  <div class="at" style="--c:7;--s:3;top:34px"><div class="lbl" style="padding-bottom:10px">Do</div>
+    <div class="rows x">
+      <div><b>+</b>페이지 전체를 한 색으로</div>
+      <div><b>+</b>강조 글자는 한 줄에 1~2자</div>
+      <div><b>+</b>노트는 좌상단 2~3열에</div>
+      <div><b>+</b>모든 장에 러닝 푸터</div>
+      <div><b>+</b>숫자는 크게, 단위는 45%</div>
+      <div><b>+</b>줄바꿈은 &lt;br&gt;로 직접</div>
+    </div>
+  </div>
+  <div class="at" style="--c:10;--s:3;top:34px"><div class="lbl" style="padding-bottom:10px">Don’t</div>
+    <div class="rows x">
+      <div><b>×</b>라운드 패널 · 그림자</div>
+      <div><b>×</b>그라데이션 · 글로우</div>
+      <div><b>×</b>팔레트 외 색 · 무지개 차트</div>
+      <div><b>×</b>한글 이탤릭 · 가짜 기울임</div>
+      <div><b>×</b>가운데 정렬 본문</div>
+      <div><b>×</b>3D · 스톡 사진 · 이모지</div>
+    </div>
+  </div>
+  <div class="rf"><span>Violet Grid</span><span>Design Guide v1.0</span><span>05 Rules</span><span>06 / 06</span></div>
+</div></section>
+</body>
+</html>

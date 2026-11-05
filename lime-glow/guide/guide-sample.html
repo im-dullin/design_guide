@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Lime Glow · Design Guide</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lime-glow.css">
+<style>
+  .sw{height:92px;border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;justify-content:space-between}
+  .sw b{font-size:13.5px;font-weight:600;letter-spacing:-.02em}
+  .sw .num{font-size:12.5px;letter-spacing:0;margin-top:3px}
+  .gd{height:150px;border-radius:14px;background:var(--night);position:relative;overflow:hidden;padding:12px 14px;color:#f2f5f1}
+  .gd>.lab,.gd>.num{position:relative;z-index:2;display:block}
+  .tl{display:grid;grid-template-columns:104px 1fr 120px;align-items:center;border-top:1px solid var(--hairD);padding:19px 0}
+  .tl:last-child{border-bottom:1px solid var(--hairD)}
+  .arch{border-radius:10px;overflow:hidden;display:block;width:100%;box-shadow:inset 0 0 0 1px var(--hairD)}
+  .ln{font-size:14px;line-height:1.5;padding:10px 0;border-top:1px solid var(--hair);display:flex;gap:10px}
+  .dkc .ln{border-color:var(--hairD)}
+  .ln b{width:16px;flex:none;font-family:Geist;font-weight:500}
+</style>
+</head>
+<body class="deck">
+
+<!-- 01 COVER -->
+<section class="slide dk">
+  <div class="curtain"></div>
+  <div class="nav">
+    <div class="logo"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7" fill="none" stroke="#b9f27e" stroke-width="2.4"/><circle cx="10" cy="10" r="2.4" fill="#b9f27e"/></svg>Lime Glow</div>
+    <div class="tabs"><span class="on">Cover</span><span>Color</span><span>Type</span><span>Components</span><span>Archetypes</span><span>Rules</span></div>
+  </div>
+  <div style="position:absolute;left:0;right:0;top:188px;text-align:center;z-index:3">
+    <span class="chip"><span class="dot"></span>Design Guide · v1.0</span>
+    <div class="disp" style="font-size:128px;margin-top:26px">Lime <span class="hl" style="font-weight:400">Glow</span></div>
+    <p class="sub" style="margin-top:22px;font-size:17px;color:rgba(255,255,255,.66)">블랙 위의 라임 빛, 민트 화이트 위의 UI 카드.<br>핀테크 · AI 스타트업을 위한 웹사이트형 피치덱</p>
+  </div>
+  <div style="position:absolute;left:0;right:0;bottom:44px;display:flex;justify-content:center;gap:8px;z-index:3">
+    <span class="chip ln">Deck 1280×720</span><span class="chip ln">Doc 900px</span><span class="chip ln">Pretendard · Geist</span>
+  </div>
+</section>
+
+<!-- 02 COLOR -->
+<section class="slide lt">
+  <div class="tint" style="right:-460px;top:-500px"></div>
+  <div class="nav">
+    <div class="logo"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7" fill="none" stroke="#4c9a2a" stroke-width="2.4"/><circle cx="10" cy="10" r="2.4" fill="#4c9a2a"/></svg>Lime Glow</div>
+    <div class="tabs"><span>Cover</span><span class="on">Color</span><span>Type</span><span>Components</span><span>Archetypes</span><span>Rules</span></div>
+  </div>
+  <div style="position:absolute;left:72px;right:72px;top:104px;display:flex;justify-content:space-between;align-items:flex-end;z-index:3">
+    <h2 class="h" style="font-size:36px">무채색이 판을 깔고,<br><span class="hl">라임은 빛으로만</span> 씁니다</h2>
+    <p class="sub" style="width:340px;font-size:15px">유채색은 초록 계열 5개뿐. 글로우 강도는<br>아래 4단계 알파 값에서만 고릅니다.</p>
+  </div>
+  <div style="position:absolute;left:72px;right:72px;top:236px;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;z-index:3">
+    <div class="sw" style="background:#060706;color:#fff"><span class="lab" style="color:rgba(255,255,255,.5)">--night</span><div><b>Dark slide</b><div class="num" style="opacity:.6">#060706</div></div></div>
+    <div class="sw" style="background:#101210;color:#fff"><span class="lab" style="color:rgba(255,255,255,.5)">--coal</span><div><b>Dark card · node</b><div class="num" style="opacity:.6">#101210</div></div></div>
+    <div class="sw" style="background:var(--paper);box-shadow:inset 0 0 0 1px var(--hair)"><span class="lab">--paper</span><div><b>Light slide</b><div class="num" style="color:var(--sub)">#F4F7F2</div></div></div>
+    <div class="sw" style="background:#fff;box-shadow:var(--sh)"><span class="lab">--white</span><div><b>UI card · table</b><div class="num" style="color:var(--sub)">#FFFFFF</div></div></div>
+    <div class="sw" style="background:#0c0f0c;color:#fff"><span class="lab" style="color:rgba(255,255,255,.5)">--ink / --sub</span><div><b>Text</b><div class="num" style="opacity:.6">#0C0F0C · #687068</div></div></div>
+    <div class="sw" style="background:var(--lime)"><span class="lab" style="color:rgba(0,0,0,.5)">--lime</span><div><b>Glow · on-dark text</b><div class="num" style="color:rgba(0,0,0,.6)">#B9F27E</div></div></div>
+    <div class="sw" style="background:var(--leaf);color:#fff"><span class="lab" style="color:rgba(255,255,255,.7)">--leaf</span><div><b>On-light text · check</b><div class="num" style="opacity:.75">#4C9A2A</div></div></div>
+    <div class="sw" style="background:var(--mint)"><span class="lab">--mint</span><div><b>Chip · highlight col</b><div class="num" style="color:var(--sub)">#E3F3D6</div></div></div>
+    <div class="sw" style="background:var(--mint2)"><span class="lab">--mint2</span><div><b>Accent slide</b><div class="num" style="color:rgba(0,0,0,.55)">#CFEEB4</div></div></div>
+    <div class="sw" style="background:var(--moss);color:#fff"><span class="lab" style="color:rgba(255,255,255,.7)">--moss</span><div><b>Text on accent</b><div class="num" style="opacity:.75">#2C6B17</div></div></div>
+  </div>
+  <div style="position:absolute;left:72px;right:72px;top:452px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;z-index:3">
+    <div class="gd"><div class="curtain"></div><span class="lab" style="color:#fff">Curtain · 표지 전용</span><div class="num" style="font-size:22px;margin-top:76px;color:var(--lime)">.30 / .16</div></div>
+    <div class="gd"><div class="glow sm" style="left:90px;top:-60px"></div><span class="lab">Glow · 다크 장 1개</span><div class="num" style="font-size:22px;margin-top:76px;color:var(--lime)">.18</div></div>
+    <div class="gd"><div class="ring" style="width:300px;height:300px;left:110px;top:20px"></div><span class="lab">Ring · 마무리 장</span><div class="num" style="font-size:22px;margin-top:76px;color:var(--lime)">.50</div></div>
+    <div class="gd" style="background:var(--paper);color:var(--ink);box-shadow:inset 0 0 0 1px var(--hair)"><div class="tint" style="width:420px;height:420px;left:40px;top:-150px"></div><span class="lab">Tint · 라이트 장 1개</span><div class="num" style="font-size:22px;margin-top:76px;color:var(--leaf)">.55</div></div>
+  </div>
+  <div class="note cap">filter:blur 금지 — 글로우는 radial-gradient로만 (PDF에서도 유지)</div>
+  <div class="pg micro">02 / 06</div>
+</section>
+
+<!-- 03 TYPE -->
+<section class="slide dk">
+  <div class="glow" style="left:-360px;top:-360px"></div>
+  <div class="nav">
+    <div class="logo"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7" fill="none" stroke="#b9f27e" stroke-width="2.4"/><circle cx="10" cy="10" r="2.4" fill="#b9f27e"/></svg>Lime Glow</div>
+    <div class="tabs"><span>Cover</span><span>Color</span><span class="on">Type</span><span>Components</span><span>Archetypes</span><span>Rules</span></div>
+  </div>
+  <div style="position:absolute;left:72px;top:118px;width:380px;z-index:3">
+    <span class="lab">Typography</span>
+    <div class="disp" style="font-size:156px;margin-top:20px;line-height:.95">Aa<span class="hl">가</span></div>
+    <p class="sub" style="margin-top:26px;font-size:15px">영문 디스플레이 · 숫자 · 라벨은 Geist,<br>한글 헤드라인 · 본문은 Pretendard.<br>굵기는 400–600, 자간은 항상 음수.</p>
+    <p class="cap" style="margin-top:16px">Geist = 유료 네오 그로테스크(Aeonik 계열)의 무료 대체</p>
+  </div>
+  <div style="position:absolute;left:500px;right:72px;top:112px;z-index:3">
+    <div class="tl"><span class="lab">Display</span><span class="disp" style="font-size:52px">Built to <span class="hl">scale</span></span><span class="micro" style="text-align:right">60–128 · 500</span></div>
+    <div class="tl"><span class="lab">Headline</span><span class="h" style="font-size:28px">한 구절만 <span class="hl">라임</span>으로</span><span class="micro" style="text-align:right">36–40 · 600</span></div>
+    <div class="tl"><span class="lab">Number</span><span class="num" style="font-size:60px">4.2<span style="font-size:34px">K</span></span><span class="micro" style="text-align:right">84–132 · 500</span></div>
+    <div class="tl"><span class="lab">Sub</span><span class="sub">헤드라인을 받쳐 주는 근거 한두 줄</span><span class="micro" style="text-align:right">15–17 · 400</span></div>
+    <div class="tl"><span class="lab">Caption</span><span class="cap">숫자 설명 · 출처 · 가상 수치 표기</span><span class="micro" style="text-align:right">13 · 400</span></div>
+    <div class="tl"><span class="lab">Label</span><span class="lab" style="color:#fff">Overview · Metric · Input 01</span><span class="micro" style="text-align:right">10.5 · 500 · caps</span></div>
+  </div>
+  <div class="pg micro">03 / 06</div>
+</section>
+
+<!-- 04 COMPONENTS -->
+<section class="slide lt">
+  <div class="tint" style="left:-480px;bottom:-600px"></div>
+  <div class="nav">
+    <div class="logo"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7" fill="none" stroke="#4c9a2a" stroke-width="2.4"/><circle cx="10" cy="10" r="2.4" fill="#4c9a2a"/></svg>Lime Glow</div>
+    <div class="tabs"><span>Cover</span><span>Color</span><span>Type</span><span class="on">Components</span><span>Archetypes</span><span>Rules</span></div>
+  </div>
+  <div style="position:absolute;left:0;right:0;top:100px;text-align:center;z-index:3">
+    <h2 class="h" style="font-size:36px">장식이 아니라 <span class="hl">제품 화면</span>처럼</h2>
+    <p class="sub" style="margin-top:8px;font-size:15px">흰 UI 카드 · 다크 노드 · 칩 · 표 — 그림자는 흰 카드에만 씁니다.</p>
+  </div>
+  <div style="position:absolute;left:72px;right:72px;top:232px;bottom:56px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;z-index:3">
+    <div class="card lg" style="padding:20px 22px">
+      <span class="lab">Nav · Chip · Toggle</span>
+      <div class="tabs" style="gap:16px;margin-top:10px"><span class="on">Overview</span><span>Platform</span><span>Market</span></div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:14px"><span class="chip"><span class="dot"></span>Status</span><span class="chip">Pipeline</span><span class="chip ln">2026.11</span></div>
+      <div style="margin-top:18px">
+        <div class="crow"><span class="ck"></span>체크 행 · ON<span class="r"><span class="tg on"></span></span></div>
+        <div class="crow"><span class="ck off"></span>체크 행 · OFF<span class="r"><span class="tg"></span></span></div>
+        <div class="crow on"><span class="ck"></span>강조 행 (카드당 1개)<span class="r micro" style="color:var(--leaf)">D-12</span></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:16px"><span class="cap">Bar</span><span class="micro">75%</span></div>
+      <div class="bar" style="margin-top:6px"><i style="width:75%"></i></div>
+    </div>
+    <div style="border-radius:22px;background:var(--night);position:relative;overflow:hidden;padding:20px 22px;color:#f2f5f1" class="dk">
+      <div class="glow sm" style="left:-40px;top:60px"></div>
+      <div style="position:relative;z-index:2">
+        <span class="lab">Node · Glow icon</span>
+        <div class="node" style="margin:22px auto 0"><div class="mk"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7" fill="none" stroke="#b9f27e" stroke-width="2.2"/><circle cx="10" cy="10" r="2.4" fill="#b9f27e"/></svg></div><b>Core Engine</b><div class="cap">플로우의 중심 1개</div></div>
+        <div style="display:flex;justify-content:space-around;margin-top:38px">
+          <div class="gico"><i><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></i></div>
+          <div class="gico"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></i></div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="tbl" style="padding:6px 18px 8px;border-radius:18px">
+        <div class="tr th" style="grid-template-columns:1.3fr 1fr 1fr;min-height:36px"><span>Metric</span><span>Now</span><span class="hc">2027</span></div>
+        <div class="tr" style="grid-template-columns:1.3fr 1fr 1fr;min-height:36px;font-size:12.5px"><span>월 매출</span><span>₩12M</span><span class="hc">₩400M</span></div>
+        <div class="tr" style="grid-template-columns:1.3fr 1fr 1fr;min-height:36px;font-size:12.5px"><span>총이익률</span><span>61%</span><span class="hc">74%</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center" class="lt">
+        <div class="face" style="height:104px"><em>이미지 자리</em></div>
+        <div><span class="lab">Portrait</span><div class="ko" style="font-size:14px;margin-top:4px">흑백 인물 자리</div><div class="cap" style="margin-top:2px">사진은 회색조 · 라운드 14</div></div>
+      </div>
+      <div class="info" style="flex:1;background:linear-gradient(180deg,var(--mint2),#eef9e7);box-shadow:none;display:flex;flex-direction:column;justify-content:space-between">
+        <span class="lab">Info tile · 액센트 장</span><b>반투명 흰 타일 위<br>제목 한 줄 + 캡션</b>
+      </div>
+    </div>
+  </div>
+  <div class="pg micro">04 / 06</div>
+</section>
+
+<!-- 05 ARCHETYPES -->
+<section class="slide dk">
+  <div class="glow" style="right:-380px;top:-440px"></div>
+  <div class="nav">
+    <div class="logo"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7" fill="none" stroke="#b9f27e" stroke-width="2.4"/><circle cx="10" cy="10" r="2.4" fill="#b9f27e"/></svg>Lime Glow</div>
+    <div class="tabs"><span>Cover</span><span>Color</span><span>Type</span><span>Components</span><span class="on">Archetypes</span><span>Rules</span></div>
+  </div>
+  <div style="position:absolute;left:72px;right:72px;top:100px;display:flex;justify-content:space-between;align-items:flex-end;z-index:3">
+    <div><span class="lab">Slide archetypes</span><div class="disp" style="font-size:56px;margin-top:10px"><span class="hl">8</span> Layouts</div></div>
+    <p class="sub" style="width:340px;text-align:right;font-size:15px">즉흥 레이아웃 대신 아키타입을 복제해<br>내용만 교체한다.</p>
+  </div>
+  <div style="position:absolute;left:72px;right:72px;top:236px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px 12px;z-index:3">
+    <div><img class="arch" src="arch/s01.png"><div class="cap" style="margin-top:7px">01 Cover · curtain</div></div>
+    <div><img class="arch" src="arch/s02.png"><div class="cap" style="margin-top:7px">02 Problem + Number</div></div>
+    <div><img class="arch" src="arch/s03.png"><div class="cap" style="margin-top:7px">03 Platform Flow</div></div>
+    <div><img class="arch" src="arch/s04.png"><div class="cap" style="margin-top:7px">04 Market · accent</div></div>
+    <div><img class="arch" src="arch/s05.png"><div class="cap" style="margin-top:7px">05 Team</div></div>
+    <div><img class="arch" src="arch/s06.png"><div class="cap" style="margin-top:7px">06 Financials</div></div>
+    <div><img class="arch" src="arch/s07.png"><div class="cap" style="margin-top:7px">07 Principles · icons</div></div>
+    <div><img class="arch" src="arch/s08.png"><div class="cap" style="margin-top:7px">08 Closing · ask</div></div>
+  </div>
+  <div class="note cap">다크 · 라이트 교차 — 액센트 장(.lm)은 덱당 1장</div>
+  <div class="pg micro">05 / 06</div>
+</section>
+
+<!-- 06 DO / DON'T -->
+<section class="slide lt">
+  <div class="tint" style="right:-480px;bottom:-600px"></div>
+  <div class="nav">
+    <div class="logo"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7" fill="none" stroke="#4c9a2a" stroke-width="2.4"/><circle cx="10" cy="10" r="2.4" fill="#4c9a2a"/></svg>Lime Glow</div>
+    <div class="tabs"><span>Cover</span><span>Color</span><span>Type</span><span>Components</span><span>Archetypes</span><span class="on">Rules</span></div>
+  </div>
+  <div style="position:absolute;left:72px;top:118px;width:380px;z-index:3">
+    <span class="lab">Rules</span>
+    <div class="disp" style="font-size:92px;margin-top:16px">Do &amp;<br><span class="hl">Don’t</span></div>
+    <h2 class="ko" style="font-size:22px;margin-top:26px">빛은 배경에, 정보는 카드에</h2>
+    <p class="sub" style="margin-top:10px;font-size:15px">글로우가 텍스트 뒤를 지나가면 실패.<br>렌더 PNG와 PDF 한 장을 직접 열어 본다.</p>
+  </div>
+  <div style="position:absolute;left:520px;right:72px;top:112px;bottom:64px;display:grid;grid-template-columns:1fr 1fr;gap:12px;z-index:3">
+    <div class="card lg" style="padding:22px 24px"><span class="lab" style="color:var(--leaf)">Do</span>
+      <div style="margin-top:12px">
+        <div class="ln"><b style="color:var(--leaf)">+</b>글로우는 화면 모서리 밖에 중심</div>
+        <div class="ln"><b style="color:var(--leaf)">+</b>장당 글로우 레이어 1개</div>
+        <div class="ln"><b style="color:var(--leaf)">+</b>강조는 한 구절, 라임/리프로</div>
+        <div class="ln"><b style="color:var(--leaf)">+</b>큰 숫자 1–2개 + 캡션 한 줄</div>
+        <div class="ln"><b style="color:var(--leaf)">+</b>UI 카드는 실제 화면처럼 짧게</div>
+        <div class="ln"><b style="color:var(--leaf)">+</b>가상 수치는 캡션에 명시</div>
+        <div class="ln" style="border-bottom:1px solid var(--hair)"><b style="color:var(--leaf)">+</b>줄바꿈은 &lt;br&gt;로 의미 단위</div>
+      </div>
+    </div>
+    <div class="dkc dk" style="padding:22px 24px;border-radius:22px;background:var(--night)"><span class="lab" style="color:var(--lime)">Don’t</span>
+      <div style="margin-top:12px">
+        <div class="ln"><b>×</b>filter:blur · 네온 텍스트 그림자</div>
+        <div class="ln"><b>×</b>본문 뒤를 지나는 밝은 글로우</div>
+        <div class="ln"><b>×</b>라임 면 채우기 · 라임 버튼 남발</div>
+        <div class="ln"><b>×</b>다크 위 카드에 드롭섀도</div>
+        <div class="ln"><b>×</b>보라 · 파랑 · 무지개 그라데이션</div>
+        <div class="ln"><b>×</b>이모지 · 3D 일러스트 · 스톡 사진</div>
+        <div class="ln" style="border-bottom:1px solid var(--hairD)"><b>×</b>700 이상 굵기 · 이탤릭</div>
+      </div>
+    </div>
+  </div>
+  <div class="note cap">전체 규칙은 SKILL.md</div>
+  <div class="pg micro">06 / 06</div>
+</section>
+</body>
+</html>

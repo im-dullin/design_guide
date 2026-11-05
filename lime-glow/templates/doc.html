@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Sample Doc · Lime Glow</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lime-glow.css">
+</head>
+<body class="doc">
+<!--
+  세로 롱페이지(웹뷰 · 한 장 PDF · 모바일 공유용). 900px 고정 폭.
+  섹션 = .sec(.dk|.lt|.lm)를 10px 간격으로 쌓기. 다크와 라이트를 교차, .lm은 문서 전체 1개.
+  글로우 레이어는 섹션의 첫 자식으로 두고 1섹션 1개만.
+-->
+<div class="wrap">
+
+  <!-- HERO — 다크 · 커튼 글로우 + 가운데 디스플레이 + 하단 스탯 3개 -->
+  <section class="sec dk" style="padding-bottom:40px">
+    <div class="curtain"></div>
+    <div class="nav">
+      <div class="logo"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7" fill="none" stroke="#b9f27e" stroke-width="2.4"/><circle cx="10" cy="10" r="2.4" fill="#b9f27e"/></svg>Brand</div>
+      <div class="tabs" style="gap:20px"><span class="on">Overview</span><span>Platform</span><span>Market</span><span>Team</span></div>
+    </div>
+    <div class="c" style="padding-top:96px">
+      <span class="chip"><span class="dot"></span>Company Brief · 2026</span>
+      <div class="disp" style="font-size:60px;margin-top:24px"><span class="hl" style="font-weight:400">Financial AI</span><br>for every growing team</div>
+      <p class="sub" style="margin-top:20px;color:rgba(255,255,255,.66)">흩어진 거래·세금·현금 흐름을 하나의 맥락으로.<br>작은 기업을 위한 AI 재무 운영 플랫폼</p>
+    </div>
+    <div class="cols" style="grid-template-columns:repeat(3,1fr);margin-top:96px;padding-top:24px;border-top:1px solid var(--hairD)">
+      <div><div class="num" style="font-size:40px">40</div><div class="cap" style="margin-top:8px">파일럿 도입 사업장</div></div>
+      <div><div class="num" style="font-size:40px">₩12M</div><div class="cap" style="margin-top:8px">현재 월 반복 매출</div></div>
+      <div><div class="num" style="font-size:40px">82%</div><div class="cap" style="margin-top:8px">3개월 유지율 · 가상 수치</div></div>
+    </div>
+  </section>
+
+  <!-- PROBLEM — 라이트 · 좌측 헤드라인과 대형 숫자 / 우측 UI 카드 -->
+  <section class="sec lt" style="padding-top:44px">
+    <div class="tint" style="right:-460px;top:-480px"></div>
+    <div style="display:grid;grid-template-columns:1fr 340px;gap:36px;align-items:start">
+      <div>
+        <span class="lab">Problem</span>
+        <h2 class="h" style="margin-top:12px">사장님이 <span class="hl">돈의 흐름</span>을<br>놓치는 순간</h2>
+        <p class="sub" style="margin-top:14px;font-size:15px">거래·세금·급여 데이터가 서로 다른 도구에 흩어져,<br>결정이 필요한 순간에 전체 그림이 보이지 않습니다.</p>
+        <div class="num" style="font-size:84px;margin-top:40px">48<span style="font-family:Pretendard;font-weight:600;font-size:42px;letter-spacing:-.04em;margin-left:5px">조</span></div>
+        <div class="cap" style="margin-top:10px">소기업이 매년 수기로 관리하는 거래 규모 · 가상 수치</div>
+      </div>
+      <div class="card lg" style="padding:18px">
+        <div class="dkc" style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px">
+          <div><div class="lab">Cash view</div><div style="font-size:13px;font-weight:600;margin-top:3px">이번 달 가용 현금</div></div>
+          <div class="num" style="font-size:22px;color:var(--lime)">₩182M</div>
+        </div>
+        <div style="margin-top:12px">
+          <div class="crow"><span class="ck"></span>은행 거래 동기화<span class="r"><span class="tg on"></span></span></div>
+          <div class="crow"><span class="ck"></span>세금계산서 매칭<span class="r"><span class="tg on"></span></span></div>
+          <div class="crow"><span class="ck off"></span>급여 · 보험 예측<span class="r"><span class="tg"></span></span></div>
+          <div class="crow on"><span class="ck"></span>자금 부족 알림<span class="r micro" style="color:var(--leaf)">D-12</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORM — 라이트 · 가운데 헤드라인 + 세로 플로우 (입력 → 노드 → 출력) -->
+  <section class="sec lt" style="padding-top:48px">
+    <div class="c">
+      <span class="lab">Platform</span>
+      <h2 class="h" style="margin-top:12px">하나의 AI 엔진이<br><span class="hl">모든 재무 업무</span>를 연결합니다</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 168px 1fr;gap:44px;align-items:center;margin-top:36px;position:relative">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div class="card"><div class="lab">Input 01</div><div class="ko" style="font-size:14px;margin-top:5px">은행 · 카드 거래</div><div class="ph" style="margin-top:10px;width:80%"></div></div>
+        <div class="card"><div class="lab">Input 02</div><div class="ko" style="font-size:14px;margin-top:5px">세금계산서 · 영수증</div><div class="ph" style="margin-top:10px;width:60%"></div></div>
+      </div>
+      <div>
+        <div class="node"><div class="mk"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7" fill="none" stroke="#b9f27e" stroke-width="2.2"/><circle cx="10" cy="10" r="2.4" fill="#b9f27e"/></svg></div><b>Brand Core</b><div class="cap">재무 AI 작업 조율</div></div>
+        <div class="c" style="margin-top:12px"><span class="pillk">담당자 검토</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div class="card"><div style="display:flex;justify-content:space-between"><span class="lab">Output 01</span><span class="tg on"></span></div><div class="ko" style="font-size:14px;margin-top:5px">월간 자금 계획</div><div class="cap">현금 흐름 · 부족 시점 예측</div></div>
+        <div class="card"><div style="display:flex;justify-content:space-between"><span class="lab">Output 02</span><span class="tg on"></span></div><div class="ko" style="font-size:14px;margin-top:5px">세무 신고 초안</div><div class="cap">부가세 · 원천세 자동 작성</div></div>
+      </div>
+      <svg class="flow-svg" viewBox="0 0 788 100" preserveAspectRatio="none" style="z-index:-1">
+        <path vector-effect="non-scaling-stroke" d="M266 26 C 290 26, 290 44, 310 44"/><path vector-effect="non-scaling-stroke" d="M266 74 C 290 74, 290 44, 310 44"/>
+        <path class="on" vector-effect="non-scaling-stroke" d="M478 44 C 500 44, 500 26, 522 26"/><path class="on" vector-effect="non-scaling-stroke" d="M478 44 C 500 44, 500 74, 522 74"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- MARKET — 액센트(.lm) · 대형 숫자 2개 + 파이프라인 정보 타일 3개 -->
+  <section class="sec lm" style="padding-top:48px">
+    <span class="lab">Go-to-market</span>
+    <h2 class="h" style="margin-top:12px">세무 대리인과 함께 시작해<br><span class="hl">소기업 전체</span>로 넓힙니다</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px">
+      <div><div class="num" style="font-size:72px">12<span style="font-size:42px">K</span></div><div class="cap" style="margin-top:8px">국내 세무 대리인 사무소 · 가상 수치</div></div>
+      <div><div class="num" style="font-size:72px">3.4<span style="font-size:42px">M</span></div><div class="cap" style="margin-top:8px">연 매출 10억 미만 사업자 · 가상 수치</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px">
+      <div class="info" style="height:128px;display:flex;flex-direction:column;justify-content:space-between"><b>한빛 세무법인</b><span class="cap">파일럿 계약 검토 중</span></div>
+      <div class="info" style="height:128px;display:flex;flex-direction:column;justify-content:space-between"><b>동네상점 본사</b><span class="cap">가맹점 120곳 시범 논의</span></div>
+      <div class="info" style="height:128px;display:flex;flex-direction:column;justify-content:space-between"><b>지역 신협 3곳</b><span class="cap">대출 심사 연동 미팅</span></div>
+    </div>
+  </section>
+
+  <!-- FINANCIALS — 라이트 · 흰 표 컨테이너 (강조 열 1개) -->
+  <section class="sec lt" style="padding-top:48px">
+    <div class="tint" style="left:-500px;bottom:-560px"></div>
+    <div class="c">
+      <span class="lab">Business</span>
+      <h2 class="h" style="margin-top:12px">연말까지 <span class="hl">월 매출 4억</span>,<br>플랫폼 하나로 확장합니다</h2>
+    </div>
+    <div class="tbl" style="margin-top:30px">
+      <div class="tr th" style="grid-template-columns:1.4fr 1fr 1fr 1fr"><span>Metric</span><span>Today</span><span class="hc">Dec 2027</span><span>Next 12M</span></div>
+      <div class="tr" style="grid-template-columns:1.4fr 1fr 1fr 1fr"><span>도입 사업장</span><span>40</span><span class="hc">1,200</span><span>4,800</span></div>
+      <div class="tr" style="grid-template-columns:1.4fr 1fr 1fr 1fr"><span>월 반복 매출</span><span>₩12M</span><span class="hc">₩400M</span><span>₩1.6B</span></div>
+      <div class="tr" style="grid-template-columns:1.4fr 1fr 1fr 1fr"><span>매출 총이익률</span><span>61%</span><span class="hc">74%</span><span>80%</span></div>
+      <div class="tr" style="grid-template-columns:1.4fr 1fr 1fr 1fr"><span>월 순소진액</span><span>₩38M</span><span class="hc">₩52M</span><span>₩60M</span></div>
+    </div>
+    <div class="cap c" style="margin-top:14px">모든 수치는 예시용 가상 데이터</div>
+  </section>
+
+  <!-- TEAM + CONTACT — 다크 · 인물 자리 4명 + 라운드 목표 + 링 글로우 -->
+  <section class="sec dk" style="padding-top:48px">
+    <div class="glow" style="right:-360px;bottom:-400px"></div>
+    <div class="ring" style="right:-340px;bottom:-430px"></div>
+    <span class="lab">Team</span>
+    <h2 class="h" style="margin-top:12px"><span class="hl">검증된 팀</span>이 금융과 AI를 함께 다룹니다</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px">
+      <div><div class="face" style="height:150px"><em>이미지 자리</em></div><div class="ko" style="font-size:15px;margin-top:12px">김도윤</div><div class="micro" style="margin-top:2px">CEO · Co-founder</div></div>
+      <div><div class="face" style="height:150px"><em>이미지 자리</em></div><div class="ko" style="font-size:15px;margin-top:12px">박서연</div><div class="micro" style="margin-top:2px">CTO · Co-founder</div></div>
+      <div><div class="face" style="height:150px"><em>이미지 자리</em></div><div class="ko" style="font-size:15px;margin-top:12px">이준호</div><div class="micro" style="margin-top:2px">Head of AI</div></div>
+      <div><div class="face" style="height:150px"><em>이미지 자리</em></div><div class="ko" style="font-size:15px;margin-top:12px">최하은</div><div class="micro" style="margin-top:2px">Tax Lead</div></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:48px;padding-top:28px;border-top:1px solid var(--hairD)">
+      <div>
+        <span class="lab">The Ask</span>
+        <div class="ko" style="font-size:22px;line-height:1.4;margin-top:10px">프리시드 라운드로<br><span class="hl">자체 재무 AI</span>를 완성합니다</div>
+        <div style="display:flex;gap:8px;margin-top:20px"><span class="chip"><span class="dot"></span>hello@brand.example</span><span class="chip ln">Seoul</span></div>
+      </div>
+      <div style="text-align:right"><div class="num" style="font-size:96px">20<span style="font-family:Pretendard;font-weight:600;font-size:46px;letter-spacing:-.04em;margin-left:5px">억</span></div><div class="cap" style="margin-top:10px">Pre-seed target · 18개월</div></div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

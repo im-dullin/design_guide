@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Sample Deck · Clean Business</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/clean-business.css">
+</head>
+<body class="deck">
+<!--
+  슬라이드 아키타입 8종. 필요한 것만 복제해서 내용만 교체하세요.
+  규칙: .slide 에 .lt(라이트) 또는 .dk(다크). 반대 톤 패널은 .panel.dk / .panel.lt / .panel.dk2.
+       상단 바 .tb = 좌(로고 + 필) / 우(필 + 원형 화살표). 하단 .ft = 저작권 줄 + 페이지.
+  로고: 별표 SVG + 이름. 별표만 --mark 회색, 다크에서는 흰색.
+-->
+
+<!-- 01 COVER — 라이트 · 초대형 레귤러 그로테스크 + Presented by + 헤어라인 + 3열 메타 -->
+<section class="slide lt">
+  <div class="tb">
+    <div class="side"><span class="logo"><svg viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Brand</span><span class="pill">Company Profile</span></div>
+    <div class="side"><span class="pill">Plan 2027</span><span class="cbtn"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 8v9H8"/></svg></span></div>
+  </div>
+  <div style="position:absolute;left:64px;right:64px;top:212px">
+    <div class="disp" style="font-size:156px">Company Profile</div>
+    <div style="margin-top:52px;font-size:13.5px"><span class="lbl" style="font-size:13px">Presented by</span>&nbsp;&nbsp;<b style="font-weight:500">김서윤 · 사업전략팀</b></div>
+  </div>
+  <div style="position:absolute;left:64px;right:64px;bottom:64px">
+    <div class="hr"></div>
+    <div class="meta" style="margin-top:22px">
+      <div><span class="lbl">Contact</span><span class="val">02-000-0000</span></div>
+      <div><span class="lbl">Date</span><span class="val">November 2026</span></div>
+      <div><span class="lbl">Website</span><span class="val">www.brand.example</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 CONTENTS — 라이트 · 좌하단 대형 제목 + 원형 버튼 / 우측 다크 라운드 패널 목차 -->
+<section class="slide lt">
+  <div style="position:absolute;left:64px;top:46px" class="copy"><b>©2026 Brand.</b> All rights reserved.</div>
+  <div style="position:absolute;left:64px;bottom:58px">
+    <div style="display:flex;align-items:center;gap:22px"><div class="disp" style="font-size:104px">Our</div><span class="cbtn lg ne" style="margin-top:14px"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 8v9H8"/></svg></span></div>
+    <div class="disp" style="font-size:104px;margin-top:4px">Contents</div>
+  </div>
+  <div class="panel dk" style="position:absolute;top:16px;right:16px;bottom:16px;width:676px;padding:22px 56px">
+    <div class="rows" style="height:100%;display:grid;grid-template-rows:repeat(5,1fr)">
+      <div style="grid-template-columns:150px 1fr 40px"><span><span class="pill">Section 1</span></span><span class="t">회사 소개</span><span class="idx" style="text-align:right">(1)</span></div>
+      <div style="grid-template-columns:150px 1fr 40px"><span><span class="pill">Section 2</span></span><span class="t">핵심 지표</span><span class="idx" style="text-align:right">(2)</span></div>
+      <div style="grid-template-columns:150px 1fr 40px"><span><span class="pill">Section 3</span></span><span class="t">서비스 구성</span><span class="idx" style="text-align:right">(3)</span></div>
+      <div style="grid-template-columns:150px 1fr 40px"><span><span class="pill">Section 4</span></span><span class="t">2027 로드맵</span><span class="idx" style="text-align:right">(4)</span></div>
+      <div style="grid-template-columns:150px 1fr 40px"><span><span class="pill">Section 5</span></span><span class="t">문의 · 연락처</span><span class="idx" style="text-align:right">(5)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 DIVIDER — 다크 · 좌측 풀블리드 이미지 자리 + 우측 섹션 필 · 대형 제목 -->
+<section class="slide dk">
+  <div class="ph sq" data-label="이미지 자리 · 640×720" style="position:absolute;left:0;top:0;bottom:0;width:640px"></div>
+  <div class="copy" style="position:absolute;left:40px;top:46px;color:rgba(255,255,255,.6)"><b>©2026 Brand.</b> All rights reserved.</div>
+  <div style="position:absolute;left:704px;right:64px;top:40px;display:flex;justify-content:space-between;align-items:center">
+    <span class="logo"><svg viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Brand</span>
+    <span class="pg">03 / 08</span>
+  </div>
+  <div style="position:absolute;left:704px;right:64px;bottom:64px">
+    <span class="pill">Section 1</span>
+    <div class="disp" style="font-size:112px;margin-top:30px">About<br>Brand</div>
+    <div class="hr" style="margin-top:40px"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:22px">
+      <p class="sub" style="color:var(--snow);opacity:.8">데이터로 판단하고, 현장에서 실행합니다.</p>
+      <span class="cbtn sw"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 8v9H8"/></svg></span>
+    </div>
+  </div>
+</section>
+
+<!-- 04 ABOUT — 라이트 · 좌측 라벨 + 한글 스테이트먼트 / 우측 이미지 자리 / 하단 3열 사실 -->
+<section class="slide lt">
+  <div class="tb">
+    <div class="side"><span class="logo"><svg viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Brand</span><span class="pill">01 About</span></div>
+    <div class="side"><span class="pg">04 / 08</span></div>
+  </div>
+  <div style="position:absolute;left:64px;top:132px;width:640px">
+    <span class="lbl">Who we are</span>
+    <h2 class="h" style="margin-top:18px">중소 제조기업의 운영 데이터를 정리하고,<br>다음 분기에 할 일을 한 장으로 만드는<br>운영 전략 파트너입니다.</h2>
+    <p class="sub" style="margin-top:22px">컨설팅 보고서로 끝내지 않습니다.<br>진단부터 실행 점검까지 같은 담당자가 분기 단위로 함께합니다.</p>
+  </div>
+  <div class="ph" data-label="이미지 자리 · 사무실 · 4:3" style="position:absolute;right:64px;top:132px;width:420px;height:300px"></div>
+  <div style="position:absolute;left:64px;right:64px;bottom:84px">
+    <div class="hr"></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:24px">
+      <div><span class="lbl">Founded</span><div class="t" style="margin-top:8px">2019년 설립</div><p class="cap" style="margin-top:6px">서울 · 창원 두 거점에서 운영합니다.</p></div>
+      <div><span class="lbl">Focus</span><div class="t" style="margin-top:8px">제조 운영 진단</div><p class="cap" style="margin-top:6px">생산 · 재고 · 원가 데이터를 함께 봅니다.</p></div>
+      <div><span class="lbl">Clients</span><div class="t" style="margin-top:8px">누적 140개 사</div><p class="cap" style="margin-top:6px">연 매출 50억~500억 규모 기업 중심.</p></div>
+    </div>
+  </div>
+  <div class="ft"><span class="copy"><b>©2026 Brand.</b> All rights reserved.</span><span class="pg">Company Profile</span></div>
+</section>
+
+<!-- 05 KEY NUMBERS — 다크 · 좌측 대형 제목 + 우측 서브 / 하단 4열 헤어라인 숫자 -->
+<section class="slide dk">
+  <div class="tb">
+    <div class="side"><span class="logo"><svg viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Brand</span><span class="pill">02 Numbers</span></div>
+    <div class="side"><span class="pg">05 / 08</span></div>
+  </div>
+  <div style="position:absolute;left:64px;right:64px;top:132px;display:flex;justify-content:space-between;align-items:flex-end">
+    <div class="disp" style="font-size:104px">Key<br>Numbers</div>
+    <p class="sub" style="width:300px;margin-bottom:6px">2026년 3분기 기준, 고객사 140곳의<br>도입 전후 평균값입니다.</p>
+  </div>
+  <div style="position:absolute;left:64px;right:64px;bottom:84px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px">
+    <div style="border-top:1px solid var(--hair);padding-top:18px"><span class="lbl">Clients</span><div class="num" style="font-size:72px;margin-top:26px">140</div><p class="cap" style="margin-top:12px">누적 고객사</p></div>
+    <div style="border-top:1px solid var(--hair);padding-top:18px"><span class="lbl">Retention</span><div class="num" style="font-size:72px;margin-top:26px">87<span style="font-size:32px">%</span></div><p class="cap" style="margin-top:12px">2년 차 재계약률</p></div>
+    <div style="border-top:1px solid var(--fg);padding-top:18px"><span class="lbl" style="color:var(--fg)">Cost</span><div class="num" style="font-size:72px;margin-top:26px">−12<span style="font-size:32px">%</span></div><p class="cap" style="margin-top:12px">도입 6개월 후 원가 절감</p></div>
+    <div style="border-top:1px solid var(--hair);padding-top:18px"><span class="lbl">Lead time</span><div class="num" style="font-size:72px;margin-top:26px">3.4<span style="font-size:32px">d</span></div><p class="cap" style="margin-top:12px">평균 납기 단축</p></div>
+  </div>
+  <div class="ft"><span class="copy" style="color:var(--sub)">출처 · 내부 고객 데이터 (n=140)</span><span class="pg">Company Profile</span></div>
+</section>
+
+<!-- 06 SERVICES — 라이트 · 제목 줄 + 3열 (이미지 자리 → 필 → 제목 → 캡션) -->
+<section class="slide lt">
+  <div class="tb">
+    <div class="side"><span class="logo"><svg viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Brand</span><span class="pill">03 Services</span></div>
+    <div class="side"><span class="pg">06 / 08</span></div>
+  </div>
+  <div class="body">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <div class="disp" style="font-size:72px">What We Do</div>
+      <span class="cbtn lg"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 8v9H8"/></svg></span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px">
+      <div><div class="ph" data-label="이미지 자리" style="height:250px"></div><div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px"><span class="pill sm">Service 01</span><span class="idx">(1)</span></div><div class="t" style="margin-top:12px">운영 데이터 진단</div><p class="cap" style="margin-top:6px">4주 안에 생산·재고 흐름을 한 장의 지도로 정리합니다.</p></div>
+      <div><div class="ph" data-label="이미지 자리" style="height:250px"></div><div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px"><span class="pill sm">Service 02</span><span class="idx">(2)</span></div><div class="t" style="margin-top:12px">원가 구조 개선</div><p class="cap" style="margin-top:6px">품목별 원가를 다시 쪼개 줄일 수 있는 항목을 찾습니다.</p></div>
+      <div><div class="ph" data-label="이미지 자리" style="height:250px"></div><div style="display:flex;justify-content:space-between;align-items:center;margin-top:20px"><span class="pill sm">Service 03</span><span class="idx">(3)</span></div><div class="t" style="margin-top:12px">분기 실행 리포트</div><p class="cap" style="margin-top:6px">매 분기 다음 할 일 5가지를 우선순위와 함께 전달합니다.</p></div>
+    </div>
+  </div>
+  <div class="ft"><span class="copy"><b>©2026 Brand.</b> All rights reserved.</span><span class="pg">Company Profile</span></div>
+</section>
+
+<!-- 07 ROADMAP — 라이트 · 제목 + 가로 헤어라인 타임라인 4단계 (현재 단계만 채운 점 + 채운 필) -->
+<section class="slide lt">
+  <div class="tb">
+    <div class="side"><span class="logo"><svg viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Brand</span><span class="pill">04 Roadmap</span></div>
+    <div class="side"><span class="pg">07 / 08</span></div>
+  </div>
+  <div class="body">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <div class="disp" style="font-size:72px">Roadmap 2027</div>
+      <p class="sub" style="width:300px;text-align:right">분기마다 하나의 목표,<br>네 단계로 확장합니다.</p>
+    </div>
+    <div style="position:relative;margin-top:84px">
+      <div class="hr" style="position:absolute;left:0;right:0;top:44px"></div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:28px">
+        <div><div style="display:flex;justify-content:space-between;align-items:center;height:28px"><span class="up">Q1</span></div><i style="display:block;width:11px;height:11px;border-radius:50%;background:var(--fg);margin-top:10px"></i><div style="margin-top:28px"><span class="pill sm on">Now</span></div><div class="t" style="margin-top:14px">창원 거점 확장</div><p class="cap" style="margin-top:6px">현장 진단 인력 2배<br>경남권 고객 대응</p></div>
+        <div><div style="height:28px;display:flex;align-items:center"><span class="up">Q2</span></div><i style="display:block;width:11px;height:11px;border-radius:50%;border:1px solid var(--fg);background:var(--bg);margin-top:10px"></i><div style="margin-top:28px;height:22px"></div><div class="t" style="margin-top:14px">진단 도구 출시</div><p class="cap" style="margin-top:6px">자가 진단 웹 도구<br>무료 공개</p></div>
+        <div><div style="height:28px;display:flex;align-items:center"><span class="up">Q3</span></div><i style="display:block;width:11px;height:11px;border-radius:50%;border:1px solid var(--fg);background:var(--bg);margin-top:10px"></i><div style="margin-top:28px;height:22px"></div><div class="t" style="margin-top:14px">원가 벤치마크</div><p class="cap" style="margin-top:6px">업종별 원가 지표<br>연 1회 발간</p></div>
+        <div><div style="height:28px;display:flex;align-items:center"><span class="up">Q4</span></div><i style="display:block;width:11px;height:11px;border-radius:50%;border:1px solid var(--fg);background:var(--bg);margin-top:10px"></i><div style="margin-top:28px;height:22px"></div><div class="t" style="margin-top:14px">고객사 200곳</div><p class="cap" style="margin-top:6px">재계약률 90% 유지<br>신규 60곳</p></div>
+      </div>
+    </div>
+    <div style="position:absolute;left:0;right:0;bottom:0;border-top:1px solid var(--hair);padding-top:18px;display:flex;justify-content:space-between;align-items:center">
+      <span class="val"><span class="lbl" style="margin-right:14px">Goal</span>2027년 말 고객사 200곳 · 재계약률 90%</span>
+      <span class="cbtn"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 8v9H8"/></svg></span>
+    </div>
+  </div>
+  <div class="ft"><span class="copy"><b>©2026 Brand.</b> All rights reserved.</span><span class="pg">Company Profile</span></div>
+</section>
+
+<!-- 08 CLOSING — 다크 · 표지와 같은 뼈대 (대형 제목 + 헤어라인 + 3열 연락 메타) -->
+<section class="slide dk">
+  <div class="tb">
+    <div class="side"><span class="logo"><svg viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Brand</span><span class="pill">Company Profile</span></div>
+    <div class="side"><span class="pill">Contact</span><span class="cbtn"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 8v9H8"/></svg></span></div>
+  </div>
+  <div style="position:absolute;left:64px;right:64px;top:212px">
+    <div class="disp" style="font-size:156px">Thank You</div>
+    <div style="margin-top:52px;font-size:13.5px"><span class="lbl" style="font-size:13px">Next step</span>&nbsp;&nbsp;<b style="font-weight:500">4주 무료 진단 상담을 예약해 주세요.</b></div>
+  </div>
+  <div style="position:absolute;left:64px;right:64px;bottom:64px">
+    <div class="hr"></div>
+    <div class="meta" style="margin-top:22px">
+      <div><span class="lbl">Contact</span><span class="val">02-000-0000</span></div>
+      <div><span class="lbl">Email</span><span class="val">hello@brand.example</span></div>
+      <div><span class="lbl">Website</span><span class="val">www.brand.example</span></div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

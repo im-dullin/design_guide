@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Editorial Grid · Design Guide</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/editorial.css">
+<style>
+  .sw{height:200px;border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between}
+  .sw b{font-family:"Hanken Grotesk";font-weight:500;font-size:15px;letter-spacing:-.02em}
+  .arch{border-radius:6px;overflow:hidden;display:block;width:100%}
+  .li{display:flex;gap:14px;padding:12px 0;border-top:1px solid var(--hair);font-size:14.5px;line-height:1.5}
+  .k .li{border-color:var(--hairD)}
+  .li .n{font-size:14px;line-height:1.5;width:26px;flex:none;color:var(--sub)}
+</style>
+</head>
+<body class="deck">
+
+<!-- 01 COVER -->
+<section class="slide"><div class="c l">
+  <div style="position:absolute;left:0;right:0;top:0;height:318px;display:grid;grid-template-columns:1.1fr 1fr 1.2fr">
+    <div class="ph arch" data-ph="이미지 자리 · 건축"></div>
+    <div class="ph facade" data-ph="이미지 자리"></div>
+    <div class="ph window" data-ph="이미지 자리"></div>
+  </div>
+  <div class="tab" style="right:44px;top:280px"><span class="mark"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>EDITORIAL GRID</span></div>
+  <div class="disp" style="position:absolute;left:50px;bottom:46px;font-size:160px">Editorial<br>Grid</div>
+  <div style="position:absolute;left:800px;bottom:62px;width:200px">
+    <div class="ko" style="font-size:19px">디자인 가이드</div>
+    <div class="cap" style="margin-top:10px">세이지 바탕 · 얇은 그로테스크<br>거대한 번호 · 흑백 사진</div>
+  </div>
+  <div style="position:absolute;left:1030px;bottom:118px;display:flex;align-items:center;gap:14px">
+    <span class="micro" style="line-height:1.1;color:var(--ink)">VE<br>R.</span><span class="n" style="font-size:26px;letter-spacing:-.03em">1.0</span>
+  </div>
+  <div class="micro" style="position:absolute;left:1030px;bottom:62px;color:var(--ink);letter-spacing:.04em">DECK + DOC</div>
+  <div class="arr lg" style="position:absolute;right:50px;bottom:56px"><svg viewBox="0 0 24 24"><path d="M19 19L5 5M5 16V5h11"/></svg></div>
+</div></section>
+
+<!-- 02 COLOR -->
+<section class="slide"><div class="c l">
+  <div class="hd" style="top:46px"><div class="t" style="font-size:34px">Color</div><span class="arr sm"><svg viewBox="0 0 24 24"><path d="M19 5L5 19M5 8v11h11"/></svg></span></div>
+  <div style="position:absolute;left:52px;right:52px;top:124px;display:flex;justify-content:space-between;align-items:flex-end">
+    <h2 class="h">색은 빼고,<br><b>명도</b>로만 나눕니다</h2>
+    <p class="sub" style="width:330px">유채색 액센트가 없습니다. 바탕의 세이지 그레이가 유일한 색 기운이고, 강조는 검정 하나로 합니다.</p>
+  </div>
+  <div style="position:absolute;left:52px;right:52px;top:340px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:10px">
+    <div class="sw" style="background:var(--page)"><span class="micro" style="color:var(--ink)">--page</span><div><b>Sage page</b><div class="micro" style="color:var(--ink);margin-top:3px">#AEB3AD</div></div></div>
+    <div class="sw" style="background:var(--card);border:1px solid var(--hair)"><span class="micro">--card</span><div><b>Off-white card</b><div class="micro" style="margin-top:3px">#F4F4F2</div></div></div>
+    <div class="sw" style="background:var(--black);color:#fff"><span class="micro" style="color:rgba(255,255,255,.55)">--black</span><div><b>Black card</b><div class="micro" style="color:rgba(255,255,255,.55);margin-top:3px">#0A0A0A</div></div></div>
+    <div class="sw" style="background:var(--paper)"><span class="micro">--paper</span><div><b>Paper</b><div class="micro" style="margin-top:3px">#E9E9E6</div></div></div>
+    <div class="sw" style="background:var(--bar2)"><span class="micro" style="color:var(--ink)">--bar2</span><div><b>Chart gray</b><div class="micro" style="color:var(--ink);margin-top:3px">#B8BCB6</div></div></div>
+  </div>
+  <div style="position:absolute;left:52px;right:52px;top:556px;display:grid;grid-template-columns:120px repeat(5,1fr);align-items:center;gap:10px">
+    <span class="lbl">Photo grays</span>
+    <div style="height:28px;border-radius:4px;background:var(--g1)"></div><div style="height:28px;border-radius:4px;background:var(--g2)"></div><div style="height:28px;border-radius:4px;background:var(--g3)"></div><div style="height:28px;border-radius:4px;background:var(--g4)"></div><div style="height:28px;border-radius:4px;background:var(--g5)"></div>
+  </div>
+  <div class="ft"><span class="mark"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg><span class="micro" style="color:var(--ink)">01. Color</span></span><span class="micro">Design Guide&nbsp;&nbsp;&nbsp;<b style="color:var(--ink);font-weight:600">P.02</b></span></div>
+</div></section>
+
+<!-- 03 TYPOGRAPHY -->
+<section class="slide"><div class="c k">
+  <div class="hd"><span class="pill sm">Typography</span><span class="mark"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>EDITORIAL GRID</span></div>
+  <div style="position:absolute;left:52px;top:118px;width:400px">
+    <div class="disp" style="font-size:190px">Aa가</div>
+    <p class="sub" style="margin-top:28px">영문 디스플레이 · 번호 · 라벨은 Hanken Grotesk,<br>한글 헤드라인 · 본문은 Pretendard.<br>굵기는 300–600, 자간은 항상 음수.</p>
+  </div>
+  <div class="rows" style="position:absolute;left:500px;right:52px;top:104px;font-size:14px">
+    <div style="grid-template-columns:110px 1fr 110px;padding:10px 0"><span class="micro">Display</span><span class="disp" style="font-size:58px">Brand Plan</span><span class="micro" style="text-align:right">104–172 · 400</span></div>
+    <div style="grid-template-columns:110px 1fr 110px;padding:12px 0"><span class="micro">Number</span><span class="n" style="font-size:64px">02.</span><span class="micro" style="text-align:right">44–300 · 400</span></div>
+    <div style="grid-template-columns:110px 1fr 110px;padding:14px 0"><span class="micro">Uppercase</span><span class="up" style="font-size:28px">Research &amp; Analysis</span><span class="micro" style="text-align:right">40–50 · 400</span></div>
+    <div style="grid-template-columns:110px 1fr 110px;padding:14px 0"><span class="micro">Headline</span><span class="h" style="font-size:26px">시장이 <b>두 배</b> 커졌습니다</span><span class="micro" style="text-align:right">34 · 500/600</span></div>
+    <div style="grid-template-columns:110px 1fr 110px;padding:14px 0"><span class="micro">Body</span><span class="sub">헤드라인을 받쳐 주는 근거 한두 줄</span><span class="micro" style="text-align:right">15 · 400</span></div>
+    <div style="grid-template-columns:110px 1fr 110px;padding:14px 0"><span class="micro">Label</span><span class="lbl">Confidential&nbsp;&nbsp;P.01 · Brand Strategy</span><span class="micro" style="text-align:right">11 · 400/500</span></div>
+  </div>
+  <div class="ft"><span class="mark"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg><span class="micro" style="color:#fff">02. Typography</span></span><span class="micro">Design Guide&nbsp;&nbsp;&nbsp;<b style="color:#fff;font-weight:600">P.03</b></span></div>
+</div></section>
+
+<!-- 04 COMPONENTS -->
+<section class="slide"><div class="c l">
+  <div class="hd" style="top:46px"><div class="t" style="font-size:34px">Components</div><span class="arr sm"><svg viewBox="0 0 24 24"><path d="M19 5L5 19M5 8v11h11"/></svg></span></div>
+  <div class="cols" style="position:absolute;left:52px;right:52px;top:136px;bottom:78px;grid-template-columns:1fr 1fr 1fr">
+    <div style="display:flex;flex-direction:column">
+      <div style="display:flex;align-items:flex-end;gap:16px"><span class="arr" style="margin-bottom:2px"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M8 5h11v11"/></svg></span><span class="n" style="font-size:54px">01.</span></div>
+      <div class="lbl" style="margin-top:16px">Number &amp; Arrow</div>
+      <div class="ko" style="font-size:20px;margin-top:6px">번호 + 가는 대각 화살표</div>
+      <p class="cap" style="margin-top:10px;font-size:13px">번호는 마침표까지 쓰고, 화살표는<br>1.5px 선 · 채움 없음 · 4방향만.</p>
+      <div style="margin-top:auto;display:flex;gap:26px;padding-top:20px;border-top:1px solid var(--hair)">
+        <span class="arr"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M8 5h11v11"/></svg></span>
+        <span class="arr"><svg viewBox="0 0 24 24"><path d="M19 5L5 19M5 8v11h11"/></svg></span>
+        <span class="arr"><svg viewBox="0 0 24 24"><path d="M19 19L5 5M5 16V5h11"/></svg></span>
+        <span class="arr"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 8v11H8"/></svg></span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div class="lbl">Pill · Mark · Footer</div>
+      <div style="display:flex;gap:8px;margin-top:16px"><span class="pill">Part 2</span><span class="pill fill">2026</span><span class="pill sm" style="align-self:center">Small</span></div>
+      <div style="margin-top:22px"><span class="mark" style="font-size:14px"><svg viewBox="0 0 24 24" style="width:18px;height:18px"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>BRAND</span></div>
+      <p class="cap" style="margin-top:10px;font-size:13px">로고 대신 ✱ 마크 + 대문자 워드마크.</p>
+      <div style="margin-top:auto;position:relative;height:150px">
+        <div class="ph tone" data-ph="이미지 자리" style="position:absolute;inset:0 0 40px 0;border-radius:4px"></div>
+        <div class="tab" style="right:16px;top:74px;background:var(--paper)"><span class="mark"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>BRAND</span></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;border-top:1px solid var(--hair);padding-top:10px"><span class="micro" style="color:var(--ink)">✱ Section name</span><span class="micro">Confidential&nbsp;&nbsp;<b style="color:var(--ink)">P.01</b></span></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column">
+      <div class="lbl">Chart · Photo slot</div>
+      <div class="chart" style="height:150px;margin-top:40px;gap:10px">
+        <div class="b" style="height:40%"><span>40</span></div><div class="b" style="height:58%"><span>58</span></div><div class="b" style="height:70%"><span>70</span></div><div class="b on" style="height:92%"><span>92</span></div>
+      </div>
+      <p class="cap" style="margin-top:12px;font-size:13px">막대는 세이지, 강조 1개만 검정.</p>
+      <div style="margin-top:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:6px">
+        <div class="ph arch" style="height:64px;border-radius:3px"></div><div class="ph facade" style="height:64px;border-radius:3px"></div><div class="ph slat" style="height:64px;border-radius:3px"></div><div class="ph arc" style="height:64px;border-radius:3px"></div>
+      </div>
+      <p class="cap" style="margin-top:8px;font-size:12px">.ph — arch · facade · slat · arc 외 4종</p>
+    </div>
+  </div>
+  <div class="ft"><span class="mark"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg><span class="micro" style="color:var(--ink)">03. Components</span></span><span class="micro">Design Guide&nbsp;&nbsp;&nbsp;<b style="color:var(--ink);font-weight:600">P.04</b></span></div>
+</div></section>
+
+<!-- 05 ARCHETYPES -->
+<section class="slide"><div class="c k">
+  <div class="hd"><span class="pill sm">Archetypes</span><span class="mark"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>EDITORIAL GRID</span></div>
+  <div style="position:absolute;left:52px;right:52px;top:96px;display:flex;justify-content:space-between;align-items:flex-end">
+    <div class="up" style="font-size:46px">8 Layouts</div>
+    <p class="sub" style="width:330px;text-align:right">즉흥 레이아웃 대신 아키타입을 복제해<br>내용과 사진만 교체합니다.</p>
+  </div>
+  <div style="position:absolute;left:52px;right:52px;top:178px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px 12px">
+    <div><img class="arch" src="arch/s01.png"><div class="micro" style="margin-top:7px;color:#fff">01. Cover</div></div>
+    <div><img class="arch" src="arch/s02.png"><div class="micro" style="margin-top:7px;color:#fff">02. Contents</div></div>
+    <div><img class="arch" src="arch/s03.png"><div class="micro" style="margin-top:7px;color:#fff">03. Divider</div></div>
+    <div><img class="arch" src="arch/s04.png"><div class="micro" style="margin-top:7px;color:#fff">04. Offerings</div></div>
+    <div><img class="arch" src="arch/s05.png"><div class="micro" style="margin-top:7px;color:#fff">05. Data</div></div>
+    <div><img class="arch" src="arch/s06.png"><div class="micro" style="margin-top:7px;color:#fff">06. Case Study</div></div>
+    <div><img class="arch" src="arch/s07.png"><div class="micro" style="margin-top:7px;color:#fff">07. Roadmap</div></div>
+    <div><img class="arch" src="arch/s08.png"><div class="micro" style="margin-top:7px;color:#fff">08. Closing</div></div>
+  </div>
+  <div class="ft"><span class="mark"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg><span class="micro" style="color:#fff">04. Archetypes</span></span><span class="micro">Design Guide&nbsp;&nbsp;&nbsp;<b style="color:#fff;font-weight:600">P.05</b></span></div>
+</div></section>
+
+<!-- 06 DO / DON'T -->
+<section class="slide"><div class="c l">
+  <div class="hd"><span class="mark"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>EDITORIAL GRID</span><span class="arr sm"><svg viewBox="0 0 24 24"><path d="M19 5L5 19M5 8v11h11"/></svg></span></div>
+  <div style="position:absolute;left:52px;top:112px;width:400px;bottom:78px;display:flex;flex-direction:column">
+    <div class="disp" style="font-size:112px">Do &amp;<br>Don’t</div>
+    <h2 class="ko" style="font-size:21px;margin-top:30px">생성형 티를 지우는 규칙</h2>
+    <p class="sub" style="margin-top:10px">렌더한 PNG를 직접 보고<br>넘침 · 겹침 · 줄바꿈을 검수합니다.</p>
+    <div class="arr lg" style="margin-top:auto"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M8 5h11v11"/></svg></div>
+  </div>
+  <div class="cols" style="position:absolute;left:540px;right:52px;top:118px;bottom:78px;grid-template-columns:1fr 1fr">
+    <div>
+      <div class="lbl" style="font-size:13px;margin-bottom:14px">Do</div>
+      <div class="li"><span class="n">01.</span>큰 영문 디스플레이 + 한글 한 줄</div>
+      <div class="li"><span class="n">02.</span>번호는 "02." 처럼 마침표까지</div>
+      <div class="li"><span class="n">03.</span>세로 헤어라인으로 3열 나누기</div>
+      <div class="li"><span class="n">04.</span>사진은 흑백 · 크롭 · 모서리 4–6px</div>
+      <div class="li"><span class="n">05.</span>푸터는 ✱ 섹션명 · Confidential P.NN</div>
+      <div class="li" style="border-bottom:1px solid var(--hair)"><span class="n">06.</span>강조는 검정 막대 · 굵은 구절 하나</div>
+    </div>
+    <div>
+      <div class="lbl" style="font-size:13px;margin-bottom:14px">Don’t</div>
+      <div class="li"><span class="n">×</span>컬러 사진 · 이모지 · 컬러 아이콘</div>
+      <div class="li"><span class="n">×</span>그림자 · 그라데이션 배경 · 글로우</div>
+      <div class="li"><span class="n">×</span>카드 안 카드, 박스로 감싼 3열</div>
+      <div class="li"><span class="n">×</span>굵은 디스플레이(500 이상) · 이탤릭</div>
+      <div class="li"><span class="n">×</span>두꺼운 화살표 · 원형 아이콘 칩</div>
+      <div class="li" style="border-bottom:1px solid var(--hair)"><span class="n">×</span>유채색 액센트 · 다색 차트</div>
+    </div>
+  </div>
+  <div class="ft"><span class="mark"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg><span class="micro" style="color:var(--ink)">05. Rules · 전체 규칙은 SKILL.md</span></span><span class="micro">Design Guide&nbsp;&nbsp;&nbsp;<b style="color:var(--ink);font-weight:600">P.06</b></span></div>
+</div></section>
+</body>
+</html>

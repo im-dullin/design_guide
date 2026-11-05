@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Midnight Aurora · Design Guide</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/midnight-aurora.css">
+<style>
+  .sw{height:168px;border-radius:14px;padding:16px 16px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line)}
+  .sw .num{font-size:13px;letter-spacing:.01em}
+  .sw b{font-weight:400;font-size:14px;letter-spacing:-.02em;display:block}
+  .gs{height:150px;border-radius:14px;position:relative;overflow:hidden;border:1px solid var(--line);background:var(--night)}
+  .arch{border-radius:8px;overflow:hidden;display:block;width:100%;border:1px solid var(--line)}
+  .x{font-size:14px;font-weight:300;letter-spacing:-.02em;line-height:1.5;display:grid;grid-template-columns:44px 1fr;padding:13px 0;border-top:1px solid var(--hair)}
+  .x:last-child{border-bottom:1px solid var(--hair)}
+</style>
+</head>
+<body class="deck">
+
+<!-- 01 COVER -->
+<section class="slide">
+  <div class="aurora"></div>
+  <div class="hd"><span class="wm">midnight aurora</span><span class="lbl">Design Guide · v1.0</span></div>
+  <div style="position:absolute;left:64px;bottom:150px;z-index:2">
+    <div class="disp" style="font-size:132px;letter-spacing:-.035em">Midnight<br>Aurora</div>
+    <p class="lead" style="margin-top:24px">밤하늘 검정 · 가벼운 기하학 산세리프 · 정해진 자리에만 뜨는 오로라</p>
+  </div>
+  <div class="rows" style="position:absolute;right:64px;bottom:150px;width:300px;z-index:2">
+    <div style="grid-template-columns:1fr auto;padding:12px 0"><span class="cap">컬러 토큰</span><span class="num" style="font-size:22px">10</span></div>
+    <div style="grid-template-columns:1fr auto;padding:12px 0"><span class="cap">서체 · Urbanist + Pretendard</span><span class="num" style="font-size:22px">2</span></div>
+    <div style="grid-template-columns:1fr auto;padding:12px 0"><span class="cap">허용 그라데이션</span><span class="num ink-ice" style="font-size:22px">4</span></div>
+  </div>
+  <div class="ft"><span class="lbl">Pitch Deck · Company Brief · IR · 서비스 소개서</span><span class="lbl">2026</span></div>
+</section>
+
+<!-- 02 COLOR -->
+<section class="slide">
+  <div class="hd"><span class="lbl">01 Color</span><span class="lbl">02 / 06</span></div>
+  <div style="position:absolute;left:64px;right:64px;top:96px;display:flex;justify-content:space-between;align-items:flex-end">
+    <h2 class="h">검정 위에 <span class="a">한 가지 블루</span></h2>
+    <p class="sub" style="width:380px">무채색 다섯 단계로 판을 깔고, 블루는 ice와 sky 두 톤만.<br>그라데이션은 아래 네 가지 외에 쓰지 않는다.</p>
+  </div>
+  <div style="position:absolute;left:64px;right:64px;top:206px;display:grid;grid-template-columns:repeat(8,1fr);gap:8px">
+    <div class="sw" style="background:#1d1e21"><span class="lbl">--page</span><div><b>Page</b><div class="num ink-sub" style="margin-top:4px">#1D1E21</div></div></div>
+    <div class="sw" style="background:#0c0c0d"><span class="lbl">--night</span><div><b>Slide</b><div class="num ink-sub" style="margin-top:4px">#0C0C0D</div></div></div>
+    <div class="sw" style="background:#141416"><span class="lbl">--bar</span><div><b>Row bar</b><div class="num ink-sub" style="margin-top:4px">#141416</div></div></div>
+    <div class="sw" style="background:#1a1b1e"><span class="lbl">--bar2</span><div><b>Input bar</b><div class="num ink-sub" style="margin-top:4px">#1A1B1E</div></div></div>
+    <div class="sw" style="background:#f2f4f7;color:#0c0c0d"><span class="lbl" style="color:rgba(0,0,0,.5)">--text</span><div><b>Text</b><div class="num" style="margin-top:4px;color:rgba(0,0,0,.55)">#F2F4F7</div></div></div>
+    <div class="sw" style="background:#a9cdf5;color:#0c0c0d"><span class="lbl" style="color:rgba(0,0,0,.5)">--ice</span><div><b>Accent</b><div class="num" style="margin-top:4px;color:rgba(0,0,0,.55)">#A9CDF5</div></div></div>
+    <div class="sw" style="background:#7fb2ea;color:#0c0c0d"><span class="lbl" style="color:rgba(0,0,0,.5)">--sky</span><div><b>Icon · bar</b><div class="num" style="margin-top:4px;color:rgba(0,0,0,.55)">#7FB2EA</div></div></div>
+    <div class="sw" style="background:#1a222d"><span class="lbl">--deep</span><div><b>Bar top</b><div class="num ink-sub" style="margin-top:4px">#1A222D</div></div></div>
+  </div>
+  <div style="position:absolute;left:64px;right:64px;top:398px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:8px">
+    <div><div class="gs"><div class="aurora"></div></div><div class="cap" style="margin-top:10px"><span class="ink-ice">Aurora</span> · 표지 · 구분장 · 마무리만, 장당 1개</div></div>
+    <div><div class="gs" style="display:flex;justify-content:center"><div style="width:84px;margin-top:18px;height:150px;border-radius:14px;background:var(--g-col);border:1px solid rgba(169,205,245,.22)"></div></div><div class="cap" style="margin-top:10px"><span class="ink-ice">Column</span> · 비교표의 우리 열</div></div>
+    <div><div class="gs" style="display:flex;justify-content:center;align-items:flex-end"><div style="width:84px;height:124px;border-radius:14px 14px 0 0;background:var(--g-bar)"></div></div><div class="cap" style="margin-top:10px"><span class="ink-ice">Bar</span> · 막대 차트 세로 채움</div></div>
+    <div><div class="gs" style="display:flex;align-items:center;padding:0 20px"><div class="meter" style="width:100%"><i style="width:68%"></i></div></div><div class="cap" style="margin-top:10px"><span class="ink-ice">Meter</span> · 가로 진행 막대</div></div>
+  </div>
+  <div class="ft"><span class="lbl">filter:blur · 글로우 · 보라/핑크 그라데이션 금지 — 전부 radial/linear로</span><span class="lbl">Design Guide · v1.0</span></div>
+</section>
+
+<!-- 03 TYPE -->
+<section class="slide">
+  <div class="hd"><span class="lbl">02 Typography</span><span class="lbl">03 / 06</span></div>
+  <div style="position:absolute;left:64px;top:96px;width:420px">
+    <div class="disp" style="font-size:190px;font-weight:200;letter-spacing:-.05em;line-height:1">Aa<span style="font-family:Pretendard;font-weight:200">가</span></div>
+    <p class="sub" style="margin-top:26px">영문 디스플레이 · 숫자는 Urbanist,<br>한글 헤드라인 · 본문은 Pretendard.<br>굵기는 200–400, 큰 글자일수록 가늘게.</p>
+  </div>
+  <div class="rows" style="position:absolute;left:540px;right:64px;top:100px">
+    <div style="grid-template-columns:100px 1fr 104px;padding:24px 0"><span class="lbl">Display</span><span class="disp" style="font-size:54px">Financials</span><span class="lbl" style="text-align:right">52–132 · 300</span></div>
+    <div style="grid-template-columns:100px 1fr 104px;padding:30px 0"><span class="lbl">Headline</span><span class="h" style="font-size:30px">검색 대신 <span class="a">맥락으로</span></span><span class="lbl" style="text-align:right">42–52 · 300</span></div>
+    <div style="grid-template-columns:100px 1fr 104px;padding:24px 0"><span class="lbl">Number</span><span class="num ink-ice" style="font-size:52px;font-weight:200">−52<span style="font-size:22px">%</span></span><span class="lbl" style="text-align:right">40–180 · 200/300</span></div>
+    <div style="grid-template-columns:100px 1fr 104px;padding:28px 0"><span class="lbl">Lead</span><span class="lead">표지 아래 한 줄 소개</span><span class="lbl" style="text-align:right">17 · 300</span></div>
+    <div style="grid-template-columns:100px 1fr 104px;padding:28px 0"><span class="lbl">Item · Sub</span><span><span class="t">행 제목 15 · 400</span> <span class="sub">— 설명 15 · 300</span></span><span class="lbl" style="text-align:right">15</span></div>
+    <div style="grid-template-columns:100px 1fr 104px;padding:28px 0"><span class="lbl">Label</span><span class="lbl">Competitors · Financials · (01)</span><span class="lbl" style="text-align:right">10.5–12 · 400</span></div>
+  </div>
+  <div class="ft"><span class="lbl">500 이상 굵기 금지(워드마크만 500) · 이탤릭 · 밑줄 금지 · 한글 keep-all</span><span class="lbl">Design Guide · v1.0</span></div>
+</section>
+
+<!-- 04 COMPONENTS -->
+<section class="slide">
+  <div class="hd"><span class="lbl">03 Components</span><span class="lbl">04 / 06</span></div>
+  <div style="position:absolute;left:64px;right:64px;top:96px;display:flex;justify-content:space-between;align-items:flex-end">
+    <h2 class="h">카드 대신<br><span class="a">행 바 · 프레임 · 번호</span></h2>
+    <p class="sub" style="width:360px">어두운 행 바와 1px 프레임으로 구획하고,<br>강조는 반투명 열 하나와 체크 아이콘으로.</p>
+  </div>
+  <div style="position:absolute;left:64px;top:290px;width:560px">
+    <div class="lbl" style="margin-bottom:14px">Compare · highlight column</div>
+    <div class="cmp">
+      <div class="hl" style="left:250px;width:90px"></div>
+      <div class="r head" style="grid-template-columns:250px repeat(3,90px) 1fr"><span></span><span class="me">Ours</span><span>Tool A</span><span>Tool B</span><span></span></div>
+      <div class="r" style="grid-template-columns:250px repeat(3,90px) 1fr"><span>맥락 기반 이해</span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><i class="nx"></i></span><span><i class="nx"></i></span><span></span></div>
+      <div class="r" style="grid-template-columns:250px repeat(3,90px) 1fr"><span>지식 자동 갱신</span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><i class="nx"></i></span><span></span></div>
+      <div class="r" style="grid-template-columns:250px repeat(3,90px) 1fr"><span>문서 초안 작성</span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span></span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px">
+      <div><div class="nl-t">Numbered list</div><ul class="nl"><li data-n="(01)">제품 주도 성장</li><li data-n="(02)">엔터프라이즈 확장</li></ul></div>
+      <div><div class="lbl" style="margin-bottom:14px">Tag · Meter</div><span class="tag"><span class="dot"></span>Beta · 42 teams</span><div class="meter" style="margin-top:16px"><i style="width:64%"></i></div></div>
+    </div>
+  </div>
+  <div class="frame" style="position:absolute;left:700px;right:64px;top:290px;bottom:72px;padding-top:22px">
+    <div class="lbl" style="position:absolute;left:22px;top:18px">Frame · bar chart</div>
+    <div class="chart" style="padding:0 22px;gap:10px">
+      <div class="b" style="height:30%"><span class="v" style="font-size:26px">12</span><span class="y">2026</span></div>
+      <div class="b" style="height:56%"><span class="v" style="font-size:26px">34</span><span class="y">2027</span></div>
+      <div class="b" style="height:86%"><span class="v" style="font-size:26px">80</span><span class="y">2028</span></div>
+    </div>
+  </div>
+  <div class="ft"><span class="lbl">아이콘은 체크 · 대시 · 화살표 3종 — 채움 원은 sky, 선은 1.6px</span><span class="lbl">Design Guide · v1.0</span></div>
+</section>
+
+<!-- 05 ARCHETYPES -->
+<section class="slide">
+  <div class="hd"><span class="lbl">04 Archetypes</span><span class="lbl">05 / 06</span></div>
+  <div style="position:absolute;left:64px;right:64px;top:96px;display:flex;justify-content:space-between;align-items:flex-end">
+    <div class="disp" style="font-size:64px">8 Layouts</div>
+    <p class="sub" style="width:380px;text-align:right">즉흥 레이아웃 대신 아키타입을 복제해<br>내용만 교체한다.</p>
+  </div>
+  <div style="position:absolute;left:64px;right:64px;top:210px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px 12px">
+    <div><img class="arch" src="arch/s01.png"><div class="cap" style="margin-top:8px"><span class="ink-mute">(01)</span> Cover · aurora</div></div>
+    <div><img class="arch" src="arch/s02.png"><div class="cap" style="margin-top:8px"><span class="ink-mute">(02)</span> Contents</div></div>
+    <div><img class="arch" src="arch/s03.png"><div class="cap" style="margin-top:8px"><span class="ink-mute">(03)</span> Problem · statement</div></div>
+    <div><img class="arch" src="arch/s04.png"><div class="cap" style="margin-top:8px"><span class="ink-mute">(04)</span> Product · frame</div></div>
+    <div><img class="arch" src="arch/s05.png"><div class="cap" style="margin-top:8px"><span class="ink-mute">(05)</span> Competitors · column</div></div>
+    <div><img class="arch" src="arch/s06.png"><div class="cap" style="margin-top:8px"><span class="ink-mute">(06)</span> Traction · numbers</div></div>
+    <div><img class="arch" src="arch/s07.png"><div class="cap" style="margin-top:8px"><span class="ink-mute">(07)</span> Financials · bars</div></div>
+    <div><img class="arch" src="arch/s08.png"><div class="cap" style="margin-top:8px"><span class="ink-mute">(08)</span> Closing · aurora low</div></div>
+  </div>
+  <div class="ft"><span class="lbl">오로라 장 사이에는 최소 3장의 무그라데이션 본문 장</span><span class="lbl">Design Guide · v1.0</span></div>
+</section>
+
+<!-- 06 DO / DON'T -->
+<section class="slide">
+  <div class="hd"><span class="lbl">05 Rules</span><span class="lbl">06 / 06</span></div>
+  <div style="position:absolute;left:64px;top:96px;width:400px">
+    <div class="disp" style="font-size:96px">Do &amp;<br>Don’t</div>
+    <p class="sub" style="margin-top:24px">렌더한 PNG와 PDF를 모두 열어<br>오로라가 살아 있는지, 넘침 · 겹침 ·<br>줄바꿈이 없는지 확인한다.</p>
+  </div>
+  <div style="position:absolute;left:540px;right:64px;top:104px;display:grid;grid-template-columns:1fr 1fr;gap:40px">
+    <div><div class="nl-t">Do</div>
+      <div class="x"><span class="num ink-mute" style="font-size:11px">(01)</span>1장 1메시지, 강조 구절은 하나</div>
+      <div class="x"><span class="num ink-mute" style="font-size:11px">(02)</span>큰 글자일수록 더 가늘게</div>
+      <div class="x"><span class="num ink-mute" style="font-size:11px">(03)</span>넓은 검정 여백을 그대로 둔다</div>
+      <div class="x"><span class="num ink-mute" style="font-size:11px">(04)</span>오로라는 모서리에서 번지게</div>
+      <div class="x"><span class="num ink-mute" style="font-size:11px">(05)</span>우리 열만 하이라이트</div>
+      <div class="x"><span class="num ink-mute" style="font-size:11px">(06)</span>줄바꿈은 &lt;br&gt;로 의미 단위</div>
+    </div>
+    <div><div class="nl-t" style="color:var(--sub)">Don’t</div>
+      <div class="x"><span class="num ink-mute" style="font-size:11px">×</span>본문 장에 오로라 · 배경 그라데이션</div>
+      <div class="x"><span class="num ink-mute" style="font-size:11px">×</span>filter:blur 글로우 · 네온 · 그림자</div>
+      <div class="x"><span class="num ink-mute" style="font-size:11px">×</span>보라 · 핑크 · 초록 등 블루 외 색</div>
+      <div class="x"><span class="num ink-mute" style="font-size:11px">×</span>굵은 제목(600+) · 이탤릭</div>
+      <div class="x"><span class="num ink-mute" style="font-size:11px">×</span>표 격자 · 세로선 · 줄무늬</div>
+      <div class="x"><span class="num ink-mute" style="font-size:11px">×</span>이모지 · 컬러 아이콘 · 스톡 사진</div>
+    </div>
+  </div>
+  <div class="ft"><span class="lbl">전체 규칙은 SKILL.md</span><span class="lbl">Design Guide · v1.0</span></div>
+</section>
+</body>
+</html>

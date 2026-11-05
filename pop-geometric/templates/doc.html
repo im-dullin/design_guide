@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Sample Doc · Pop Geometric</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Righteous&family=Jua&family=Instrument+Serif&family=Noto+Serif+KR:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/pop.css">
+</head>
+<body class="doc">
+<!--
+  세로 롱페이지(웹뷰 · 한 장 PDF · 모바일 공유용). 900px 고정 폭.
+  섹션 = .blk(.bg-w|y|r|b|g) 블록을 14px 간격으로 쌓기. 흰 블록과 원색 블록을 교차.
+-->
+<div class="wrap">
+
+  <!-- HERO — 흰 바탕 · 가장자리까지 채운 대문자 3줄 + 캡슐 -->
+  <section class="blk bg-w">
+    <div class="disp" style="font-size:172px">
+      <div class="ln"><span class="t">OUR</span><span class="pl r">2026</span></div>
+      <div class="ln"><span class="t">S</span><span class="pl y"></span><span class="t">HOW</span></div>
+      <div class="ln"><span class="t">REEL!</span><span class="pl b"><span class="wm" style="font-size:34px">BRAND</span></span></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:40px">
+      <div class="kd" style="font-size:32px">작은 브랜드를 위한<br>애니메이션 스튜디오 소개서</div>
+      <p class="sub mut" style="width:300px">캐릭터 하나로 브랜드를 기억하게 만드는 방법을 정리했습니다.</p>
+    </div>
+    <div class="ft"><span>Studio Profile<br>2026 Edition</span><span>Page 01</span><span>Copyright 2026</span><span class="wm">BRAND</span></div>
+  </section>
+
+  <!-- STATEMENT — 노랑 · 한글 헤비 라운드 양끝 맞춤 -->
+  <section class="blk bg-y">
+    <div class="kd just" style="font-size:60px;line-height:1.08">
+      <div><span>우리는</span><span>작은</span><span>브랜드의</span><span>이야기를</span></div>
+      <div><span>움직이는</span><span>그림으로</span><span>바꿉니다.</span></div>
+      <div><span>기획부터</span><span>캐릭터,</span><span>모션까지</span></div>
+      <div><span>한</span><span>팀이</span><span>끝까지</span><span>책임집니다.</span></div>
+    </div>
+    <div class="ft"><span>About<br>스튜디오 소개</span><span>Page 02</span><span>Copyright 2026</span><span class="wm">BRAND</span></div>
+  </section>
+
+  <!-- SERVICES — 흰 바탕 · 디스플레이 + 도형 리스트 -->
+  <section class="blk bg-w">
+    <div class="disp" style="font-size:96px">
+      <div class="ln"><span class="t">WHAT WE DO</span><span class="pl k" style="font-size:20px;font-family:Righteous">4 Services</span></div>
+    </div>
+    <div class="rows" style="margin-top:34px">
+      <div style="grid-template-columns:84px 200px 1fr auto;padding:20px 0"><i class="sh c r" style="width:52px;height:52px"></i><span class="kd" style="font-size:26px">캐릭터 IP</span><span class="sub mut">성격 · 말투 · 동작 시트까지 한 벌로</span><span class="tag o">4주</span></div>
+      <div style="grid-template-columns:84px 200px 1fr auto;padding:20px 0"><i class="sh hu y" style="width:52px;height:26px"></i><span class="kd" style="font-size:26px">숏폼 모션</span><span class="sub mut">15초 · 30초 컷, 채널별 비율로 납품</span><span class="tag o">주 2편</span></div>
+      <div style="grid-template-columns:84px 200px 1fr auto;padding:20px 0"><i class="sh tri b" style="width:52px;height:52px"></i><span class="kd" style="font-size:26px">브랜드 필름</span><span class="sub mut">60초 메인 필름과 컷다운 3종</span><span class="tag o">8주</span></div>
+      <div style="grid-template-columns:84px 200px 1fr auto;padding:20px 0"><i class="sh cap2 g" style="width:70px;height:40px"></i><span class="kd" style="font-size:26px">매장 키트</span><span class="sub mut">포스터 · 스티커 · 사이니지 그래픽</span><span class="tag o">2주</span></div>
+    </div>
+  </section>
+
+  <!-- PATTERN — 노랑 + 빨강 기하 패턴 · 좌상단 빨강 디스플레이 -->
+  <section class="blk bg-y" style="height:360px;padding:0">
+    <svg class="pat" viewBox="0 0 900 360" width="900" height="360" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><rect width="900" height="360" fill="var(--yellow)"/><path d="M360 0L540 0L540 180Z" fill="var(--red)"/><path d="M540 360L900 360A360 360 0 0 0 540 0Z" fill="var(--red)"/><path d="M540 360L360 360A180 180 0 0 1 540 180Z" fill="var(--red)"/><path d="M0 360A90.0 90.0 0 0 1 180 360Z" fill="var(--red)"/><path d="M180 180L180 360L360 360Z" fill="var(--red)"/></svg>
+    <div style="position:absolute;left:36px;top:36px;z-index:2;color:var(--red)">
+      <div class="disp" style="font-size:64px;line-height:.9">New<br>Project</div>
+      <div class="kd" style="font-size:22px;margin-top:14px">캐릭터 IP 런칭 캠페인</div>
+    </div>
+  </section>
+
+  <!-- METRICS — 코발트 · 큰 숫자 + 캡슐 막대 -->
+  <section class="blk bg-b">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <div class="disp" style="font-size:80px;line-height:.9">Numbers</div>
+      <p class="sub" style="width:260px;color:rgba(255,255,255,.85)">런칭 후 12주, 세 채널 합산 기준입니다.</p>
+    </div>
+    <div style="margin-top:28px">
+      <div style="display:grid;grid-template-columns:200px 1fr 170px;align-items:center;gap:20px;padding:16px 0;border-top:1.5px solid rgba(255,255,255,.5)"><span class="num" style="font-size:64px;text-box:trim-both cap alphabetic">4.2M</span><div class="bar y" style="height:40px;width:92%"></div><div class="kd" style="font-size:21px">누적 조회수</div></div>
+      <div style="display:grid;grid-template-columns:200px 1fr 170px;align-items:center;gap:20px;padding:16px 0;border-top:1.5px solid rgba(255,255,255,.5)"><span class="num" style="font-size:64px;text-box:trim-both cap alphabetic">68%</span><div class="bar r" style="height:40px;width:68%"></div><div class="kd" style="font-size:21px">끝까지 본 비율</div></div>
+      <div style="display:grid;grid-template-columns:200px 1fr 170px;align-items:center;gap:20px;padding:16px 0;border-top:1.5px solid rgba(255,255,255,.5);border-bottom:1.5px solid rgba(255,255,255,.5)"><span class="num" style="font-size:64px;text-box:trim-both cap alphabetic">+31K</span><div class="bar w" style="height:40px;width:44%"></div><div class="kd" style="font-size:21px">새 팔로워</div></div>
+    </div>
+  </section>
+
+  <!-- QUOTE — 흰 바탕 · 거대한 따옴표 + 세리프 인용 -->
+  <section class="blk bg-w" style="height:380px">
+    <svg class="qm" viewBox="0 0 740 720" style="position:absolute;left:-10px;top:0;width:390px;height:380px">
+      <path d="M215 -20H365L345 520H15Z"/><circle cx="180" cy="520" r="165"/>
+      <path d="M580 -20H730L710 520H380Z"/><circle cx="545" cy="520" r="165"/>
+    </svg>
+    <div style="position:absolute;left:430px;right:36px;top:40px">
+      <p class="serif-ko" style="font-size:27px;line-height:1.45">처음엔 30초짜리 영상 하나였는데, 지금은 그 캐릭터가 우리 가게의 얼굴이 됐습니다.”</p>
+      <p style="font-size:14px;margin-top:24px">— 김하늘 · 동네 베이커리 대표</p>
+    </div>
+  </section>
+
+  <!-- CONTACT — 그린 · 흰 대문자 + 연락처 -->
+  <section class="blk bg-g">
+    <div class="disp" style="font-size:150px;color:#fff">
+      <div class="ln"><span class="t">THANK</span><span class="pl y"></span></div>
+      <div class="ln"><span class="pl r" style="font-size:17px">Let’s talk</span><span class="t">YOU!</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:26% 26% 1fr;border-top:1.5px solid rgba(255,255,255,.5);padding-top:16px;margin-top:40px">
+      <div><div class="lab" style="opacity:.7">Mail</div><div style="font-size:16px;margin-top:6px">hello@brand.studio</div></div>
+      <div><div class="lab" style="opacity:.7">Call</div><div style="font-size:16px;margin-top:6px">010-0000-0000</div></div>
+      <div><div class="lab" style="opacity:.7">Next</div><div class="kd" style="font-size:20px;margin-top:4px">30분 통화로 첫 아이디어를 보여 드립니다</div></div>
+    </div>
+    <div class="ft"><span>작은 브랜드를 위한<br>애니메이션 스튜디오</span><span>Page 07</span><span>Copyright 2026</span><span class="wm">BRAND</span></div>
+  </section>
+
+</div>
+</body>
+</html>

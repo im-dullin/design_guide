@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Sample Deck · Violet Grid</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/violet-grid.css">
+</head>
+<body class="deck">
+<!--
+  슬라이드 아키타입 8종. 필요한 것만 복제해서 내용만 교체하세요.
+  구조: .slide > .pg(.v|.w|.g|.k) > .side(좌상단 라벨+노트) + .at 블록(12열 배치) + .rf(러닝 푸터)
+  열 배치: <div class="at" style="--c:시작열;--s:칸수;top:..px">  (1280 기준 여백 40 · 거터 16 · 12열)
+  페이지 색은 바이올렛 · 화이트 · 그레이 · 블랙을 돌려 쓰고, 같은 색을 연속 2장 넘게 두지 않는다.
+-->
+
+<!-- 01 COVER — 바이올렛 · 좌상단 노트 + 상단 메타 + 하단 거대 대문자 제목 -->
+<section class="slide"><div class="pg v">
+  <div class="side">
+    <div class="lbl">Growth Proposal</div>
+    <p class="note" style="margin-top:10px">설치에서 끝나지 않고, 30일 뒤에도 남는 사용자를 만드는 12주 실행 계획입니다.</p>
+  </div>
+  <div class="at" style="--c:7;--s:3;top:34px"><div class="lbl">Prepared for</div><p class="note" style="margin-top:10px">클라이언트명<br>모바일 앱 서비스팀</p></div>
+  <div class="at" style="--c:10;--s:3;top:34px;text-align:right"><div class="lbl">Vol. 01</div><p class="note" style="margin-top:10px">2026.11.06<br>대외비</p></div>
+  <div class="at dsp" style="--c:1;--s:12;top:300px;font-size:156px">Grow <em>F</em>aster,<br>Stay Longer</div>
+  <div class="at kd" style="--c:1;--s:6;top:592px;font-size:30px">앱 성장 실행 제안서</div>
+  <div class="at" style="--c:7;--s:6;top:600px;display:flex;gap:8px;justify-content:flex-end"><span class="chip k">12 Weeks</span><span class="chip">D30 Retention +35.5%</span></div>
+  <div class="rf"><span>Brand</span><span>Growth Proposal 2027</span><span>Cover</span><span>01 / 08</span></div>
+</div></section>
+
+<!-- 02 CONTENTS — 화이트 · 거대 대문자 목차 + 우측 바이올렛 페이지 번호 -->
+<section class="slide"><div class="pg w">
+  <div class="side">
+    <div class="lbl">Table of Contents</div>
+    <p class="note" style="margin-top:10px">여섯 개 장으로 구성했습니다. 앞의 세 장은 문제와 전략, 뒤의 세 장은 실행과 연락입니다.</p>
+  </div>
+  <div class="at toc" style="--c:4;--s:9;top:92px">
+    <div><span class="t" style="font-size:82px">Overview</span><span class="c">제안 개요</span><span class="n" style="font-size:82px">03</span></div>
+    <div><span class="t" style="font-size:82px">Strategy</span><span class="c">성장 전략</span><span class="n" style="font-size:82px">04</span></div>
+    <div><span class="t" style="font-size:82px">Metrics</span><span class="c">핵심 지표</span><span class="n" style="font-size:82px">05</span></div>
+    <div><span class="t" style="font-size:82px">Roadmap</span><span class="c">12주 일정</span><span class="n" style="font-size:82px">06</span></div>
+    <div><span class="t" style="font-size:82px">Services</span><span class="c">채널과 업종</span><span class="n" style="font-size:82px">07</span></div>
+    <div><span class="t" style="font-size:82px">Contact</span><span class="c">담당자</span><span class="n" style="font-size:82px">08</span></div>
+  </div>
+  <div class="rf"><span>Brand</span><span>Growth Proposal 2027</span><span>Contents</span><span>02 / 08</span></div>
+</div></section>
+
+<!-- 03 DIVIDER — 블랙 · 강조 글자 스왑 대문자 제목 + 상단 한글 헤드라인 -->
+<section class="slide"><div class="pg k">
+  <div class="side">
+    <div class="lbl">01 — Overview</div>
+    <p class="note" style="margin-top:10px">광고비를 늘리면 설치는 늘지만, 남는 사용자는 늘지 않습니다. 이 장은 그 간격을 다룹니다.</p>
+  </div>
+  <div class="at kd" style="--c:7;--s:6;top:34px;font-size:40px">광고비가 아니라<br><b>남는 사용자</b>를 키웁니다</div>
+  <div class="at dsp" style="--c:1;--s:12;top:340px;font-size:150px">Scale <em>U</em>sers,<br>Not C<em>o</em>sts</div>
+  <div class="rf"><span>Brand</span><span>Growth Proposal 2027</span><span>01 Overview</span><span>03 / 08</span></div>
+</div></section>
+
+<!-- 04 STATEMENT — 바이올렛 · 문단형 대형 한글 + 하단 3열 노트 -->
+<section class="slide"><div class="pg v">
+  <div class="side">
+    <div class="lbl">02 — Strategy</div>
+    <p class="note" style="margin-top:10px">제안의 핵심을 한 문단으로 먼저 말하고, 아래 세 칸에서 실행 방식을 나눕니다.</p>
+  </div>
+  <p class="at st" style="--c:4;--s:9;top:30px;font-size:50px">우리는 설치 수가 아니라 <b>30일 뒤에도 앱을 여는 사용자</b>를 기준으로 캠페인을 설계합니다. 데이터로 시작하고, 소재로 확장하고, 리텐션으로 증명합니다.</p>
+  <div class="at" style="--c:4;--s:3;top:500px;border-top:1px solid rgba(0,0,0,.28);padding-top:12px"><div class="lbl">01 Data</div><p class="note" style="margin-top:8px">이벤트 설계와 코호트 분석으로 이탈 구간을 먼저 찾습니다.</p></div>
+  <div class="at" style="--c:7;--s:3;top:500px;border-top:1px solid rgba(0,0,0,.28);padding-top:12px"><div class="lbl">02 Creative</div><p class="note" style="margin-top:8px">주 단위로 소재를 교체하고, 이긴 메시지만 예산을 키웁니다.</p></div>
+  <div class="at" style="--c:10;--s:3;top:500px;border-top:1px solid rgba(0,0,0,.28);padding-top:12px"><div class="lbl">03 Retention</div><p class="note" style="margin-top:8px">푸시·CRM 시나리오로 첫 7일의 재방문을 설계합니다.</p></div>
+  <div class="rf"><span>Brand</span><span>Growth Proposal 2027</span><span>02 Strategy</span><span>04 / 08</span></div>
+</div></section>
+
+<!-- 05 METRICS — 그레이 · 스탯 카드 3개 (흰 · 블랙 · 흰), 차트는 바이올렛 틴트 -->
+<section class="slide"><div class="pg g">
+  <div class="side">
+    <div class="lbl">03 — Metrics</div>
+    <p class="note" style="margin-top:10px">유사 업종 앱 3곳의 첫 90일 평균입니다. 수치는 예시이며 실제 제안 시 교체합니다.</p>
+  </div>
+  <div class="at kd" style="--c:4;--s:9;top:34px;font-size:40px">숫자로 보는 <b>첫 90일</b></div>
+  <div class="at" style="--c:4;--s:9;top:200px;height:400px;display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:16px;align-items:end">
+    <div class="card w" style="height:300px">
+      <div class="hd"><span class="lbl">New Installs</span><span class="cap">90일</span></div>
+      <div class="num" style="font-size:54px;margin-top:22px">48.2K</div>
+      <div class="cap" style="margin-top:8px">신규 설치 · 유료 62%</div>
+      <div class="vbars" style="height:84px;margin-top:auto"><i class="d" style="height:30%"></i><i class="d" style="height:42%"></i><i class="c" style="height:38%"></i><i class="c" style="height:55%"></i><i class="b" style="height:64%"></i><i class="b" style="height:72%"></i><i class="a" style="height:100%"></i></div>
+    </div>
+    <div class="card k" style="height:400px">
+      <div class="hd"><span class="lbl">D30 Retention</span><span class="chip v" style="height:24px;font-size:12px">+8.1p</span></div>
+      <div class="num" style="font-size:72px;margin-top:26px">23.45<span style="font-size:32px">%</span></div>
+      <div class="cap" style="margin-top:10px">30일 잔존율 · 업계 평균 15.3%</div>
+      <svg class="area" viewBox="0 0 300 150" style="margin-top:auto;height:150px" preserveAspectRatio="none">
+        <line class="gl" x1="0" y1="50" x2="300" y2="50"/><line class="gl" x1="0" y1="100" x2="300" y2="100"/>
+        <path class="f" d="M0 150V118L30 112L60 120L90 96L120 102L150 80L180 88L210 60L240 70L270 34L300 42V150Z"/>
+        <path class="s" style="stroke:#fff" d="M0 118L30 112L60 120L90 96L120 102L150 80L180 88L210 60L240 70L270 34L300 42"/>
+      </svg>
+    </div>
+    <div class="card w" style="height:300px">
+      <div class="hd"><span class="lbl">ROAS</span><span class="cap">vs. 이전 분기</span></div>
+      <div class="num vt" style="font-size:54px;margin-top:22px">+35.5<span style="font-size:26px">%</span></div>
+      <div class="cap" style="margin-top:8px">광고 수익률 개선</div>
+      <div class="vbars" style="height:84px;margin-top:auto;gap:8px"><i class="d" style="height:46%"></i><i class="a" style="height:100%"></i><i class="d" style="height:58%"></i><i class="b" style="height:84%"></i></div>
+    </div>
+  </div>
+  <div class="at" style="--c:1;--s:3;top:520px"><div class="num" style="font-size:80px">90<span style="font-size:30px">d</span></div><div class="cap" style="margin-top:8px">측정 기간 · 2026.06–08</div></div>
+  <div class="rf"><span>Brand</span><span>Growth Proposal 2027</span><span>03 Metrics</span><span>05 / 08</span></div>
+</div></section>
+
+<!-- 06 ROADMAP — 화이트 · 좌측 대형 디스플레이 + 우측 헤어라인 단계 행 -->
+<section class="slide"><div class="pg w">
+  <div class="side">
+    <div class="lbl">04 — Roadmap</div>
+    <p class="note" style="margin-top:10px">12주를 네 단계로 나눕니다. 단계마다 산출물과 리뷰 시점이 정해져 있습니다.</p>
+  </div>
+  <div class="at dsp" style="--c:1;--s:6;top:380px;font-size:132px">12 Week<br>R<em>o</em>admap</div>
+  <div class="at rows" style="--c:7;--s:6;top:34px">
+    <div style="grid-template-columns:76px 1fr 96px;padding:20px 0 22px"><span class="num vt" style="font-size:40px">01</span><div><div class="kd" style="font-size:21px">진단과 이벤트 설계</div><p class="note" style="margin-top:6px">SDK 점검 · 핵심 이벤트 12개 정의 · 코호트 기준선</p></div><span class="tag" style="justify-self:end">W1–2</span></div>
+    <div style="grid-template-columns:76px 1fr 96px;padding:20px 0 22px"><span class="num vt" style="font-size:40px">02</span><div><div class="kd" style="font-size:21px">캠페인 셋업</div><p class="note" style="margin-top:6px">채널 4곳 동시 집행 · 소재 20종 A/B 테스트</p></div><span class="tag" style="justify-self:end">W3–6</span></div>
+    <div style="grid-template-columns:76px 1fr 96px;padding:20px 0 22px"><span class="num vt" style="font-size:40px">03</span><div><div class="kd" style="font-size:21px">리텐션 시나리오</div><p class="note" style="margin-top:6px">온보딩 푸시 · 휴면 복귀 CRM · 7일 재방문 설계</p></div><span class="tag f" style="justify-self:end">W7–10</span></div>
+    <div style="grid-template-columns:76px 1fr 96px;padding:20px 0 22px"><span class="num vt" style="font-size:40px">04</span><div><div class="kd" style="font-size:21px">확장과 리포트</div><p class="note" style="margin-top:6px">이긴 채널 예산 재배분 · 최종 리포트 · 다음 분기 제안</p></div><span class="tag" style="justify-self:end">W11–12</span></div>
+  </div>
+  <div class="rf"><span>Brand</span><span>Growth Proposal 2027</span><span>04 Roadmap</span><span>06 / 08</span></div>
+</div></section>
+
+<!-- 07 SERVICES — 블랙 · 흰 선 아이콘 그리드 + 업종 태그 -->
+<section class="slide"><div class="pg k">
+  <div class="side">
+    <div class="lbl">05 — Services</div>
+    <p class="note" style="margin-top:10px">획득부터 리텐션까지 한 팀이 운영합니다. 필요한 채널만 골라 조합할 수 있습니다.</p>
+  </div>
+  <div class="at kd" style="--c:4;--s:9;top:34px;font-size:40px">앱 성장에 필요한<br><b>열두 가지 채널</b></div>
+  <div class="at icg" style="--c:4;--s:9;top:250px">
+    <div><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg><span class="cap">퍼포먼스 광고</span></div>
+    <div><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><span class="cap">ASO · 검색</span></div>
+    <div><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9.5v5l4.5-2.5z"/></svg><span class="cap">영상 소재</span></div>
+    <div><svg class="ic" viewBox="0 0 24 24"><circle cx="9" cy="9" r="3.5"/><path d="M2.5 20c.8-3.5 3.3-5 6.5-5s5.7 1.5 6.5 5M16 5.5a3.5 3.5 0 0 1 0 7M18 15c2 .6 3.2 2.2 3.5 5"/></svg><span class="cap">인플루언서</span></div>
+    <div><svg class="ic" viewBox="0 0 24 24"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4l2-2zM10 21h4"/></svg><span class="cap">푸시 알림</span></div>
+    <div><svg class="ic" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg><span class="cap">CRM 메시지</span></div>
+    <div><svg class="ic" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/></svg><span class="cap">코호트 분석</span></div>
+    <div><svg class="ic" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg><span class="cap">SDK 연동</span></div>
+    <div><svg class="ic" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5"/><rect x="13.5" y="4" width="6.5" height="6.5"/><rect x="4" y="13.5" width="6.5" height="6.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5"/></svg><span class="cap">대시보드</span></div>
+    <div><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9S9.5 5.5 12 3z"/></svg><span class="cap">글로벌 런칭</span></div>
+    <div><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4-3 7.5-7 9-4-1.5-7-5-7-9V6z"/></svg><span class="cap">어뷰징 검수</span></div>
+    <div><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 9.5c-.5-1-1.6-1.5-3-1.5-1.7 0-3 .8-3 2s1.3 1.7 3 2 3 .8 3 2-1.3 2-3 2c-1.4 0-2.5-.5-3-1.5M12 6.5V8M12 16v1.5"/></svg><span class="cap">예산 운영</span></div>
+  </div>
+  <div class="at" style="--c:4;--s:9;top:560px;display:flex;gap:8px;flex-wrap:wrap"><span class="tag">E-Commerce</span><span class="tag">Education</span><span class="tag f">Healthcare</span><span class="tag">Gaming</span><span class="tag">Fintech</span></div>
+  <div class="rf"><span>Brand</span><span>Growth Proposal 2027</span><span>05 Services</span><span>07 / 08</span></div>
+</div></section>
+
+<!-- 08 CLOSING — 좌 바이올렛(제목 + 프로필 필) · 우 워드마크 타일 2×2 -->
+<section class="slide"><div class="pg v">
+  <div class="side">
+    <div class="lbl">06 — Contact</div>
+    <p class="note" style="margin-top:10px">제안 내용 검토 후 30분 킥오프 미팅을 요청드립니다.</p>
+  </div>
+  <div class="at dsp" style="--c:1;--s:6;top:150px;font-size:138px">Let’s<br>Gr<em>o</em>w</div>
+  <div class="at" style="--c:1;--s:5;top:440px;display:flex;flex-direction:column;gap:10px">
+    <div class="prof"><div class="av">HR</div><div><div class="nm">김하린 · 그로스 리드</div><div class="ds">제안 · 계약 문의 — harin@brand.kr</div></div></div>
+    <div class="prof"><div class="av">DY</div><div><div class="nm">이도윤 · 퍼포먼스 매니저</div><div class="ds">캠페인 운영 문의 — 010-0000-0000</div></div></div>
+  </div>
+  <div style="position:absolute;left:640px;right:0;top:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr">
+    <div class="wt k"><span class="lbl">On Black</span><span class="wm" style="font-size:40px">Brand</span></div>
+    <div class="wt l"><span class="lbl">On Lavender</span><span class="wm" style="font-size:40px">Brand</span></div>
+    <div class="wt w"><span class="lbl">On White</span><span class="wm" style="font-size:40px">Brand</span></div>
+    <div class="wt v"><span class="lbl">On Violet</span><span class="wm" style="font-size:40px">Brand</span></div>
+  </div>
+  <div class="rf" style="right:680px;grid-template-columns:repeat(6,1fr)"><span style="grid-column:1/3">Brand</span><span style="grid-column:3/5">Growth Proposal 2027</span><span style="display:none"></span><span style="grid-column:5/7">08 / 08</span></div>
+</div></section>
+</body>
+</html>

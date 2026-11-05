@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Sample Doc · Clean Business</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/clean-business.css">
+</head>
+<body class="doc">
+<!--
+  세로 롱페이지(웹뷰 · 한 장 PDF · 모바일 공유용). 900px 고정 폭.
+  섹션 = .sec.lt / .sec.dk 를 이어 붙인다. 라이트 섹션끼리는 헤어라인으로 구분.
+  다크 섹션은 문서 전체에서 2개(지표 · 마무리)까지만.
+-->
+<div class="wrap">
+
+  <!-- HERO — 라이트 · 상단 바 + 대형 제목 + Presented by + 헤어라인 + 3열 메타 -->
+  <section class="sec lt" style="padding-top:40px;padding-bottom:48px">
+    <div class="tb">
+      <div class="side"><span class="logo"><svg viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Brand</span><span class="pill">Company Profile</span></div>
+      <div class="side"><span class="pill">Plan 2027</span><span class="cbtn"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 8v9H8"/></svg></span></div>
+    </div>
+    <div class="disp" style="font-size:104px;margin-top:150px">Company<br>Profile</div>
+    <div style="margin-top:40px;font-size:13.5px"><span class="lbl" style="font-size:13px">Presented by</span>&nbsp;&nbsp;<b style="font-weight:500">김서윤 · 사업전략팀</b></div>
+    <div class="hr" style="margin-top:72px"></div>
+    <div class="meta" style="margin-top:20px">
+      <div><span class="lbl">Contact</span><span class="val">02-000-0000</span></div>
+      <div><span class="lbl">Date</span><span class="val">November 2026</span></div>
+      <div><span class="lbl">Website</span><span class="val">www.brand.example</span></div>
+    </div>
+  </section>
+
+  <!-- CONTENTS — 라이트 · 제목 줄 + 다크 라운드 패널 목차 -->
+  <section class="sec lt">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <div style="display:flex;align-items:center;gap:18px"><div class="disp" style="font-size:60px">Our Contents</div><span class="cbtn ne" style="margin-top:8px"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 8v9H8"/></svg></span></div>
+      <span class="copy"><b>©2026 Brand.</b> All rights reserved.</span>
+    </div>
+    <div class="panel dk rows" style="margin-top:32px;padding:8px 40px">
+      <div style="grid-template-columns:140px 1fr 40px;padding:22px 0"><span><span class="pill">Section 1</span></span><span class="t">회사 소개</span><span class="idx" style="text-align:right">(1)</span></div>
+      <div style="grid-template-columns:140px 1fr 40px;padding:22px 0"><span><span class="pill">Section 2</span></span><span class="t">핵심 지표</span><span class="idx" style="text-align:right">(2)</span></div>
+      <div style="grid-template-columns:140px 1fr 40px;padding:22px 0"><span><span class="pill">Section 3</span></span><span class="t">서비스 구성</span><span class="idx" style="text-align:right">(3)</span></div>
+      <div style="grid-template-columns:140px 1fr 40px;padding:22px 0"><span><span class="pill">Section 4</span></span><span class="t">2027 로드맵</span><span class="idx" style="text-align:right">(4)</span></div>
+    </div>
+  </section>
+
+  <!-- ABOUT — 라이트 · 라벨 + 스테이트먼트 + 이미지 자리 16:9 + 3열 사실 -->
+  <section class="sec lt">
+    <div style="display:flex;justify-content:space-between;align-items:center"><span class="pill">01 About</span><span class="idx">(1)</span></div>
+    <h2 class="h" style="margin-top:28px">중소 제조기업의 운영 데이터를 정리하고,<br>다음 분기에 할 일을 한 장으로 만드는<br>운영 전략 파트너입니다.</h2>
+    <p class="sub" style="margin-top:16px">컨설팅 보고서로 끝내지 않습니다.<br>진단부터 실행 점검까지 같은 담당자가 분기 단위로 함께합니다.</p>
+    <div class="ph" data-label="이미지 자리 · 788×420 · 흑백 권장" style="height:420px;margin-top:36px"></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:28px">
+      <div><span class="lbl">Founded</span><div class="t" style="margin-top:6px;font-size:17px">2019년 설립</div><p class="cap" style="margin-top:4px">서울 · 창원 두 거점</p></div>
+      <div><span class="lbl">Focus</span><div class="t" style="margin-top:6px;font-size:17px">제조 운영 진단</div><p class="cap" style="margin-top:4px">생산 · 재고 · 원가 데이터</p></div>
+      <div><span class="lbl">Clients</span><div class="t" style="margin-top:6px;font-size:17px">누적 140개 사</div><p class="cap" style="margin-top:4px">연 매출 50억~500억 규모</p></div>
+    </div>
+  </section>
+
+  <!-- NUMBERS — 다크 · 제목 줄 + 2×2 헤어라인 숫자 (강조 1칸만 진한 윗선) -->
+  <section class="sec dk">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <div><span class="pill">02 Numbers</span><div class="disp" style="font-size:64px;margin-top:24px">Key Numbers</div></div>
+      <p class="sub" style="text-align:right">2026년 3분기 기준<br>고객사 140곳 평균값</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;column-gap:32px;row-gap:40px;margin-top:44px">
+      <div style="border-top:1px solid var(--hair);padding-top:16px"><span class="lbl">Clients</span><div class="num" style="font-size:64px;margin-top:22px">140</div><p class="cap" style="margin-top:10px">누적 고객사</p></div>
+      <div style="border-top:1px solid var(--hair);padding-top:16px"><span class="lbl">Retention</span><div class="num" style="font-size:64px;margin-top:22px">87<span style="font-size:28px">%</span></div><p class="cap" style="margin-top:10px">2년 차 재계약률</p></div>
+      <div style="border-top:1px solid var(--fg);padding-top:16px"><span class="lbl" style="color:var(--fg)">Cost</span><div class="num" style="font-size:64px;margin-top:22px">−12<span style="font-size:28px">%</span></div><p class="cap" style="margin-top:10px">도입 6개월 후 원가 절감</p></div>
+      <div style="border-top:1px solid var(--hair);padding-top:16px"><span class="lbl">Lead time</span><div class="num" style="font-size:64px;margin-top:22px">3.4<span style="font-size:28px">d</span></div><p class="cap" style="margin-top:10px">평균 납기 단축</p></div>
+    </div>
+  </section>
+
+  <!-- SERVICES — 라이트 · 헤어라인 리스트 (번호 · 필 · 제목/캡션 · 원형 버튼) -->
+  <section class="sec lt">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <div><span class="pill">03 Services</span><div class="disp" style="font-size:64px;margin-top:24px">What We Do</div></div>
+      <span class="idx">(3)</span>
+    </div>
+    <div class="rows open" style="margin-top:36px">
+      <div style="grid-template-columns:150px 1fr 40px;padding:24px 0"><span><span class="pill sm">Service 01</span></span><div><div class="t">운영 데이터 진단</div><p class="cap" style="margin-top:4px">4주 안에 생산·재고 흐름을 한 장의 지도로 정리합니다.</p></div><span class="cbtn"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 8v9H8"/></svg></span></div>
+      <div style="grid-template-columns:150px 1fr 40px;padding:24px 0"><span><span class="pill sm">Service 02</span></span><div><div class="t">원가 구조 개선</div><p class="cap" style="margin-top:4px">품목별 원가를 다시 쪼개 줄일 수 있는 항목을 찾습니다.</p></div><span class="cbtn"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 8v9H8"/></svg></span></div>
+      <div style="grid-template-columns:150px 1fr 40px;padding:24px 0"><span><span class="pill sm">Service 03</span></span><div><div class="t">분기 실행 리포트</div><p class="cap" style="margin-top:4px">매 분기 다음 할 일 5가지를 우선순위와 함께 전달합니다.</p></div><span class="cbtn"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 8v9H8"/></svg></span></div>
+    </div>
+  </section>
+
+  <!-- ROADMAP — 라이트 · 분기 행 리스트 (현재 분기만 채운 필) -->
+  <section class="sec lt">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <div><span class="pill">04 Roadmap</span><div class="disp" style="font-size:64px;margin-top:24px">Roadmap 2027</div></div>
+      <span class="idx">(4)</span>
+    </div>
+    <div class="rows open" style="margin-top:36px">
+      <div style="grid-template-columns:150px 1fr 220px;padding:20px 0"><span class="up">Q1 <span class="pill sm on" style="margin-left:10px">Now</span></span><span class="t" style="font-size:17px">창원 거점 확장</span><span class="cap" style="text-align:right">현장 진단 인력 2배</span></div>
+      <div style="grid-template-columns:150px 1fr 220px;padding:20px 0"><span class="up">Q2</span><span class="t" style="font-size:17px">진단 도구 출시</span><span class="cap" style="text-align:right">자가 진단 웹 도구 무료 공개</span></div>
+      <div style="grid-template-columns:150px 1fr 220px;padding:20px 0"><span class="up">Q3</span><span class="t" style="font-size:17px">원가 벤치마크</span><span class="cap" style="text-align:right">업종별 원가 지표 연 1회 발간</span></div>
+      <div style="grid-template-columns:150px 1fr 220px;padding:20px 0"><span class="up">Q4</span><span class="t" style="font-size:17px">고객사 200곳</span><span class="cap" style="text-align:right">재계약률 90% 유지</span></div>
+    </div>
+  </section>
+
+  <!-- CONTACT — 다크 · 표지와 같은 뼈대 -->
+  <section class="sec dk" style="padding-bottom:40px">
+    <div class="tb">
+      <span class="logo"><svg viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>Brand</span>
+      <div class="side"><span class="pill">Contact</span><span class="cbtn"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 8v9H8"/></svg></span></div>
+    </div>
+    <div class="disp" style="font-size:104px;margin-top:96px">Thank You</div>
+    <div style="margin-top:32px;font-size:13.5px"><span class="lbl" style="font-size:13px">Next step</span>&nbsp;&nbsp;<b style="font-weight:500">4주 무료 진단 상담을 예약해 주세요.</b></div>
+    <div class="hr" style="margin-top:64px"></div>
+    <div class="meta" style="margin-top:20px">
+      <div><span class="lbl">Contact</span><span class="val">02-000-0000</span></div>
+      <div><span class="lbl">Email</span><span class="val">hello@brand.example</span></div>
+      <div><span class="lbl">Website</span><span class="val">www.brand.example</span></div>
+    </div>
+    <div class="copy" style="margin-top:48px;color:var(--sub)"><b>©2026 Brand.</b> All rights reserved.</div>
+  </section>
+
+</div>
+</body>
+</html>

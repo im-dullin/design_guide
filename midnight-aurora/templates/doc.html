@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Sample Doc · Midnight Aurora</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/midnight-aurora.css">
+</head>
+<body class="doc">
+<!--
+  세로 롱페이지(웹뷰 · 한 장 PDF · 모바일 공유용). 900px 고정 폭.
+  섹션 = .sec(검정, radius 8)를 10px 간격으로 차콜 페이지 위에 쌓기.
+  오로라는 Hero 한 곳에만. 하이라이트 열과 막대는 각자 섹션 하나씩.
+-->
+<div class="wrap">
+
+  <!-- HERO — 오로라 · 워드마크 · 영문 디스플레이 · 리드 · 지표 3개 -->
+  <section class="sec" style="padding-top:44px;padding-bottom:44px">
+    <div class="aurora"></div>
+    <div class="top"><span class="wm">brandname</span><span class="lbl">Company Brief · 2026</span></div>
+    <div class="on-aurora" style="margin-top:150px">
+      <div class="disp" style="font-size:64px">Team Knowledge,<br>Finally Connected</div>
+      <p class="lead" style="margin-top:20px">흩어진 팀의 지식을 하나로 잇는 AI 업무 플랫폼</p>
+    </div>
+    <div class="on-aurora" style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:64px">
+      <div style="border-top:1px solid var(--hair);padding-top:18px"><div class="num ink-ice" style="font-size:44px">−52<span style="font-size:22px">%</span></div><div class="cap" style="margin-top:10px">검색 시간 감소</div></div>
+      <div style="border-top:1px solid var(--hair);padding-top:18px"><div class="num" style="font-size:44px">42</div><div class="cap" style="margin-top:10px">베타 도입 팀</div></div>
+      <div style="border-top:1px solid var(--hair);padding-top:18px"><div class="num" style="font-size:44px">2.4<span style="font-size:22px">s</span></div><div class="cap" style="margin-top:10px">평균 응답 시간</div></div>
+    </div>
+  </section>
+
+  <!-- PROBLEM — 라벨 · 문장 헤드라인 · 서브 · 번호 3행 -->
+  <section class="sec">
+    <div class="lbl">Problem</div>
+    <h2 class="h" style="margin-top:28px">팀이 일하는 시간의 <span class="a">3분의 1은</span><br>정보를 찾는 데 쓰입니다</h2>
+    <p class="sub" style="margin-top:18px">도구는 늘었지만 지식은 더 흩어졌습니다.</p>
+    <div class="rows" style="margin-top:36px">
+      <div style="grid-template-columns:56px 1fr 120px;padding:20px 0"><span class="num ink-mute" style="font-size:12px">(01)</span><div><div class="t">하루 평균 검색 시간</div><div class="cap" style="margin-top:3px">메신저 · 문서 · 메일을 오가며 찾는 시간</div></div><span class="num ink-ice" style="font-size:34px;text-align:right">4.2<span style="font-size:16px">h</span></span></div>
+      <div style="grid-template-columns:56px 1fr 120px;padding:20px 0"><span class="num ink-mute" style="font-size:12px">(02)</span><div><div class="t">팀이 쓰는 업무 도구</div><div class="cap" style="margin-top:3px">지식이 도구마다 나뉘어 저장됩니다</div></div><span class="num" style="font-size:34px;text-align:right">11</span></div>
+      <div style="grid-template-columns:56px 1fr 120px;padding:20px 0"><span class="num ink-mute" style="font-size:12px">(03)</span><div><div class="t">같은 질문의 반복</div><div class="cap" style="margin-top:3px">이미 답이 있는 질문이 다시 올라옵니다</div></div><span class="num" style="font-size:34px;text-align:right">62<span style="font-size:16px">%</span></span></div>
+    </div>
+  </section>
+
+  <!-- COMPETITORS — 비교표 + 하이라이트 열 -->
+  <section class="sec">
+    <div class="lbl">Competitors</div>
+    <h2 class="h" style="margin-top:28px">다른 도구는 검색하고,<br><span class="a">우리는 맥락을 이해합니다</span></h2>
+    <div class="cmp" style="margin-top:44px">
+      <div class="hl" style="left:300px;width:96px"></div>
+      <div class="r head" style="grid-template-columns:300px repeat(4,96px) 1fr"><span></span><span class="me">brandname</span><span>Tool A</span><span>Tool B</span><span>Tool C</span><span></span></div>
+      <div class="r" style="grid-template-columns:300px repeat(4,96px) 1fr"><span>여러 도구 동시 검색</span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span></span></div>
+      <div class="r" style="grid-template-columns:300px repeat(4,96px) 1fr"><span>맥락 기반 이해</span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><i class="nx"></i></span><span><i class="nx"></i></span><span><i class="nx"></i></span><span></span></div>
+      <div class="r" style="grid-template-columns:300px repeat(4,96px) 1fr"><span>지식 자동 갱신</span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><i class="nx"></i></span><span><i class="nx"></i></span><span></span></div>
+      <div class="r" style="grid-template-columns:300px repeat(4,96px) 1fr"><span>문서 초안 작성</span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><i class="nx"></i></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span></span></div>
+    </div>
+    <div class="cap" style="margin-top:26px">Tool A–C · 공개 기능 기준 비교</div>
+  </section>
+
+  <!-- FINANCIALS — 좌측 디스플레이 + 성장 동력, 우측 프레임 막대 -->
+  <section class="sec" style="display:grid;grid-template-columns:300px 1fr;gap:32px;padding-top:44px;padding-bottom:44px">
+    <div style="display:flex;flex-direction:column">
+      <div class="lbl">Financials</div>
+      <div class="disp" style="font-size:40px;margin-top:28px">Annual<br>Recurring<br>Revenue</div>
+      <p class="cap" style="margin-top:14px">연간 반복 매출 전망 · 단위 억 원</p>
+      <div style="margin-top:auto">
+        <div class="nl-t">Growth drivers</div>
+        <ul class="nl"><li data-n="(01)">제품 주도 성장</li><li data-n="(02)">엔터프라이즈 확장</li><li data-n="(03)">팀 단위 바이럴</li></ul>
+      </div>
+    </div>
+    <div class="frame" style="height:400px;padding-top:28px">
+      <div class="chart" style="padding:0 20px;gap:10px">
+        <div class="b" style="height:24%"><span class="v" style="font-size:30px">12</span><span class="y">2026</span></div>
+        <div class="b" style="height:50%"><span class="v" style="font-size:30px">34</span><span class="y">2027</span></div>
+        <div class="b" style="height:92%"><span class="v" style="font-size:30px">80</span><span class="y">2028</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP — 번호 리스트 대형 + 시기 -->
+  <section class="sec">
+    <div class="lbl">Roadmap</div>
+    <h2 class="h" style="margin-top:28px">다음 18개월, <span class="a">세 단계로</span> 넓힙니다</h2>
+    <div class="rows" style="margin-top:36px">
+      <div style="grid-template-columns:56px 1fr 140px;padding:22px 0"><span class="num ink-mute" style="font-size:12px">(01)</span><div><div class="t" style="font-size:18px;font-weight:300">팀 플랜 정식 출시</div><div class="cap" style="margin-top:4px">연결 도구 20종 · 셀프 온보딩</div></div><span class="num ink-sub" style="font-size:15px;text-align:right">2026 Q4</span></div>
+      <div style="grid-template-columns:56px 1fr 140px;padding:22px 0"><span class="num ink-mute" style="font-size:12px">(02)</span><div><div class="t" style="font-size:18px;font-weight:300">엔터프라이즈 보안 인증</div><div class="cap" style="margin-top:4px">권한 동기화 · 감사 로그</div></div><span class="num ink-sub" style="font-size:15px;text-align:right">2027 Q2</span></div>
+      <div style="grid-template-columns:56px 1fr 140px;padding:22px 0"><span class="num ink-ice" style="font-size:12px">(03)</span><div><div class="t ink-ice" style="font-size:18px;font-weight:300">업무 자동화 에이전트</div><div class="cap" style="margin-top:4px">반복 보고서 · 회의록 자동 작성</div></div><span class="num ink-ice" style="font-size:15px;text-align:right">2027 Q4</span></div>
+    </div>
+  </section>
+
+  <!-- CONTACT — 짧은 마무리 + 연락처 -->
+  <section class="sec" style="display:flex;justify-content:space-between;align-items:flex-end;padding-top:44px;padding-bottom:44px">
+    <div><div class="disp" style="font-size:48px">Let’s talk</div><p class="sub" style="margin-top:12px">도입 상담과 데모는 언제든 열려 있습니다.</p></div>
+    <div class="rows" style="width:320px">
+      <div style="grid-template-columns:90px 1fr;padding:12px 0"><span class="lbl">Contact</span><span class="t" style="font-weight:300;font-size:14px">홍길동 · 대표</span></div>
+      <div style="grid-template-columns:90px 1fr;padding:12px 0"><span class="lbl">Email</span><span class="t" style="font-weight:300;font-size:14px">hello@brandname.example</span></div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

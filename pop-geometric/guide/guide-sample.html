@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Pop Geometric · Design Guide</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Righteous&family=Jua&family=Instrument+Serif&family=Noto+Serif+KR:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/pop.css">
+<style>
+  .sw{border-radius:999px;display:flex;flex-direction:column;justify-content:center;padding:0 34px}
+  .sw b{font-family:Righteous;font-weight:400;font-size:26px;text-transform:uppercase}
+  .sw span{font-size:13px;margin-top:4px;opacity:.85}
+  .ty{display:grid;grid-template-columns:250px 1fr;align-items:center;border-top:1.5px solid currentColor;padding:16px 0}
+  .ty:last-child{border-bottom:1.5px solid currentColor}
+  .arch{display:block;width:100%;border-radius:6px}
+  .li{padding:13px 0;border-top:1.5px solid currentColor;font-size:15px;display:flex;gap:12px}
+  .li:last-child{border-bottom:1.5px solid currentColor}
+  .li i{font-style:normal;font-family:Righteous;width:16px;flex:none}
+</style>
+</head>
+<body class="deck">
+
+<!-- 01 COVER -->
+<section class="slide bg-w">
+  <div class="fill disp" style="font-size:212px;top:44px">
+    <div class="ln"><span class="t">POP</span><span class="pl r" style="font-size:18px">Design Guide · v1.0</span></div>
+    <div class="ln"><span class="t">GEO</span><span class="pl y"></span><span class="t">ME</span></div>
+    <div class="ln"><span class="t">TRIC</span><span class="pl b" style="font-size:18px">Deck + Doc</span><span class="pl g fix" style="width:240px"></span></div>
+  </div>
+  <div class="ft"><span>둥근 기하 대문자 · 원색 캡슐<br>통짜 배경의 팝 스튜디오 덱</span><span>Page 01</span><span>Copyright 2026</span><span class="wm">POP GEO</span></div>
+</section>
+
+<!-- 02 COLOR -->
+<section class="slide bg-k">
+  <div style="position:absolute;left:40px;right:40px;top:44px;display:flex;justify-content:space-between;align-items:flex-end">
+    <div class="disp" style="font-size:112px;line-height:.9">Color</div>
+    <p class="sub" style="width:360px;color:rgba(255,255,255,.8)">원색 4개와 검정·흰색만 씁니다.<br>한 장의 배경은 한 색, 캡슐은 그 위에 얹습니다.</p>
+  </div>
+  <div style="position:absolute;left:40px;right:40px;top:212px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+    <div class="sw r" style="height:150px"><b>Red</b><span>--red · #E04B52</span></div>
+    <div class="sw y" style="height:150px"><b>Yellow</b><span>--yellow · #F2BD45</span></div>
+    <div class="sw b" style="height:150px"><b>Cobalt</b><span>--blue · #2F4BF0</span></div>
+    <div class="sw g" style="height:150px;border:1.5px solid rgba(255,255,255,.25)"><b>Forest</b><span>--green · #2F4A33</span></div>
+  </div>
+  <div style="position:absolute;left:40px;right:40px;top:380px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px">
+    <div class="sw w" style="height:96px"><b style="font-size:20px">Paper</b><span>--paper · #FFFFFF</span></div>
+    <div class="sw" style="height:96px;background:var(--ink);border:1.5px solid rgba(255,255,255,.4)"><b style="font-size:20px">Ink</b><span>--ink · #0B0B0B</span></div>
+    <div class="sw" style="height:96px;background:var(--mist);color:var(--ink)"><b style="font-size:20px">Mist</b><span>--mist · 문서 바깥 배경</span></div>
+    <div style="display:flex;flex-direction:column;justify-content:center;padding-left:6px"><div class="kd" style="font-size:22px">배경 1색 + 캡슐 최대 4색</div><div class="cap" style="opacity:.7;margin-top:4px">그라데이션 · 틴트 · 투명도 겹침 금지</div></div>
+  </div>
+  <div style="position:absolute;left:40px;right:40px;top:520px;display:grid;grid-template-columns:repeat(6,1fr);gap:14px">
+    <div><div style="height:64px;border-radius:8px;background:var(--paper)"></div><div class="cap" style="margin-top:6px;opacity:.75">흰 장 · 글자 검정</div></div>
+    <div><div style="height:64px;border-radius:8px;background:var(--yellow)"></div><div class="cap" style="margin-top:6px;opacity:.75">노랑 · 글자 검정/빨강</div></div>
+    <div><div style="height:64px;border-radius:8px;background:var(--red)"></div><div class="cap" style="margin-top:6px;opacity:.75">빨강 · 글자 검정</div></div>
+    <div><div style="height:64px;border-radius:8px;background:var(--blue)"></div><div class="cap" style="margin-top:6px;opacity:.75">코발트 · 글자 흰색</div></div>
+    <div><div style="height:64px;border-radius:8px;background:var(--green)"></div><div class="cap" style="margin-top:6px;opacity:.75">그린 · 글자 흰색</div></div>
+    <div><div style="height:64px;border-radius:8px;background:var(--ink);border:1.5px solid rgba(255,255,255,.4)"></div><div class="cap" style="margin-top:6px;opacity:.75">검정 · 가이드 전용</div></div>
+  </div>
+  <div class="ft"><span>Pop Geometric<br>Design Guide v1.0</span><span>Page 02</span><span>Copyright 2026</span><span class="wm">POP GEO</span></div>
+</section>
+
+<!-- 03 TYPOGRAPHY -->
+<section class="slide bg-y">
+  <div style="position:absolute;left:40px;right:40px;top:44px;display:flex;justify-content:space-between;align-items:flex-end">
+    <div class="disp" style="font-size:112px;line-height:.9">Type</div>
+    <p class="sub" style="width:380px">영문은 크게, 한글은 둥글고 무겁게.<br>본문과 인용만 차분한 서체로 내립니다.</p>
+  </div>
+  <div style="position:absolute;left:40px;right:40px;top:196px">
+    <div class="ty"><div><div class="lab">Display EN</div><div class="cap" style="margin-top:4px">Righteous · 120–250px · 대문자</div></div><div class="disp" style="font-size:92px;line-height:.9">ABC GROW 2026?</div></div>
+    <div class="ty"><div><div class="lab">Display KO</div><div class="cap" style="margin-top:4px">Jua · 60–92px · 양끝 맞춤</div></div><div class="kd" style="font-size:58px">작은 브랜드를 크게 말하기</div></div>
+    <div class="ty"><div><div class="lab">Body</div><div class="cap" style="margin-top:4px">Pretendard 400–600 · 13–16px</div></div><div class="sub" style="font-size:17px">본문은 짧게 두 줄 안에서 끝냅니다. 디스플레이가 말하고, 본문은 받쳐 줍니다.</div></div>
+    <div class="ty"><div><div class="lab">Quote</div><div class="cap" style="margin-top:4px">Noto Serif KR · Instrument Serif</div></div><div class="serif-ko" style="font-size:32px">“캐릭터가 가게의 얼굴이 됐습니다.” <span class="serif" style="font-size:36px;letter-spacing:0">Quote</span></div></div>
+    <div class="ty"><div><div class="lab">Footer</div><div class="cap" style="margin-top:4px">Pretendard 10px · Righteous 17px</div></div><div style="display:grid;grid-template-columns:26% 22% 1fr auto;font-size:10px;align-items:end"><span>작은 브랜드를 위한<br>애니메이션 스튜디오</span><span>Page 04</span><span>Copyright 2026</span><span class="wm" style="font-size:17px">BRAND</span></div></div>
+  </div>
+  <div class="ft"><span>Pop Geometric<br>Design Guide v1.0</span><span>Page 03</span><span>Copyright 2026</span><span class="wm">POP GEO</span></div>
+</section>
+
+<!-- 04 COMPONENTS -->
+<section class="slide bg-w">
+  <div style="position:absolute;left:40px;right:40px;top:44px;display:flex;justify-content:space-between;align-items:flex-end">
+    <div class="disp" style="font-size:112px;line-height:.9">Parts</div>
+    <p class="sub" style="width:380px">캡슐 · 태그 · 막대 · 도형 · 패턴 · 따옴표.<br>모두 CSS와 SVG로 그립니다. 이미지 없음.</p>
+  </div>
+  <div style="position:absolute;left:40px;top:200px;width:580px">
+    <div class="lab">Capsule in line · .ln + .pl</div>
+    <div class="disp" style="font-size:104px;margin-top:14px"><div class="ln"><span class="t">AB</span><span class="pl r">2026</span><span class="t">CD</span></div></div>
+    <div class="lab" style="margin-top:34px">Tag · .tag</div>
+    <div style="display:flex;gap:8px;margin-top:12px"><span class="tag r" style="color:#fff">Chapter 01</span><span class="tag y">New</span><span class="tag b" style="color:#fff">4 Weeks</span><span class="tag o">주 2편</span></div>
+    <div class="lab" style="margin-top:34px">Bar · .bar</div>
+    <div style="display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;margin-top:12px">
+      <span class="num" style="font-size:44px;text-box:trim-both cap alphabetic">68%</span><div class="bar r" style="height:31px;width:68%"></div>
+    </div>
+  </div>
+  <div style="position:absolute;left:680px;right:40px;top:200px">
+    <div class="lab">Shapes · .sh</div>
+    <div style="display:flex;gap:22px;align-items:flex-end;margin-top:14px">
+      <i class="sh c r" style="width:76px;height:76px"></i><i class="sh hu y" style="width:76px;height:38px"></i><i class="sh q b" style="width:76px;height:76px"></i><i class="sh tri g" style="width:76px;height:76px"></i><i class="sh cap2 k" style="width:120px;height:76px"></i>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 196px;gap:20px;margin-top:34px">
+      <div><div class="lab">Pattern · 사분원 + 삼각형</div><div style="position:relative;height:196px;margin-top:12px;overflow:hidden;border-radius:4px"><svg class="pat" viewBox="0 0 540 360" width="540" height="360" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%"><rect width="540" height="360" fill="var(--yellow)"/><path d="M0 360L360 360A360 360 0 0 0 0 0Z" fill="var(--red)"/><path d="M360 0L540 0L540 180Z" fill="var(--red)"/><path d="M360 180L540 180A180 180 0 0 1 360 360Z" fill="var(--red)"/></svg></div></div>
+      <div><div class="lab">Quote mark · .qm</div><div style="position:relative;height:196px;margin-top:12px;overflow:hidden;border:1.5px solid var(--ink);border-radius:4px">
+        <svg class="qm" viewBox="0 0 740 720" style="position:absolute;left:-4px;top:0;width:200px;height:196px"><path d="M215 -20H365L345 520H15Z"/><circle cx="180" cy="520" r="165"/><path d="M580 -20H730L710 520H380Z"/><circle cx="545" cy="520" r="165"/></svg></div></div>
+    </div>
+  </div>
+  <div class="ft"><span>Pop Geometric<br>Design Guide v1.0</span><span>Page 04</span><span>Copyright 2026</span><span class="wm">POP GEO</span></div>
+</section>
+
+<!-- 05 ARCHETYPES -->
+<section class="slide bg-b">
+  <div style="position:absolute;left:40px;right:40px;top:44px;display:flex;justify-content:space-between;align-items:flex-end">
+    <div class="disp" style="font-size:112px;line-height:.9">8 Layouts</div>
+    <p class="sub" style="width:380px;color:rgba(255,255,255,.85)">즉흥 레이아웃 대신 아키타입을 복제해<br>글자와 캡슐만 바꿉니다.</p>
+  </div>
+  <div style="position:absolute;left:40px;right:40px;top:186px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px 14px">
+    <div><img class="arch" src="arch/s01.png"><div class="lab" style="margin-top:8px;font-size:12px">01 Cover</div></div>
+    <div><img class="arch" src="arch/s02.png"><div class="lab" style="margin-top:8px;font-size:12px">02 Statement</div></div>
+    <div><img class="arch" src="arch/s03.png"><div class="lab" style="margin-top:8px;font-size:12px">03 Index</div></div>
+    <div><img class="arch" src="arch/s04.png"><div class="lab" style="margin-top:8px;font-size:12px">04 Pattern Opener</div></div>
+    <div><img class="arch" src="arch/s05.png"><div class="lab" style="margin-top:8px;font-size:12px">05 Process</div></div>
+    <div><img class="arch" src="arch/s06.png"><div class="lab" style="margin-top:8px;font-size:12px">06 Numbers</div></div>
+    <div><img class="arch" src="arch/s07.png"><div class="lab" style="margin-top:8px;font-size:12px">07 Quote</div></div>
+    <div><img class="arch" src="arch/s08.png"><div class="lab" style="margin-top:8px;font-size:12px">08 Closing</div></div>
+  </div>
+  <div class="ft"><span>흰 장과 원색 장을 교차<br>같은 배경 2장 연속 금지</span><span>Page 05</span><span>Copyright 2026</span><span class="wm">POP GEO</span></div>
+</section>
+
+<!-- 06 DO / DON'T -->
+<section class="slide bg-g">
+  <div style="position:absolute;left:40px;top:44px;width:440px">
+    <div class="disp" style="font-size:150px;line-height:.86">Do<br>Don’t</div>
+    <div class="kd" style="font-size:28px;margin-top:28px">크게, 꽉 차게, 납작하게</div>
+    <p class="sub" style="margin-top:10px;color:rgba(255,255,255,.8)">렌더한 PNG를 직접 보고<br>가장자리 · 캡슐 높이 · 줄바꿈을 검수한다.</p>
+  </div>
+  <div style="position:absolute;left:540px;right:40px;top:52px;display:grid;grid-template-columns:1fr 1fr;gap:28px">
+    <div><div class="lab" style="color:var(--yellow);margin-bottom:12px">Do</div>
+      <div class="li"><i>+</i>디스플레이로 좌우 끝까지 채우기</div>
+      <div class="li"><i>+</i>캡슐 높이 = 글자 캡하이트</div>
+      <div class="li"><i>+</i>한 장에 배경 1색, 통짜로</div>
+      <div class="li"><i>+</i>한글 헤드라인은 주아로 양끝 맞춤</div>
+      <div class="li"><i>+</i>숫자는 크게, 막대는 캡슐로</div>
+      <div class="li"><i>+</i>모든 장에 작은 푸터 한 줄</div>
+    </div>
+    <div><div class="lab" style="color:var(--red);margin-bottom:12px">Don’t</div>
+      <div class="li"><i>×</i>그라데이션 · 그림자 · 3D · 사진</div>
+      <div class="li"><i>×</i>원색 4개 외 색, 파스텔 틴트</div>
+      <div class="li"><i>×</i>둥근 카드 박스로 내용 감싸기</div>
+      <div class="li"><i>×</i>가운데 정렬 작은 제목</div>
+      <div class="li"><i>×</i>영문 대문자를 한글에 억지로 대응</div>
+      <div class="li"><i>×</i>이모지 · 아이콘 남발</div>
+    </div>
+  </div>
+  <div style="position:absolute;left:540px;right:40px;top:500px;display:grid;grid-template-columns:1fr 1fr;gap:28px">
+    <div><div class="disp" style="font-size:84px"><div class="ln"><span class="t">AB</span><span class="pl y"></span><span class="t">C</span></div></div><div class="cap" style="margin-top:14px;opacity:.8">캡슐 높이 = 캡하이트, 남는 폭을 캡슐이 채움</div></div>
+    <div><div class="disp" style="font-size:84px"><div class="ln" style="align-items:flex-start;justify-content:flex-start;gap:18px"><span class="t">AB</span><span class="tag r" style="color:#fff;margin-top:6px">pill</span><span class="t">C</span></div></div><div class="cap" style="margin-top:14px;opacity:.8">작은 태그를 끼워 넣기 · 기준선 어긋남 · 빈 오른쪽</div></div>
+  </div>
+  <div class="ft"><span>전체 규칙은<br>SKILL.md</span><span>Page 06</span><span>Copyright 2026</span><span class="wm">POP GEO</span></div>
+</section>
+</body>
+</html>

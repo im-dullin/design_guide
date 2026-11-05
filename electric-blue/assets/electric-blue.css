@@ -1,0 +1,145 @@
+/* ============================================================
+   Electric Blue Design System — electric-blue.css
+   일렉트릭 블루 빛 무대(stage) 위에 블랙 패널을 얹고,
+   와이드 대문자 영문 디스플레이 + 한글 본문 + 선 아이콘 카드 + 절제된 글로우.
+   사용: <body class="deck"> (1280×720 슬라이드) | <body class="doc"> (900px 웹뷰/롱 PDF)
+   폰트: Pretendard(한글·본문) + Montserrat(영문 디스플레이·숫자·라벨) — <head>에 아래 2줄 필수
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+   글로우는 전부 linear/radial-gradient로 만든다(filter:blur 금지 → PDF에서 빠질 수 있음).
+   ============================================================ */
+
+:root{
+  /* stage — 패널 바깥의 빛 무대 */
+  --stage0:#040c52;  /* 가장 어두운 가장자리 */
+  --stage1:#0b2ad8;  /* 무대 본색 */
+  --stage2:#4a74ff;  /* 밝은 띠 */
+  --halo:#b4c8ff;    /* 무대 중심 하이라이트 */
+  /* surface */
+  --ink:#05060a;     /* 블랙 패널 */
+  --coal:#0c0e15;    /* 다크 카드 */
+  --coal2:#151927;   /* 한 단계 밝은 다크 카드 · 칩 */
+  --paper:#f3f5fa;   /* 화이트 카드 */
+  /* text */
+  --text:#f5f7fc; --mute:#8c93a8; --dim:#5d6478; --ink2:#0b0d14; --mute2:#5a6174;
+  --hair:rgba(255,255,255,.12); --hairW:rgba(11,20,64,.12);
+  --edge:rgba(168,192,255,.55);  /* 패널 1px 테두리 */
+  /* accent — 블루 3단 외 색 금지 */
+  --volt:#1f4dff;    /* 솔리드 카드 · 라인 · 화이트 카드 위 구분선 */
+  --volt2:#5a82ff;   /* 블랙 위 강조 텍스트 · 숫자 (대비 확보용 한 단계 밝은 블루) */
+  --ice:#cfdcff;     /* 빔 코어 · 하이라이트 · 블루 카드 위 보조 */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Pretendard",sans-serif;color:var(--text);background:var(--stage0);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;word-break:keep-all}
+
+/* ---------- 1. 무대(stage) — 패널을 감싸는 블루 프레임 ---------- */
+.stage{background:
+  radial-gradient(60% 55% at 50% 50%, var(--halo) 0%, rgba(180,200,255,0) 70%),
+  radial-gradient(120% 110% at 50% 50%, var(--stage2) 0%, var(--stage1) 45%, var(--stage0) 100%)}
+
+/* ---------- 2. 레이아웃: DECK (1280×720) ---------- */
+@page{size:1280px 720px;margin:0}
+.deck .slide{width:1280px;height:720px;position:relative;overflow:hidden;break-after:page}
+.deck .slide:last-child{break-after:auto}
+.deck .p{position:absolute;inset:14px;border-radius:10px;overflow:hidden;background:var(--ink);border:1px solid var(--edge)}
+.deck .hd{position:absolute;left:56px;right:56px;top:34px;display:flex;align-items:center;justify-content:space-between;z-index:5}
+.deck .ft{position:absolute;left:56px;right:56px;bottom:28px;display:flex;justify-content:space-between;align-items:center;z-index:5}
+.deck .body{position:absolute;left:56px;right:56px;top:92px;bottom:68px;z-index:3}
+.z{position:relative;z-index:3}
+
+/* ---------- 3. 레이아웃: DOC (900px 세로 롱페이지) ---------- */
+.doc{font-size:14.5px;line-height:1.55;background:
+  radial-gradient(70% 30% at 50% 0%, var(--stage2) 0%, rgba(74,116,255,0) 100%),
+  radial-gradient(80% 25% at 50% 55%, rgba(90,130,255,.9) 0%, rgba(90,130,255,0) 100%),
+  linear-gradient(180deg, var(--stage1) 0%, var(--stage0) 30%, var(--stage1) 55%, var(--stage0) 100%)}
+.doc .wrap{width:900px;margin:0 auto;padding:16px;display:flex;flex-direction:column;gap:14px}
+.doc .p{border-radius:10px;overflow:hidden;padding:44px;position:relative;background:var(--ink);border:1px solid var(--edge)}
+.doc .top{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:3}
+
+/* ---------- 4. 글로우 3종 (규칙: SKILL.md §1·§4) ---------- */
+/* 4-1 헤이즈: 패널 가장자리에서 번지는 블루 빛. 슬라이드당 1개, 한 변·한 모서리에만 */
+.haze{position:absolute;pointer-events:none;z-index:1}
+.haze.bl{left:-20%;bottom:-45%;width:90%;height:110%;background:radial-gradient(closest-side, rgba(31,77,255,.78), rgba(31,77,255,.32) 45%, rgba(31,77,255,0))}
+.haze.br{right:-20%;bottom:-45%;width:90%;height:110%;background:radial-gradient(closest-side, rgba(31,77,255,.78), rgba(31,77,255,.32) 45%, rgba(31,77,255,0))}
+.haze.tr{right:-22%;top:-50%;width:80%;height:100%;background:radial-gradient(closest-side, rgba(31,77,255,.55), rgba(31,77,255,.2) 50%, rgba(31,77,255,0))}
+.haze.top{left:0;right:0;top:-55%;height:100%;background:radial-gradient(60% 50% at 50% 50%, rgba(31,77,255,.55), rgba(31,77,255,.18) 55%, rgba(31,77,255,0))}
+.haze.floor{left:-10%;right:-10%;bottom:-60%;height:120%;background:radial-gradient(55% 50% at 50% 50%, rgba(74,116,255,.95), rgba(31,77,255,.5) 40%, rgba(31,77,255,0) 100%)}
+/* 4-2 빔: 수평 광선 1줄. 슬라이드당 최대 1개, Divider·Roadmap 전용 */
+.beam{position:absolute;left:0;right:0;height:90px;pointer-events:none;z-index:2}
+.beam::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 50% at 62% 50%, rgba(74,116,255,.75), rgba(31,77,255,.25) 45%, rgba(31,77,255,0) 100%)}
+.beam::after{content:"";position:absolute;left:0;right:0;top:44px;height:2px;border-radius:2px;
+  background:linear-gradient(90deg, rgba(90,130,255,0) 0%, rgba(90,130,255,.55) 18%, var(--ice) 62%, #fff 86%, rgba(207,220,255,0) 100%)}
+/* 4-3 글로우 점: 차트 데이터 포인트 · 빔 위 노드에만 */
+.gdot{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;z-index:3;
+  background:radial-gradient(circle, #fff 0 2px, var(--volt2) 3px 5px, rgba(90,130,255,.45) 6px, rgba(90,130,255,0) 15px)}
+
+/* ---------- 5. 코일 오브젝트 (scripts/coil.py로 생성한 SVG) — 덱당 최대 2회(표지·마무리) ---------- */
+.coilwrap{position:absolute;z-index:2;pointer-events:none}
+.coilwrap svg{display:block;width:100%;height:auto}
+/* 오브(겹친 원 5개) — 헤드라인 앞 장식, 슬라이드당 1개 */
+.orbs{display:inline-flex;vertical-align:middle}
+.orbs i{width:30px;height:30px;border-radius:50%;margin-left:-12px;border:1px solid rgba(255,255,255,.25)}
+.orbs i:first-child{margin-left:0}
+.orbs i:nth-child(1){background:#fff}.orbs i:nth-child(2){background:#dbe4ff}.orbs i:nth-child(3){background:#a9bfff}
+.orbs i:nth-child(4){background:#6f92ff}.orbs i:nth-child(5){background:var(--volt)}
+
+/* ---------- 6. 타이포 ---------- */
+.disp{font-family:"Montserrat","Pretendard",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.005em;line-height:1.04}
+.hk{font-weight:700;font-size:42px;letter-spacing:-.035em;line-height:1.2}       /* 한글 헤드라인(덱) */
+.doc .hk{font-size:30px}
+.num{font-family:"Montserrat",sans-serif;font-weight:500;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.v{color:var(--volt2)} .w .v{color:var(--volt)}
+.lb{font-family:"Montserrat","Pretendard",sans-serif;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.wm{font-family:"Montserrat",sans-serif;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--text)}
+.sub{color:var(--mute);font-size:15px;line-height:1.6;letter-spacing:-.01em}
+.cap{color:var(--mute);font-size:12.5px;line-height:1.5;letter-spacing:-.01em}
+.w .cap,.w .sub{color:var(--mute2)} .w .lb{color:var(--mute2)}
+.cv .cap,.cv .sub{color:rgba(255,255,255,.78)} .cv .lb{color:rgba(255,255,255,.7)}
+
+/* ---------- 7. 필 · 태그 ---------- */
+.pill{display:inline-flex;align-items:center;gap:8px;height:30px;padding:0 15px;border:1px solid var(--hair);border-radius:999px;font-size:13px;font-weight:500;letter-spacing:-.01em;white-space:nowrap;color:var(--text)}
+.pill.on{border-color:var(--volt2);color:#fff}
+.pill .dot{width:6px;height:6px;border-radius:50%;background:var(--volt2)}
+.tag{display:inline-flex;align-items:center;height:22px;padding:0 9px;border:1px solid rgba(255,255,255,.28);border-radius:6px;font-size:11px;font-weight:500;color:rgba(255,255,255,.75);white-space:nowrap;background:var(--ink)}
+
+/* ---------- 8. 카드 ---------- */
+.card{border-radius:16px;padding:22px 24px;position:relative;overflow:hidden;z-index:3}
+.doc .card{border-radius:14px;padding:20px 22px}
+.card.w{background:var(--paper);color:var(--ink2)}
+.card.cv{background:var(--volt);color:#fff}
+.card.k{background:var(--coal);border:1px solid var(--hair)}
+.card.k.on{border-color:rgba(90,130,255,.7)}
+.card.flex{display:flex;flex-direction:column;justify-content:space-between}
+.rule{height:1px;background:var(--hair);margin:14px 0 12px}
+.w .rule{background:var(--volt)} .cv .rule{background:rgba(255,255,255,.55)}
+.lab{font-size:14.5px;font-weight:600;letter-spacing:-.02em}
+.stmt{font-size:15px;line-height:1.45;letter-spacing:-.02em}
+.w .stmt{color:#2b3040} .cv .stmt{color:rgba(255,255,255,.9)} .k .stmt{color:rgba(255,255,255,.8)}
+
+/* ---------- 9. 선 아이콘 (assets/icons.md) — 칩 없이 선만 ---------- */
+.ico{width:44px;height:44px;flex:none;display:block}
+.ico svg,svg.ico{width:44px;height:44px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
+.ico svg *,svg.ico *{stroke-width:1.4px;vector-effect:non-scaling-stroke}
+.ico.sm,.ico.sm svg{width:28px;height:28px}
+
+/* ---------- 10. 헤어라인 행 리스트 (목차 · 비교 · 스펙) ---------- */
+.rows>div{display:grid;border-top:1px solid var(--hair);align-items:center}
+.rows>div:last-child{border-bottom:1px solid var(--hair)}
+.w .rows>div{border-color:var(--hairW)}
+
+/* ---------- 11. 타임라인 열 (빔 아래 4열) ---------- */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tl>div{position:relative;padding:22px 22px 4px 22px;border-left:1px solid rgba(255,255,255,.22);display:flex;flex-direction:column;
+  background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,0) 60%)}
+.tl>div::before{content:"";position:absolute;left:-1px;bottom:0;width:1px;height:40%;background:linear-gradient(180deg, rgba(5,6,10,0), var(--ink))}
+.tl .yr{font-family:"Montserrat";font-weight:500;font-size:28px;letter-spacing:-.02em}
+.tl h4{font-size:18px;font-weight:600;letter-spacing:-.03em;line-height:1.35;margin-top:12px}
+.tl .cap{margin-top:auto}
+
+/* ---------- 12. 차트 (SVG 곡선 · 지표 막대) ---------- */
+.chart{position:absolute;z-index:3}
+.chart svg{position:absolute;left:0;top:0;overflow:visible}
+.chart .lbl{position:absolute;transform:translate(-50%,0);white-space:nowrap}
+.bar{height:6px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg, var(--volt), var(--ice))}

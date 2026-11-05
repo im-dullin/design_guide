@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Sample Deck · Midnight Aurora</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/midnight-aurora.css">
+</head>
+<body class="deck">
+<!--
+  슬라이드 아키타입 8종. 필요한 것만 복제해서 내용만 교체하세요.
+  규칙: 슬라이드마다 .slide > (.aurora) + .hd + (.body | absolute 블록) + .ft
+       오로라(.aurora)는 표지 · 구분장 · 마무리에만, 한 장에 1개.
+       본문 장의 그라데이션은 하이라이트 열(.cmp .hl) 또는 막대(.chart .b) 중 한 종류만.
+-->
+
+<!-- 01 COVER — 오로라(우상단) · 워드마크 · 대형 영문 디스플레이(ice) · 한글 한 줄 -->
+<section class="slide">
+  <div class="aurora"></div>
+  <div class="hd"><span class="wm">brandname</span><span class="lbl">Pitch Deck</span></div>
+  <div style="position:absolute;left:64px;bottom:150px;z-index:2">
+    <div class="disp" style="font-size:84px">Team Knowledge,<br>Finally Connected</div>
+    <p class="lead" style="margin-top:22px">흩어진 팀의 지식을 하나로 잇는 AI 업무 플랫폼</p>
+  </div>
+  <div class="ft"><span class="lbl">Seed Round · 2026.11</span><span class="lbl">Confidential</span></div>
+</section>
+
+<!-- 02 CONTENTS — 좌측 헤드라인 + 우측 (01) 번호 목차 -->
+<section class="slide">
+  <div class="hd"><span class="lbl">Contents</span><span class="lbl">02</span></div>
+  <div style="position:absolute;left:64px;top:104px;width:420px">
+    <h2 class="h">오늘 나눌 이야기<br><span class="a">다섯 가지</span></h2>
+    <p class="sub" style="margin-top:20px">문제에서 시작해 숫자로 끝납니다.<br>장마다 한 가지 메시지만 담았습니다.</p>
+  </div>
+  <div class="rows" style="position:absolute;left:560px;right:64px;top:112px">
+    <div style="grid-template-columns:64px 1fr 1fr 40px;padding:28px 0"><span class="num ink-mute" style="font-size:13px">(01)</span><span class="t" style="font-size:22px;font-weight:300">문제</span><span class="cap">팀이 정보를 찾는 시간</span><span class="num ink-mute" style="font-size:13px;text-align:right">03</span></div>
+    <div style="grid-template-columns:64px 1fr 1fr 40px;padding:28px 0"><span class="num ink-mute" style="font-size:13px">(02)</span><span class="t" style="font-size:22px;font-weight:300">제품</span><span class="cap">연결 · 이해 · 답변</span><span class="num ink-mute" style="font-size:13px;text-align:right">04</span></div>
+    <div style="grid-template-columns:64px 1fr 1fr 40px;padding:28px 0"><span class="num ink-mute" style="font-size:13px">(03)</span><span class="t" style="font-size:22px;font-weight:300">경쟁 구도</span><span class="cap">기능 비교</span><span class="num ink-mute" style="font-size:13px;text-align:right">05</span></div>
+    <div style="grid-template-columns:64px 1fr 1fr 40px;padding:28px 0"><span class="num ink-mute" style="font-size:13px">(04)</span><span class="t" style="font-size:22px;font-weight:300">성과</span><span class="cap">도입 6개월 지표</span><span class="num ink-mute" style="font-size:13px;text-align:right">06</span></div>
+    <div style="grid-template-columns:64px 1fr 1fr 40px;padding:28px 0"><span class="num ink-mute" style="font-size:13px">(05)</span><span class="t" style="font-size:22px;font-weight:300">재무 전망</span><span class="cap">연간 반복 매출</span><span class="num ink-mute" style="font-size:13px;text-align:right">07</span></div>
+  </div>
+  <div class="ft"><span class="lbl">brandname</span><span class="lbl">Pitch Deck · 2026</span></div>
+</section>
+
+<!-- 03 PROBLEM — 대형 문장 헤드라인(흰색 + ice 한 구절) + 하단 3열 숫자 -->
+<section class="slide">
+  <div class="hd"><span class="lbl">Problem</span><span class="lbl">03</span></div>
+  <div style="position:absolute;left:64px;right:64px;top:104px">
+    <h2 class="h" style="font-size:52px;line-height:1.2">팀이 일하는 시간의 <span class="a">3분의 1은</span><br>정보를 찾는 데 쓰입니다</h2>
+    <p class="sub" style="margin-top:24px;width:520px">도구는 늘었지만 지식은 더 흩어졌습니다.<br>답은 이미 어딘가에 있는데, 찾는 데만 하루 네 시간이 넘게 듭니다.</p>
+  </div>
+  <div style="position:absolute;left:64px;right:64px;bottom:80px;display:grid;grid-template-columns:repeat(3,1fr);gap:40px">
+    <div style="border-top:1px solid var(--hair);padding-top:22px"><div class="num ink-ice" style="font-size:72px">4.2<span style="font-size:30px">h</span></div><div class="t" style="margin-top:18px">하루 평균 검색 시간</div><div class="cap" style="margin-top:6px">메신저 · 문서 · 메일을 오가며 찾는 시간</div></div>
+    <div style="border-top:1px solid var(--hair);padding-top:22px"><div class="num" style="font-size:72px">11<span style="font-size:30px">개</span></div><div class="t" style="margin-top:18px">팀이 쓰는 업무 도구</div><div class="cap" style="margin-top:6px">지식이 도구마다 나뉘어 저장됩니다</div></div>
+    <div style="border-top:1px solid var(--hair);padding-top:22px"><div class="num" style="font-size:72px">62<span style="font-size:30px">%</span></div><div class="t" style="margin-top:18px">같은 질문의 반복</div><div class="cap" style="margin-top:6px">이미 답이 있는 질문이 다시 올라옵니다</div></div>
+  </div>
+  <div class="ft"><span class="lbl">* 가상의 예시 수치입니다</span><span class="lbl">Pitch Deck · 2026</span></div>
+</section>
+
+<!-- 04 PRODUCT — 좌측 헤드라인 + 번호 리스트, 우측 아웃라인 프레임 안 3단계 -->
+<section class="slide">
+  <div class="hd"><span class="lbl">Product</span><span class="lbl">04</span></div>
+  <div style="position:absolute;left:64px;top:104px;width:430px">
+    <h2 class="h">흩어진 도구를 잇고,<br><span class="a">맥락으로 답합니다</span></h2>
+    <p class="sub" style="margin-top:20px">질문 하나로 팀의 문서 · 대화 · 일정을<br>함께 읽고 출처와 함께 답을 돌려줍니다.</p>
+  </div>
+  <div style="position:absolute;left:64px;bottom:80px;width:360px">
+    <div class="nl-t">Core features</div>
+    <ul class="nl"><li data-n="(01)">도구 11종 원클릭 연결</li><li data-n="(02)">권한을 지키는 검색</li><li data-n="(03)">스스로 갱신되는 지식 베이스</li></ul>
+  </div>
+  <div class="frame" style="position:absolute;left:560px;right:64px;top:104px;bottom:72px;padding:30px 30px">
+    <div class="lbl">How it works</div>
+    <div class="rbar" style="margin-top:22px;height:50px;justify-content:space-between;background:var(--bar2)"><span>지난 분기 고객 이탈 원인 정리해 줘</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="color:var(--mute)"><path d="M20 5v7a3 3 0 0 1-3 3H5M9 11l-4 4 4 4"/></svg></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px">
+      <div class="rbar" style="height:262px;display:flex;flex-direction:column;align-items:flex-start;padding:20px 20px 22px"><div class="num ink-mute" style="font-size:12px">(01)</div><div class="t" style="margin-top:auto">연결</div><div class="cap" style="margin-top:6px">메신저 · 문서 ·<br>메일을 한곳에</div></div>
+      <div class="rbar" style="height:262px;display:flex;flex-direction:column;align-items:flex-start;padding:20px 20px 22px"><div class="num ink-mute" style="font-size:12px">(02)</div><div class="t" style="margin-top:auto">이해</div><div class="cap" style="margin-top:6px">사람 · 프로젝트 ·<br>시점을 연결</div></div>
+      <div class="rbar" style="height:262px;display:flex;flex-direction:column;align-items:flex-start;padding:20px 20px 22px"><div class="num ink-ice" style="font-size:12px">(03)</div><div class="t ink-ice" style="margin-top:auto">답변</div><div class="cap" style="margin-top:6px">출처 링크와<br>함께 요약</div></div>
+    </div>
+    <div style="position:absolute;left:30px;right:30px;bottom:28px;display:flex;justify-content:space-between;align-items:flex-end">
+      <div><div class="cap">평균 응답 시간</div><div class="num" style="font-size:40px;margin-top:8px">2.4<span style="font-size:18px">s</span></div></div>
+      <span class="tag"><span class="dot"></span>Beta · 42 teams</span>
+    </div>
+  </div>
+  <div class="ft"><span class="lbl"></span><span class="lbl">Pitch Deck · 2026</span></div>
+</section>
+
+<!-- 05 COMPETITORS — 헤드라인 + 행 바 비교표 + 우리 열만 반투명 블루 하이라이트 -->
+<section class="slide">
+  <div class="hd"><span class="lbl">Competitors</span><span class="lbl">05</span></div>
+  <div style="position:absolute;left:64px;right:64px;top:104px">
+    <h2 class="h">다른 도구는 검색하고,<br><span class="a">우리는 맥락을 이해합니다</span></h2>
+  </div>
+  <div class="cmp" style="position:absolute;left:200px;right:200px;top:290px">
+    <div class="hl" style="left:340px;width:110px"></div>
+    <div class="r head" style="grid-template-columns:340px repeat(4,110px) 1fr"><span></span><span class="me">brandname</span><span>Tool A</span><span>Tool B</span><span>Tool C</span><span></span></div>
+    <div class="r" style="grid-template-columns:340px repeat(4,110px) 1fr"><span>여러 도구 동시 검색</span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span></span></div>
+    <div class="r" style="grid-template-columns:340px repeat(4,110px) 1fr"><span>즉시 AI 답변</span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><i class="nx"></i></span><span></span></div>
+    <div class="r" style="grid-template-columns:340px repeat(4,110px) 1fr"><span>맥락 기반 이해</span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><i class="nx"></i></span><span><i class="nx"></i></span><span><i class="nx"></i></span><span></span></div>
+    <div class="r" style="grid-template-columns:340px repeat(4,110px) 1fr"><span>지식 자동 갱신</span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><i class="nx"></i></span><span><i class="nx"></i></span><span></span></div>
+    <div class="r" style="grid-template-columns:340px repeat(4,110px) 1fr"><span>문서 초안 작성</span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><i class="nx"></i></span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span></span></div>
+    <div class="r" style="grid-template-columns:340px repeat(4,110px) 1fr"><span>업무 흐름 최적화</span><span><svg class="ck" viewBox="0 0 16 16"><circle cx="8" cy="8" r="8"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4"/></svg></span><span><i class="nx"></i></span><span><i class="nx"></i></span><span><i class="nx"></i></span><span></span></div>
+  </div>
+  <div class="ft"><span class="lbl">Tool A–C · 공개 기능 기준 비교</span><span class="lbl">Pitch Deck · 2026</span></div>
+</section>
+
+<!-- 06 TRACTION — 디스플레이 숫자 1개(ice) + 헤어라인 지표 3행 + 미터 -->
+<section class="slide">
+  <div class="hd"><span class="lbl">Traction</span><span class="lbl">06</span></div>
+  <div style="position:absolute;left:64px;top:104px;width:480px">
+    <h2 class="h">도입 6개월,<br>검색 시간이 <span class="a">절반으로</span></h2>
+    <div class="num ink-ice" style="font-size:180px;font-weight:200;margin-top:56px;letter-spacing:-.05em">−52<span style="font-size:72px">%</span></div>
+    <div class="cap" style="margin-top:14px">1인 하루 평균 검색 시간 · 베타 42개 팀</div>
+  </div>
+  <div class="rows" style="position:absolute;left:640px;right:64px;top:118px">
+    <div style="grid-template-columns:1fr auto;padding:30px 0 26px"><div><div class="t">주간 활성 사용자</div><div class="cap" style="margin-top:4px">초대된 인원 대비</div></div><div class="num" style="font-size:52px">81<span style="font-size:24px">%</span></div></div>
+    <div style="grid-template-columns:1fr auto;padding:30px 0 26px"><div><div class="t">팀당 연결 도구</div><div class="cap" style="margin-top:4px">평균, 도입 첫 달</div></div><div class="num" style="font-size:52px">6.8</div></div>
+    <div style="grid-template-columns:1fr auto;padding:30px 0 26px"><div><div class="t">유료 전환율</div><div class="cap" style="margin-top:4px">14일 체험 후</div></div><div class="num" style="font-size:52px">38<span style="font-size:24px">%</span></div></div>
+    <div style="grid-template-columns:1fr;padding:24px 0 26px"><div style="display:flex;justify-content:space-between" class="cap"><span>목표 대비 진행</span><span class="num" style="font-size:13px">64%</span></div><div class="meter" style="margin-top:12px"><i style="width:64%"></i></div></div>
+  </div>
+  <div class="ft"><span class="lbl">* 가상의 예시 수치입니다</span><span class="lbl">Pitch Deck · 2026</span></div>
+</section>
+
+<!-- 07 FINANCIALS — 좌측 영문 디스플레이 + 성장 동력 리스트, 우측 프레임 안 그라데이션 막대 -->
+<section class="slide">
+  <div class="hd"><span class="lbl">Financials</span><span></span></div>
+  <div style="position:absolute;left:64px;top:0;bottom:0;width:440px;display:flex;flex-direction:column;justify-content:center">
+    <div class="disp" style="font-size:52px">Annual Recurring<br>Revenue</div>
+    <p class="sub" style="margin-top:18px">연간 반복 매출 전망 · 단위 억 원</p>
+  </div>
+  <div style="position:absolute;left:64px;bottom:80px;width:360px">
+    <div class="nl-t">Growth drivers</div>
+    <ul class="nl"><li data-n="(01)">제품 주도 성장</li><li data-n="(02)">엔터프라이즈 확장</li><li data-n="(03)">팀 단위 바이럴</li></ul>
+  </div>
+  <div class="frame" style="position:absolute;left:600px;right:48px;top:48px;bottom:48px;padding-top:40px">
+    <div class="chart">
+      <div class="b" style="height:24%"><span class="v">12</span><span class="y">2026</span></div>
+      <div class="b" style="height:50%"><span class="v">34</span><span class="y">2027</span></div>
+      <div class="b" style="height:92%"><span class="v">80</span><span class="y">2028</span></div>
+    </div>
+  </div>
+  <div class="ft"><span class="lbl">* 가상의 예시 수치입니다</span><span class="lbl"></span></div>
+</section>
+
+<!-- 08 CLOSING — 오로라(우하단 low) · Thank you · 연락처 헤어라인 -->
+<section class="slide">
+  <div class="aurora low"></div>
+  <div class="hd"><span class="wm">brandname</span><span class="lbl">08</span></div>
+  <div style="position:absolute;left:64px;top:190px;z-index:2">
+    <div class="disp" style="font-size:120px">Thank you</div>
+    <p class="lead" style="margin-top:22px">팀의 지식이 일하는 방식, 함께 만들어 가겠습니다.</p>
+  </div>
+  <div class="rows" style="position:absolute;left:64px;bottom:80px;width:520px;z-index:2">
+    <div style="grid-template-columns:120px 1fr;padding:14px 0"><span class="lbl">Contact</span><span class="t" style="font-weight:300">홍길동 · 대표</span></div>
+    <div style="grid-template-columns:120px 1fr;padding:14px 0"><span class="lbl">Email</span><span class="t" style="font-weight:300">hello@brandname.example</span></div>
+  </div>
+  </section>
+</body>
+</html>

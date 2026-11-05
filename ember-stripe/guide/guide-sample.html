@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Ember Stripe · Design Guide</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/ember.css">
+<style>
+  .sw{height:168px;padding:18px 20px;display:flex;flex-direction:column;justify-content:space-between}
+  .sw b{font-size:15px;font-weight:600;letter-spacing:-.02em}
+  .sw .num{font-size:14px;letter-spacing:0;margin-top:4px}
+  .stage{position:relative;overflow:hidden;isolation:isolate;background:#000;outline:1px solid var(--hair)}
+  .arch{display:block;width:100%;outline:1px solid var(--hair)}
+  .x{font-size:16px;line-height:1.5;display:grid;grid-template-columns:30px 1fr;padding:20px 0;border-top:1px solid var(--hair);color:#e6e6e6}
+  .x b{font-family:"Inter";font-weight:400;color:var(--sub)}
+  .x:last-child{border-bottom:1px solid var(--hair)}
+</style>
+</head>
+<body class="deck">
+
+<!-- 01 COVER -->
+<section class="slide">
+  <div class="flute"></div>
+  <div class="hd"><span class="wm">EMBER STRIPE</span><span class="micro" style="color:rgba(255,255,255,.65)">Design Guide · v1.0</span></div>
+  <div style="position:absolute;left:64px;bottom:118px">
+    <div class="disp" style="font-size:132px">Ember<br>Stripe</div>
+  </div>
+  <div style="position:absolute;left:66px;right:64px;bottom:64px;display:flex;justify-content:space-between;align-items:baseline">
+    <span class="kick">Launch Deck System 2026</span>
+    <span class="kick" style="color:rgba(255,255,255,.7)">순수 블랙 · 골유리 엠버 · 얇은 디스플레이</span>
+  </div>
+</section>
+
+<!-- 02 COLOR -->
+<section class="slide">
+  <div class="glow tr"></div>
+  <div style="position:absolute;left:64px;top:76px">
+    <h2 class="h">블랙이 무대,<br><span class="a">빛은 한 곳에서만</span></h2>
+  </div>
+  <p class="lead" style="position:absolute;right:64px;top:84px;width:300px;font-size:14px">배경은 언제나 #000. 유채색은 엠버 계열 네 단계뿐이고, 면으로 칠하지 않고 빛으로만 씁니다.</p>
+  <div style="position:absolute;left:64px;right:64px;top:290px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+    <div class="sw" style="background:#000;outline:1px solid var(--hair)"><span class="micro">--void</span><div><b>Background</b><div class="num" style="color:var(--sub)">#000000</div></div></div>
+    <div class="sw" style="background:#1c1c1c"><span class="micro">--card</span><div><b>Stat card</b><div class="num" style="color:var(--sub)">#1C1C1C · α.78</div></div></div>
+    <div class="sw" style="background:#000;outline:1px solid var(--hair)"><span class="micro">--ink · --body · --sub</span><div><b>Text</b><div class="num" style="margin-top:6px"><span style="color:#fff">#FFF</span> <span style="color:#a3a3a3">#A3A3A3</span> <span style="color:#6e6e6e">#6E6E6E</span></div></div></div>
+    <div class="sw" style="background:#2a2a2a"><span class="micro" style="color:#8a8a8a">--line · --hair</span><div><b>Lines</b><div class="num" style="color:#8a8a8a">#2A2A2A · W12%</div></div></div>
+    <div class="sw" style="background:var(--ember-deep)"><span class="micro" style="color:rgba(255,255,255,.55)">--ember-deep</span><div><b>Glow edge</b><div class="num" style="color:rgba(255,255,255,.6)">#5A1E08</div></div></div>
+    <div class="sw" style="background:var(--ember)"><span class="micro" style="color:rgba(255,255,255,.7)">--ember</span><div><b>Glow body</b><div class="num" style="color:rgba(255,255,255,.75)">#C4521A</div></div></div>
+    <div class="sw" style="background:var(--ember-hi)"><span class="micro" style="color:rgba(0,0,0,.55)">--ember-hi</span><div><b style="color:#000">Core · text accent</b><div class="num" style="color:rgba(0,0,0,.6)">#E07A2C</div></div></div>
+    <div class="sw" style="background:linear-gradient(90deg,#000 0%,var(--ember-deep) 30%,var(--ember) 65%,var(--ember-hi) 100%)"><span class="micro" style="color:rgba(255,255,255,.6)">Ramp</span><div><b>Light falloff</b><div class="num" style="color:rgba(255,255,255,.7)">000 → 5A → C4 → E0</div></div></div>
+  </div>
+  <div class="ft"><span class="wm">EMBER STRIPE</span><span class="micro">01 Color · 02 / 06</span></div>
+</section>
+
+<!-- 03 TYPOGRAPHY -->
+<section class="slide">
+  <div class="glow bl"></div>
+  <div style="position:absolute;left:64px;top:76px;width:400px">
+    <span class="lbl"><i></i>Typography</span>
+    <div class="disp" style="font-size:168px;margin-top:30px;margin-left:-6px">Aa<span style="font-family:Pretendard;font-weight:200;letter-spacing:-.06em">가</span></div>
+    <p class="lead" style="margin-top:26px;font-size:14px">영문 디스플레이·숫자는 Inter 300,<br>한글은 Pretendard 300 · 400 · 600.<br>크게 쓸수록 얇게, 자간은 항상 음수.</p>
+  </div>
+  <div class="rows" style="position:absolute;left:520px;right:64px;top:84px">
+    <div style="grid-template-columns:110px 1fr 120px;padding:20px 0"><span class="micro">Display</span><span class="disp" style="font-size:56px">Launch</span><span class="micro" style="text-align:right">72–132 · 300</span></div>
+    <div style="grid-template-columns:110px 1fr 120px;padding:24px 0"><span class="micro">Headline</span><span class="h" style="font-size:32px">얇고 크게, 두 줄로</span><span class="micro" style="text-align:right">52 · 300</span></div>
+    <div style="grid-template-columns:110px 1fr 120px;padding:20px 0"><span class="micro">Number</span><span class="num" style="font-size:52px">1 in 4</span><span class="micro" style="text-align:right">68–200 · 300</span></div>
+    <div style="grid-template-columns:110px 1fr 120px;padding:24px 0"><span class="micro">Card title</span><span class="t">카드 제목은 굵게</span><span class="micro" style="text-align:right">18 · 600</span></div>
+    <div style="grid-template-columns:110px 1fr 120px;padding:24px 0"><span class="micro">Lead</span><span class="lead">헤드라인 옆 회색 단락</span><span class="micro" style="text-align:right">14–15 · 400</span></div>
+    <div style="grid-template-columns:110px 1fr 120px;padding:24px 0"><span class="micro">Micro</span><span class="micro">Part 02 · Q1 2027 · 03 / 08</span><span class="micro" style="text-align:right">12.5 · 400</span></div>
+  </div>
+  <div class="ft"><span class="wm">EMBER STRIPE</span><span class="micro">02 Typography · 03 / 06</span></div>
+</section>
+
+<!-- 04 COMPONENTS -->
+<section class="slide">
+  <div style="position:absolute;left:64px;top:76px">
+    <h2 class="h">빛 두 가지,<br>나머지는 <span class="a">각진 카드</span></h2>
+  </div>
+  <p class="lead" style="position:absolute;right:64px;top:84px;width:300px;font-size:14px">골유리는 표지·구분장·마무리에만, 본문 장은 모서리 글로 하나. 카드는 모서리를 깎지 않습니다.</p>
+  <div style="position:absolute;left:64px;right:64px;top:268px;bottom:96px;display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:10px">
+    <div style="display:grid;grid-template-rows:1fr 1fr;gap:10px">
+      <div class="stage"><div class="flute"></div><div style="position:absolute;left:20px;bottom:18px"><div class="micro" style="color:rgba(255,255,255,.6)">Signature A</div><div class="t" style="font-size:16px;margin-top:4px">Fluted glass · .flute</div></div></div>
+      <div class="stage"><div class="glow" style="left:0;bottom:0;width:420px;height:260px;background:radial-gradient(ellipse 100% 100% at 0% 100%,rgba(224,122,44,.62) 0%,rgba(196,82,26,.42) 22%,rgba(90,30,8,.22) 50%,rgba(0,0,0,0) 78%)"></div><div style="position:absolute;left:20px;top:18px"><div class="micro">Signature B</div><div class="t" style="font-size:16px;margin-top:4px">Corner glow · .glow.bl</div></div></div>
+    </div>
+    <div class="card solid"><span class="micro" style="position:absolute;left:26px;top:26px">.card</span><div class="num">74%</div><div class="t">카드 제목</div><div class="cap">숫자는 우상단 오른쪽 정렬,<br>제목과 설명은 아래에 붙인다.</div></div>
+    <div style="display:flex;flex-direction:column;gap:22px;padding:4px 0 0 18px">
+      <div><div class="micro" style="margin-bottom:10px">Label · .lbl</div><span class="lbl"><i></i>Part 02</span><span class="lbl off" style="margin-left:14px"><i></i>Draft</span></div>
+      <div><div class="micro" style="margin-bottom:10px">Bar · .bar</div><div class="bar"><i style="width:58%"></i></div><div class="bar" style="margin-top:12px"><i class="e" style="width:72%"></i></div></div>
+      <div><div class="micro" style="margin-bottom:14px">Tick · .tick.on</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div class="tick on"><span class="cap" style="color:var(--ember-hi)">Q1</span></div><div class="tick"><span class="cap">Q2</span></div></div></div>
+      <div class="rows" style="margin-top:auto"><div style="grid-template-columns:34px 1fr;padding:11px 0"><span class="micro">01</span><span class="cap" style="color:#e6e6e6">헤어라인 행</span></div><div style="grid-template-columns:34px 1fr;padding:11px 0"><span class="micro">02</span><span class="cap" style="color:#e6e6e6">세로선 · 격자 없음</span></div></div>
+    </div>
+  </div>
+  <div class="ft"><span class="wm">EMBER STRIPE</span><span class="micro">03 Components · 04 / 06</span></div>
+</section>
+
+<!-- 05 ARCHETYPES -->
+<section class="slide">
+  <div class="glow tr"></div>
+  <div style="position:absolute;left:64px;top:76px">
+    <div class="disp" style="font-size:72px">8 Layouts</div>
+  </div>
+  <p class="lead" style="position:absolute;right:64px;top:84px;width:300px;font-size:14px">즉흥 레이아웃 대신 아키타입을 복제해 내용만 바꿉니다. 골유리 장은 덱 전체 3장까지.</p>
+  <div style="position:absolute;left:64px;right:64px;top:218px;display:grid;grid-template-columns:repeat(4,1fr);gap:22px 12px">
+    <div><img class="arch" src="arch/s01.png"><div class="cap" style="margin-top:8px"><span style="color:var(--ember-hi)">01</span>&nbsp; Cover · flute</div></div>
+    <div><img class="arch" src="arch/s02.png"><div class="cap" style="margin-top:8px">02&nbsp; Contents</div></div>
+    <div><img class="arch" src="arch/s03.png"><div class="cap" style="margin-top:8px">03&nbsp; Problem · Stats</div></div>
+    <div><img class="arch" src="arch/s04.png"><div class="cap" style="margin-top:8px"><span style="color:var(--ember-hi)">04</span>&nbsp; Divider · flute pane</div></div>
+    <div><img class="arch" src="arch/s05.png"><div class="cap" style="margin-top:8px">05&nbsp; Features</div></div>
+    <div><img class="arch" src="arch/s06.png"><div class="cap" style="margin-top:8px">06&nbsp; Metric</div></div>
+    <div><img class="arch" src="arch/s07.png"><div class="cap" style="margin-top:8px">07&nbsp; Roadmap</div></div>
+    <div><img class="arch" src="arch/s08.png"><div class="cap" style="margin-top:8px"><span style="color:var(--ember-hi)">08</span>&nbsp; Closing · flute low</div></div>
+  </div>
+  <div class="ft"><span class="wm">EMBER STRIPE</span><span class="micro">04 Archetypes · 05 / 06</span></div>
+</section>
+
+<!-- 06 DO / DON'T -->
+<section class="slide">
+  <div class="glow bl"></div>
+  <div style="position:absolute;left:64px;top:76px;width:400px">
+    <div class="disp" style="font-size:96px">Do &amp;<br>Don’t</div>
+    <p class="lead" style="margin-top:28px;font-size:14px">빛이 많아질수록 싸 보입니다.<br>렌더한 PNG와 PDF를 직접 열어 확인합니다.</p>
+  </div>
+  <div style="position:absolute;left:520px;right:64px;top:84px;display:grid;grid-template-columns:1fr 1fr;gap:32px">
+    <div><div class="lbl"><i></i>Do</div>
+      <div style="margin-top:18px">
+        <div class="x"><b>01</b>배경은 항상 순수 블랙</div>
+        <div class="x"><b>02</b>빛은 한 장에 한 곳</div>
+        <div class="x"><b>03</b>제목은 얇게, 크게, 두 줄</div>
+        <div class="x"><b>04</b>숫자는 카드 우상단 정렬</div>
+        <div class="x"><b>05</b>각진 카드 · 1px 헤어라인</div>
+        <div class="x"><b>06</b>엠버 텍스트는 한 구절만</div>
+      </div>
+    </div>
+    <div><div class="lbl off"><i></i>Don’t</div>
+      <div style="margin-top:18px">
+        <div class="x"><b>×</b>본문 장에 골유리 줄무늬</div>
+        <div class="x"><b>×</b>filter:blur · 이미지 글로</div>
+        <div class="x"><b>×</b>둥근 카드 · 그림자 · 테두리</div>
+        <div class="x"><b>×</b>엠버 외 유채색 · 네온</div>
+        <div class="x"><b>×</b>굵은 제목 · 가운데 정렬</div>
+        <div class="x"><b>×</b>엠버로 면 채우기 · 버튼</div>
+      </div>
+    </div>
+  </div>
+  <div class="ft"><span class="wm">EMBER STRIPE</span><span class="micro">05 Rules · 06 / 06</span></div>
+</section>
+</body>
+</html>

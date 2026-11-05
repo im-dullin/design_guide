@@ -1,0 +1,115 @@
+/* ============================================================
+   Pop Geometric Design System — pop.css
+   화면을 가장자리까지 채우는 둥근 기하 대문자 + 글자와 맞물리는 원색 캡슐,
+   통짜 원색 배경, 거대한 따옴표, 사분원·삼각형 패턴, 아주 작은 푸터 한 줄.
+   사용: <body class="deck"> (1280×720 슬라이드) | <body class="doc"> (900px 롱페이지)
+   폰트 — <head>에 아래 2줄 필수
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Jua&family=Instrument+Serif&family=Noto+Serif+KR:wght@400;500&display=swap" rel="stylesheet">
+   ============================================================ */
+
+:root{
+  /* surface */
+  --paper:#ffffff;   /* 흰 슬라이드 */
+  --ink:#0b0b0b;     /* 글자 · 따옴표 · 검정 면 */
+  --mist:#d4d7df;    /* 문서 바깥 배경 (블록 사이 틈) */
+  /* pop 4색 — 이 4개 외 색 금지 */
+  --red:#e04b52;
+  --yellow:#f2bd45;
+  --blue:#2f4bf0;
+  --green:#2f4a33;
+  /* text */
+  --sub:#5f5f5f;     /* 흰 바탕 보조 텍스트 */
+  --hair:rgba(0,0,0,.16);
+  --hairW:rgba(255,255,255,.28);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Pretendard",sans-serif;color:var(--ink);background:var(--mist);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;word-break:keep-all}
+
+/* ---------- 1. 레이아웃: DECK (1280×720, 풀블리드) ---------- */
+@page{size:1280px 720px;margin:0}
+.deck{background:var(--mist)}
+.deck .slide{width:1280px;height:720px;position:relative;overflow:hidden;background:var(--paper);break-after:page}
+.deck .slide:last-child{break-after:auto}
+/* 배경 5종 — 슬라이드 전체를 한 색으로 */
+.bg-w{background:var(--paper)!important;color:var(--ink)}
+.bg-y{background:var(--yellow)!important;color:var(--ink)}
+.bg-r{background:var(--red)!important;color:var(--ink)}
+.bg-b{background:var(--blue)!important;color:#fff}
+.bg-g{background:var(--green)!important;color:#fff}
+.bg-k{background:var(--ink)!important;color:#fff}
+
+/* 덱 여백: 좌우 40 · 상단 36 · 푸터 영역 하단 64 */
+.deck .fill{position:absolute;left:40px;right:40px;top:36px}
+
+/* 푸터 — 설명 2줄 · Page NN · Copyright · 워드마크 (모든 장) */
+.ft{position:absolute;left:40px;right:40px;bottom:24px;display:grid;
+  grid-template-columns:26% 22% 1fr auto;align-items:end;font-size:10px;line-height:1.35;z-index:5}
+.ft .wm{font-size:17px}
+.doc .ft{position:static;margin-top:40px;left:auto;right:auto}
+
+/* ---------- 2. 타이포 ---------- */
+/* 영문 디스플레이 — Righteous, 대문자, 캡하이트로 트림 */
+.disp{font-family:"Righteous",sans-serif;text-transform:uppercase;font-weight:400;
+  line-height:1;letter-spacing:-.005em;white-space:nowrap}
+.disp .t,.disp.trim{text-box:trim-both cap alphabetic}
+/* 가장자리까지 채우는 디스플레이 줄: 글자 덩어리(.t) + 남는 폭을 채우는 캡슐(.pl) */
+.ln{display:flex;align-items:stretch;gap:.06em}
+.ln + .ln{margin-top:.17em}
+.ln .t{display:block}
+.ln.j{justify-content:space-between}
+
+/* 한글 디스플레이 — Jua (둥근 고딕 헤비) */
+.kd{font-family:"Jua",sans-serif;font-weight:400;letter-spacing:-.02em;line-height:1.12}
+/* 양끝 맞춤 문장(Statement): 줄마다 div, 어절마다 span — 어절 사이만 벌어진다 */
+.just > div{display:flex;justify-content:space-between;white-space:nowrap}  /* 어절마다 <span> */
+
+/* 본문 */
+.h{font-family:"Jua",sans-serif;font-size:34px;line-height:1.2;letter-spacing:-.02em;font-weight:400}
+.sub{font-size:15px;line-height:1.6;letter-spacing:-.01em}
+.cap{font-size:12.5px;line-height:1.5}
+.mut{color:var(--sub)}
+.lab{font-family:"Righteous",sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.02em}
+.wm{font-family:"Righteous",sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1;white-space:nowrap}
+.num{font-family:"Righteous",sans-serif;font-variant-numeric:tabular-nums;line-height:1;white-space:nowrap}
+.serif{font-family:"Instrument Serif","Noto Serif KR",serif;font-weight:400}
+.serif-ko{font-family:"Noto Serif KR",serif;font-weight:400;letter-spacing:-.035em}
+
+/* ---------- 3. 컴포넌트 ---------- */
+/* 캡슐 .pl — 디스플레이 줄 안에서 글자와 같은 높이로 맞물린다 */
+.pl{display:flex;align-items:center;justify-content:center;border-radius:999px;flex:1 1 0;min-width:60px;
+  font-family:"Pretendard",sans-serif;font-size:16px;font-weight:500;text-transform:none;letter-spacing:0;color:#fff}
+.pl.fix{flex:none}
+.r{background:var(--red)} .y{background:var(--yellow);color:var(--ink)} .b{background:var(--blue)}
+.g{background:var(--green)} .k{background:var(--ink)} .w{background:#fff;color:var(--ink)}
+.pl .wm{font-size:44px;color:#fff}
+
+/* 단독 캡슐 태그 .tag — 라벨 · 연도 · 상태 */
+.tag{display:inline-flex;align-items:center;height:30px;padding:0 16px;border-radius:999px;
+  font-size:13px;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+.tag.o{border:1.5px solid currentColor;background:transparent}
+
+/* 캡슐 막대 .bar — 데이터 (높이 = 그 줄 숫자 캡하이트) */
+.bar{height:56px;border-radius:999px}
+
+/* 기하 도형 .sh — 원 · 반원 · 사분원 · 삼각형 · 캡슐 */
+.sh{display:block;width:88px;height:88px}
+.sh.c{border-radius:50%}
+.sh.hu{border-radius:88px 88px 0 0;height:44px}
+.sh.q{border-radius:0 100% 0 0}
+.sh.tri{clip-path:polygon(0 100%,100% 100%,0 0)}
+.sh.cap2{border-radius:999px;width:132px}
+
+/* 행 .rows — 목차 · 리스트 (헤어라인만) */
+.rows > div{display:grid;align-items:center;border-top:1.5px solid currentColor}
+.rows > div:last-child{border-bottom:1.5px solid currentColor}
+
+/* 거대한 따옴표 — templates 의 <svg class="qm"> 사용 */
+.qm{display:block;fill:var(--ink)}
+
+/* ---------- 4. DOC (900px 롱페이지) ---------- */
+.doc{padding:14px 0}
+.doc .wrap{width:900px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.doc .blk{position:relative;overflow:hidden;border-radius:14px;padding:36px 36px 22px;background:var(--paper)}
+.doc .blk .ft{position:static;display:grid;margin-top:36px}

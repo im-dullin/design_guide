@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Sample Deck · Ember Stripe</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/ember.css">
+</head>
+<body class="deck">
+<!--
+  슬라이드 아키타입 8종. 필요한 것만 복제해서 내용만 교체하세요.
+  규칙: .slide 배경은 항상 순수 블랙. 빛은 둘 중 하나만.
+    - 골유리 .flute (Cover · Divider · Closing 전용, 덱 전체 최대 3장)
+    - 코너 글로 .glow.(bl|br|tr|tl) (본문 장, 장당 1개, 위치는 장마다 바꿔도 됨)
+  워드마크: Cover는 좌상단(.hd), 나머지는 좌하단(.ft). 페이지 번호는 우하단.
+-->
+
+<!-- 01 COVER — 풀블리드 골유리 · 좌하단 2줄 디스플레이 + 캡션 -->
+<section class="slide">
+  <div class="flute"></div>
+  <div class="hd"><span class="wm">PROJECT<sup>®</sup></span><span></span></div>
+  <div style="position:absolute;left:64px;bottom:118px">
+    <div class="disp" style="font-size:108px">Built for<br>Deep Recovery</div>
+  </div>
+  <div style="position:absolute;left:66px;bottom:64px"><span class="kick">Launch Plan 2027</span></div>
+</section>
+
+<!-- 02 CONTENTS — 코너 글로(tr) · 좌측 디스플레이 + 우측 헤어라인 목차 -->
+<section class="slide">
+  <div class="glow tr"></div>
+  <div style="position:absolute;left:64px;top:76px;width:360px">
+    <div class="disp" style="font-size:72px">Contents</div>
+    <p class="lead" style="margin-top:26px">회복 관리 플랫폼 출시 계획<br>3개 파트 · 8페이지</p>
+  </div>
+  <div class="rows" style="position:absolute;left:520px;right:64px;top:92px">
+    <div style="grid-template-columns:70px 1fr 160px;padding:30px 0"><span class="num" style="font-size:28px;color:var(--ember-hi)">01</span><span style="font-size:24px;font-weight:300;letter-spacing:-.04em">왜 지금인가</span><span class="micro" style="text-align:right">Problem · p.03</span></div>
+    <div style="grid-template-columns:70px 1fr 160px;padding:30px 0"><span class="num" style="font-size:28px;color:var(--sub)">02</span><span style="font-size:24px;font-weight:300;letter-spacing:-.04em">제품과 근거</span><span class="micro" style="text-align:right">Product · p.04–06</span></div>
+    <div style="grid-template-columns:70px 1fr 160px;padding:30px 0"><span class="num" style="font-size:28px;color:var(--sub)">03</span><span style="font-size:24px;font-weight:300;letter-spacing:-.04em">출시 로드맵</span><span class="micro" style="text-align:right">Launch · p.07–08</span></div>
+  </div>
+  <div class="ft"><span class="wm">PROJECT<sup>®</sup></span><span class="micro">02 / 08</span></div>
+</section>
+
+<!-- 03 PROBLEM · STATS — 코너 글로(bl) · 2줄 헤드라인 + 우측 리드 + 스탯 카드 3개 -->
+<section class="slide">
+  <div class="glow bl"></div>
+  <div style="position:absolute;left:64px;top:76px">
+    <h2 class="h">모두가 바쁜데,<br>회복하는 사람은 없다</h2>
+  </div>
+  <p class="lead" style="position:absolute;right:64px;top:84px;width:300px;font-size:14px">일하는 시간은 측정하면서 쉬는 시간은 아무도 재지 않습니다. 연결은 늘었고, 몸은 더 지쳤습니다.</p>
+  <div class="cards" style="position:absolute;left:64px;right:64px;top:330px;height:262px">
+    <div class="card"><div class="num">68%</div><div class="t">만성 피로</div><div class="cap">직장인 10명 중 7명이 주 3회 이상<br>피로가 풀리지 않은 채 출근합니다.</div></div>
+    <div class="card"><div class="num">5.9h</div><div class="t">수면 부족</div><div class="cap">평균 수면 시간은 권장치보다<br>1시간 이상 짧습니다.</div></div>
+    <div class="card"><div class="num">1 in 4</div><div class="t">해석 불가</div><div class="cap">기기는 데이터를 쌓지만, 무엇을<br>바꿔야 할지는 알려 주지 않습니다.</div></div>
+  </div>
+  <div class="ft"><span class="wm">PROJECT<sup>®</sup></span><span class="micro">01 Problem · 03 / 08</span></div>
+</section>
+
+<!-- 04 DIVIDER — 우측 46% 골유리 창 · 좌측 파트 번호 + 디스플레이 -->
+<section class="slide">
+  <div class="flute pane"></div>
+  <div style="position:absolute;left:64px;top:76px"><span class="lbl"><i></i>Part 02</span></div>
+  <div style="position:absolute;left:64px;bottom:118px">
+    <div class="disp" style="font-size:96px">Product<br>&amp; Evidence</div>
+    <p class="lead" style="margin-top:26px">측정에서 끝나지 않고, 다음 행동까지 제안합니다.</p>
+  </div>
+  <div class="ft"><span class="wm">PROJECT<sup>®</sup></span><span class="micro">04 / 08</span></div>
+</section>
+
+<!-- 05 FEATURES — 코너 글로(br) · 좌측 헤드라인 + 우측 기능 행 3개 -->
+<section class="slide">
+  <div class="glow br"></div>
+  <div style="position:absolute;left:64px;top:76px;width:440px">
+    <h2 class="h">세 가지 신호로<br><span class="a">회복 점수</span>를 만든다</h2>
+    <p class="lead" style="margin-top:28px;width:340px">손목 센서 하나로 매일 아침 오늘의 컨디션과 권장 강도를 알려 줍니다.</p>
+  </div>
+  <div class="rows" style="position:absolute;left:640px;right:64px;top:92px">
+    <div style="grid-template-columns:56px 1fr;padding:30px 0 32px"><span class="micro">01</span><div><div class="t">심박 변이도</div><div class="cap" style="margin-top:8px">자율신경의 균형을 밤새 추적해<br>회복 정도를 0–100으로 환산합니다.</div></div></div>
+    <div style="grid-template-columns:56px 1fr;padding:30px 0 32px"><span class="micro">02</span><div><div class="t">수면 단계</div><div class="cap" style="margin-top:8px">깊은 잠과 렘 수면의 비율로<br>수면의 질을 따로 평가합니다.</div></div></div>
+    <div style="grid-template-columns:56px 1fr;padding:30px 0 32px"><span class="micro">03</span><div><div class="t">활동 부하</div><div class="cap" style="margin-top:8px">어제의 운동량과 스트레스를<br>오늘의 권장 강도에 반영합니다.</div></div></div>
+  </div>
+  <div class="ft"><span class="wm">PROJECT<sup>®</sup></span><span class="micro">02 Product · 05 / 08</span></div>
+</section>
+
+<!-- 06 METRICS — 코너 글로(tl) · 대형 숫자 1개(엠버) + 막대 비교 카드 -->
+<section class="slide">
+  <div class="glow tl"></div>
+  <div style="position:absolute;left:64px;top:76px">
+    <span class="lbl"><i></i>Pilot · 12 weeks · n=480</span>
+    <div class="num" style="font-size:200px;margin-top:40px;margin-left:-8px">+31<span style="font-size:96px;color:var(--ember-hi)">%</span></div>
+    <p class="lead" style="margin-top:26px;width:360px">12주 파일럿 동안 참여자의 평균 회복 점수가 31% 올랐습니다.</p>
+  </div>
+  <div class="card solid" style="position:absolute;left:660px;right:64px;top:92px;height:500px;padding:32px 32px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline"><span class="t">주간 회복 점수</span><span class="micro">평균 · 0–100</span></div>
+    <div style="margin-top:auto;display:flex;flex-direction:column;gap:26px">
+      <div><div style="display:flex;justify-content:space-between;align-items:baseline"><span class="cap">1주차</span><span class="num" style="font-size:28px">52</span></div><div class="bar" style="margin-top:10px"><i style="width:52%"></i></div></div>
+      <div><div style="display:flex;justify-content:space-between;align-items:baseline"><span class="cap">4주차</span><span class="num" style="font-size:28px">58</span></div><div class="bar" style="margin-top:10px"><i style="width:58%"></i></div></div>
+      <div><div style="display:flex;justify-content:space-between;align-items:baseline"><span class="cap">8주차</span><span class="num" style="font-size:28px">63</span></div><div class="bar" style="margin-top:10px"><i style="width:63%"></i></div></div>
+      <div><div style="display:flex;justify-content:space-between;align-items:baseline"><span class="cap" style="color:#fff">12주차</span><span class="num" style="font-size:28px;color:var(--ember-hi)">68</span></div><div class="bar" style="margin-top:10px"><i class="e" style="width:68%"></i></div></div>
+    </div>
+  </div>
+  <div class="ft"><span class="wm">PROJECT<sup>®</sup></span><span class="micro">02 Product · 06 / 08</span></div>
+</section>
+
+<!-- 07 ROADMAP — 코너 글로(bl) · 4단계 타임라인 (현재 단계만 엠버 점) -->
+<section class="slide">
+  <div class="glow bl"></div>
+  <div style="position:absolute;left:64px;top:76px">
+    <h2 class="h">네 단계로<br>시장에 들어갑니다</h2>
+  </div>
+  <p class="lead" style="position:absolute;right:64px;top:84px;width:300px;font-size:14px">국내 파일럿에서 검증한 지표를 기준으로 단계마다 다음 시장을 엽니다.</p>
+  <div style="position:absolute;left:64px;right:64px;top:300px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+    <div><div class="num" style="font-size:64px;margin-bottom:34px;color:#fff">01</div><div class="tick on"><div class="micro" style="color:var(--ember-hi)">Q1 2027</div><div class="t" style="margin-top:14px">국내 베타</div><div class="cap" style="margin-top:8px">사전 신청자 2,000명<br>앱 · 밴드 동시 공개</div></div></div>
+    <div><div class="num" style="font-size:64px;margin-bottom:34px;color:rgba(255,255,255,.38)">02</div><div class="tick"><div class="micro">Q2 2027</div><div class="t" style="margin-top:14px">정식 출시</div><div class="cap" style="margin-top:8px">온라인 판매 시작<br>기업 복지몰 입점</div></div></div>
+    <div><div class="num" style="font-size:64px;margin-bottom:34px;color:rgba(255,255,255,.38)">03</div><div class="tick"><div class="micro">Q3 2027</div><div class="t" style="margin-top:14px">기업 플랜</div><div class="cap" style="margin-top:8px">팀 단위 대시보드<br>보험사 제휴 파일럿</div></div></div>
+    <div><div class="num" style="font-size:64px;margin-bottom:34px;color:rgba(255,255,255,.38)">04</div><div class="tick"><div class="micro">Q4 2027</div><div class="t" style="margin-top:14px">해외 진출</div><div class="cap" style="margin-top:8px">일본 · 싱가포르<br>현지 파트너 2곳</div></div></div>
+  </div>
+  <div class="ft"><span class="wm">PROJECT<sup>®</sup></span><span class="micro">03 Launch · 07 / 08</span></div>
+</section>
+
+<!-- 08 CLOSING — 아래에서 올라오는 골유리 · Thank you + 연락 행 -->
+<section class="slide">
+  <div class="flute low"></div>
+  <div style="position:absolute;left:64px;top:76px">
+    <div class="disp" style="font-size:128px">Thank you</div>
+    <p class="lead" style="margin-top:22px">쉬는 시간을 재는 일, 이제 시작합니다.</p>
+  </div>
+  <div style="position:absolute;left:64px;bottom:96px;display:grid;grid-template-columns:repeat(3,auto);gap:64px">
+    <div><div class="micro" style="color:rgba(255,255,255,.6)">Contact</div><div style="font-size:16px;margin-top:8px">홍길동 · 사업개발 리드</div></div>
+    <div><div class="micro" style="color:rgba(255,255,255,.6)">Email</div><div class="num" style="font-size:16px;letter-spacing:-.01em;margin-top:8px">hello@project.kr</div></div>
+    <div><div class="micro" style="color:rgba(255,255,255,.6)">Phone</div><div class="num" style="font-size:16px;letter-spacing:-.01em;margin-top:8px">010-0000-0000</div></div>
+  </div>
+  <div class="ft"><span class="wm">PROJECT<sup>®</sup></span><span class="micro" style="color:rgba(255,255,255,.6)">08 / 08</span></div>
+</section>
+</body>
+</html>
