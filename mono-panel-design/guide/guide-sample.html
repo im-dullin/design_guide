@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Mono Panel · Design Guide</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/mono.css">
+<style>
+  .sw{height:150px;border-radius:18px;padding:16px 18px;display:flex;flex-direction:column;justify-content:space-between}
+  .sw .num{font-size:15px}
+  .tline{display:grid;grid-template-columns:150px 1fr 150px;align-items:baseline;padding:14px 0;border-top:1px solid var(--hair)}
+  .tline:last-child{border-bottom:1px solid var(--hair)}
+  .arch{border-radius:12px;overflow:hidden;display:block;width:100%}
+  .x{font-size:14px;line-height:1.5;display:flex;gap:10px;padding:9px 0;border-top:1px solid var(--hairD)}
+  .x b{width:18px;flex:none;font-family:"Inter Tight"}
+</style>
+</head>
+<body class="deck">
+
+<!-- 01 COVER -->
+<section class="slide"><div class="p d">
+  <div class="hd"><span class="wm">MONO PANEL</span><div class="sec"><span class="micro">Design Guide</span><span class="pill sm" style="color:rgba(255,255,255,.7)">v1.0</span></div></div>
+  <div style="position:absolute;left:56px;top:140px">
+    <div class="disp" style="font-size:132px">Mono<br>Panel</div>
+    <div style="display:flex;gap:10px;margin-top:32px"><span class="pill">Editorial IR Deck</span><span class="pill fill">Deck + Doc</span></div>
+    <div style="font-size:22px;font-weight:500;letter-spacing:-.03em;margin-top:24px;color:rgba(255,255,255,.88)">다크 패널 · 얇은 디스플레이 · 단 하나의 액센트</div>
+  </div>
+  <div style="position:absolute;right:56px;bottom:56px;width:372px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+    <div class="tile k" style="height:128px;display:flex;flex-direction:column;justify-content:space-between"><div class="num" style="font-size:44px">11</div><div class="cap">컬러 토큰<br>무채색 8 · 액센트 3</div></div>
+    <div class="tile k" style="height:128px;display:flex;flex-direction:column;justify-content:space-between"><div class="num" style="font-size:44px">2</div><div class="cap">서체<br>Pretendard · Inter Tight</div></div>
+    <div class="tile s" style="height:128px;grid-column:span 2;display:flex;justify-content:space-between;align-items:flex-end"><div><div class="num" style="font-size:48px">13</div><div class="cap" style="margin-top:8px">아키타입 · 덱 8종 + 문서 섹션 5종</div></div><div class="ico"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></div></div>
+  </div>
+  <div class="ft"><span class="micro">제안서 · 소개서 · 커리큘럼 · 보고서 · 원페이저</span><span class="micro"></span></div>
+</div></section>
+
+<!-- 02 COLOR -->
+<section class="slide"><div class="p l">
+  <div class="hd"><span class="wm">MONO PANEL</span><span class="micro">01 Color · 02 / 06</span></div>
+  <div class="body">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <h2 class="h">무채색이 판을 깔고,<br><span class="a">블루는 한 곳에만</span></h2>
+      <p class="sub" style="width:330px">패널·타일은 검정·회색 단계로만 구성하고, 액센트는 슬라이드당 한 개.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:30px">
+      <div class="sw" style="background:#151515;color:#fff"><span class="micro">--page</span><div><b style="font-size:15px">Page</b><div class="num" style="opacity:.6;margin-top:4px">#151515</div></div></div>
+      <div class="sw" style="background:#0b0b0b;color:#fff"><span class="micro">--black</span><div><b style="font-size:15px">Dark panel</b><div class="num" style="opacity:.6;margin-top:4px">#0B0B0B</div></div></div>
+      <div class="sw" style="background:#222;color:#fff"><span class="micro">--tile / --tile2</span><div><b style="font-size:15px">Dark tile</b><div class="num" style="opacity:.6;margin-top:4px">#171717 · #222</div></div></div>
+      <div class="sw" style="background:#fff;border:1px solid var(--hair)"><span class="micro">--white · --light</span><div><b style="font-size:15px">Light</b><div class="num" style="color:var(--sub);margin-top:4px">#FFF · #EBEBE9</div></div></div>
+      <div class="sw" style="background:var(--sky)"><span class="micro">--sky</span><div><b style="font-size:15px">Accent tile</b><div class="num" style="color:rgba(0,0,0,.6);margin-top:4px">#C8DBFB</div></div></div>
+      <div class="sw" style="background:var(--blue);color:#fff"><span class="micro" style="color:rgba(255,255,255,.7)">--blue</span><div><b style="font-size:15px">Text accent</b><div class="num" style="opacity:.75;margin-top:4px">#2F6BFF</div></div></div>
+      <div class="sw" style="background:#0b0b0b;color:var(--sky2)"><span class="micro">--sky2</span><div><b style="font-size:15px">Accent on dark</b><div class="num" style="opacity:.8;margin-top:4px">#9DBDF3</div></div></div>
+      <div class="sw" style="background:var(--sigbg)"><span class="micro">--sigbg</span><div><b style="font-size:15px">Signature row</b><div class="num" style="color:var(--sub);margin-top:4px">#E7EFFD</div></div></div>
+    </div>
+  </div>
+  <div class="ft"><span class="micro">팔레트 외 색 · 배경 그라데이션 · 그림자 금지 (막대 채움만 sky2→blue)</span><span class="micro">Design Guide · v1.0</span></div>
+</div></section>
+
+<!-- 03 TYPE -->
+<section class="slide"><div class="p d">
+  <div class="hd"><span class="wm">MONO PANEL</span><span class="micro">02 Typography · 03 / 06</span></div>
+  <div style="position:absolute;left:56px;top:96px;width:400px">
+    <span class="pill sm" style="color:var(--sky2)"><span class="dot"></span>Typography</span>
+    <div class="disp" style="font-size:150px;margin-top:22px">Aa<span style="color:var(--sky2)">가</span></div>
+    <p class="sub" style="margin-top:20px">영문 디스플레이·숫자는 Inter Tight,<br>한글 헤드라인·본문은 Pretendard.<br>굵기는 300–600, 자간은 항상 음수.</p>
+  </div>
+  <div class="rows" style="position:absolute;left:500px;right:56px;top:100px;font-size:14px">
+    <div style="grid-template-columns:120px 1fr 110px;padding:12px 0"><span class="micro">Display</span><span class="disp" style="font-size:56px">Overview</span><span class="micro" style="text-align:right">64–132 · 400</span></div>
+    <div style="grid-template-columns:120px 1fr 110px;padding:14px 0"><span class="micro">Headline</span><span class="h" style="font-size:30px">한 줄로 <span class="a">대비</span>시킨다</span><span class="micro" style="text-align:right">40 · 600</span></div>
+    <div style="grid-template-columns:120px 1fr 110px;padding:14px 0"><span class="micro">Number</span><span class="num" style="font-size:48px">+38<span style="font-size:20px">%</span></span><span class="micro" style="text-align:right">44–72 · 500</span></div>
+    <div style="grid-template-columns:120px 1fr 110px;padding:14px 0"><span class="micro">Sub</span><span class="sub">헤드라인을 받쳐 주는 근거 한두 줄</span><span class="micro" style="text-align:right">15 · 400</span></div>
+    <div style="grid-template-columns:120px 1fr 110px;padding:14px 0"><span class="micro">Caption</span><span class="cap">타일 설명 · 출처 · 각주</span><span class="micro" style="text-align:right">12.5 · 400</span></div>
+    <div style="grid-template-columns:120px 1fr 110px;padding:14px 0"><span class="micro">Micro</span><span class="micro">Problem 01 · Output · Day 02</span><span class="micro" style="text-align:right">12 · 500</span></div>
+  </div>
+  <div class="ft"><span class="micro">700 이상 · 이탤릭 · 밑줄 금지 · 한글 keep-all</span><span class="micro">Design Guide · v1.0</span></div>
+</div></section>
+
+<!-- 04 COMPONENTS -->
+<section class="slide"><div class="p l">
+  <div class="hd"><span class="wm">MONO PANEL</span><span class="micro">03 Components · 04 / 06</span></div>
+  <div class="body">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <h2 class="h">장식 대신<br><span class="a">타일 · 필 · 헤어라인</span></h2>
+      <p class="sub" style="width:330px">모든 화면은 이 여섯 가지 조합으로 만든다.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:26px;height:392px">
+      <div class="tile w" style="display:flex;flex-direction:column;gap:14px">
+        <span class="micro">Pill</span>
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="pill">Outline</span><span class="pill fill">Fill</span><span class="pill blue">추천</span></div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="pill sm">Small</span><span class="pill sm"><span class="dot"></span>Status</span></div>
+        <span class="micro" style="margin-top:auto">Signature</span>
+        <div><span class="sigb"><i></i>Signature · 노하우</span></div>
+        <div class="trow sig" style="display:grid;grid-template-columns:70px 1fr;padding:12px 0;font-size:13.5px"><span class="num" style="font-size:13px">10:50</span><b style="font-weight:600">시그니처 행 하이라이트</b></div>
+      </div>
+      <div style="display:grid;grid-template-rows:1fr 1fr;gap:10px">
+        <div class="tile k" style="display:flex;flex-direction:column;justify-content:space-between"><div style="display:flex;justify-content:space-between"><span class="micro">Tile · k</span><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></div></div><div><div class="num" style="font-size:40px">48<span style="font-size:18px">k</span></div><div class="cap" style="margin-top:6px">라벨 → 숫자 → 캡션</div></div></div>
+        <div class="tile s" style="display:flex;justify-content:space-between;align-items:flex-end"><div><span class="micro">Tile · s (accent)</span><div style="font-size:19px;font-weight:600;letter-spacing:-.04em;margin-top:10px">화면당 하나만</div></div><div class="ico"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></div></div>
+      </div>
+      <div class="tile k" style="display:flex;flex-direction:column;gap:12px">
+        <span class="micro">Rows · Data</span>
+        <div class="rows" style="font-size:13.5px"><div style="grid-template-columns:40px 1fr auto;padding:10px 0"><span class="micro">01</span>헤어라인 행 리스트<span class="micro">p.03</span></div><div style="grid-template-columns:40px 1fr auto;padding:10px 0"><span class="micro">02</span>세로선 · 격자 없음<span class="micro">p.06</span></div></div>
+        <div style="margin-top:auto"><div class="cap" style="display:flex;justify-content:space-between"><span>Bar</span><span class="num" style="font-size:12px">62%</span></div><div class="bar" style="margin-top:6px"><i style="width:62%"></i></div></div>
+        <div class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft"><span class="micro">아이콘: 24 그리드 · 1.6px 선 · 채움 없음 · 타일당 1개</span><span class="micro">Design Guide · v1.0</span></div>
+</div></section>
+
+<!-- 05 ARCHETYPES -->
+<section class="slide"><div class="p d">
+  <div class="hd"><span class="wm">MONO PANEL</span><span class="micro">04 Archetypes · 05 / 06</span></div>
+  <div class="body">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <div><span class="micro">Slide archetypes</span><div class="disp" style="font-size:64px;margin-top:10px">8 Layouts</div></div>
+      <p class="sub" style="width:330px;text-align:right">즉흥 레이아웃 대신 아키타입을 복제해 내용만 교체한다.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:24px">
+      <div><img class="arch" src="arch/s01.png"><div class="cap" style="margin-top:6px">Cover</div></div>
+      <div><img class="arch" src="arch/s02.png"><div class="cap" style="margin-top:6px">Contents</div></div>
+      <div><img class="arch" src="arch/s03.png"><div class="cap" style="margin-top:6px">Divider</div></div>
+      <div><img class="arch" src="arch/s04.png"><div class="cap" style="margin-top:6px">Problem → Solution</div></div>
+      <div><img class="arch" src="arch/s05.png"><div class="cap" style="margin-top:6px">Metrics</div></div>
+      <div><img class="arch" src="arch/s06.png"><div class="cap" style="margin-top:6px">Timetable</div></div>
+      <div><img class="arch" src="arch/s07.png"><div class="cap" style="margin-top:6px">Compare</div></div>
+      <div><img class="arch" src="arch/s08.png"><div class="cap" style="margin-top:6px">Closing</div></div>
+    </div>
+  </div>
+  <div class="ft"><span class="micro">다크 · 라이트 교차 — 같은 톤 3장 이상 연속 금지</span><span class="micro">Design Guide · v1.0</span></div>
+</div></section>
+
+<!-- 06 DO / DON'T -->
+<section class="slide"><div class="p l">
+  <div class="hd"><span class="wm">MONO PANEL</span><span class="micro">05 Rules · 06 / 06</span></div>
+  <div style="position:absolute;left:56px;top:96px;width:400px">
+    <div class="disp" style="font-size:96px">Do<br>&amp; Don’t</div>
+    <h2 style="font-size:22px;font-weight:600;letter-spacing:-.04em;margin-top:22px">생성형 티를 지우는 규칙</h2>
+    <p class="sub" style="margin-top:12px">렌더한 PNG를 직접 보고<br>넘침 · 겹침 · 줄바꿈을 검수한다.</p>
+  </div>
+  <div style="position:absolute;left:520px;right:56px;top:96px;bottom:64px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+    <div class="tile w"><span class="micro" style="color:var(--blue)">Do</span>
+      <div style="margin-top:12px;font-size:14px;line-height:1.5">
+        <div style="padding:9px 0;border-top:1px solid var(--hair)">1장 1메시지, 대비 구조 헤드라인</div>
+        <div style="padding:9px 0;border-top:1px solid var(--hair)">숫자를 크게, 단위는 40%</div>
+        <div style="padding:9px 0;border-top:1px solid var(--hair)">비대칭 분할 · 넉넉한 여백</div>
+        <div style="padding:9px 0;border-top:1px solid var(--hair)">영문은 디스플레이 · 라벨에만</div>
+        <div style="padding:9px 0;border-top:1px solid var(--hair)">줄바꿈은 &lt;br&gt;로 의미 단위</div>
+        <div style="padding:9px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)">근거 있는 표현만</div>
+      </div>
+    </div>
+    <div class="tile k"><span class="micro" style="color:var(--sky2)">Don’t</span>
+      <div style="margin-top:12px">
+        <div class="x"><b>×</b>이모지 · 컬러 아이콘 · 스톡 사진</div>
+        <div class="x"><b>×</b>배경 그라데이션 · 글로우 · 그림자</div>
+        <div class="x"><b>×</b>액센트 2개 이상 · 팔레트 외 색</div>
+        <div class="x"><b>×</b>카드 안의 카드, 균등 카드 나열</div>
+        <div class="x"><b>×</b>표 격자 · 세로선 · 굵은 테두리</div>
+        <div class="x" style="border-bottom:1px solid var(--hairD)"><b>×</b>긴 설명 문장 · 불릿 5개 이상</div>
+      </div>
+    </div>
+  </div>
+  <div class="ft"><span class="micro">전체 규칙은 SKILL.md</span><span class="micro">Design Guide · v1.0</span></div>
+</div></section>
+</body>
+</html>

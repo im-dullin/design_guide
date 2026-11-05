@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Sample Deck · Mono Panel</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/mono.css">
+</head>
+<body class="deck">
+<!--
+  슬라이드 아키타입 8종. 필요한 것만 복제해서 내용만 교체하세요.
+  규칙: 슬라이드마다 .slide > .p(.l|.d) > .hd + (.body | absolute 블록) + .ft
+       다크(.d)와 라이트(.l)를 교차. 액센트 타일(.tile.s)은 슬라이드당 최대 1개.
+-->
+
+<!-- 01 COVER — 다크 · 초대형 영문 디스플레이 + 우하단 스탯 타일 -->
+<section class="slide"><div class="p d">
+  <div class="hd"><span class="wm">PROJECT NAME</span><div class="sec"><span class="micro">Proposal</span><span class="pill sm" style="color:rgba(255,255,255,.7)">2026.11</span></div></div>
+  <div style="position:absolute;left:56px;top:140px">
+    <div class="disp" style="font-size:124px">Grow<br>Your Brand</div>
+    <div style="display:flex;gap:10px;margin-top:32px"><span class="pill">Brand Renewal</span><span class="pill fill">12 Weeks</span></div>
+    <div style="font-size:22px;font-weight:500;letter-spacing:-.03em;margin-top:24px;color:rgba(255,255,255,.88)">브랜드 리뉴얼 실행 제안서</div>
+  </div>
+  <div style="position:absolute;right:56px;bottom:56px;width:372px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+    <div class="tile k" style="height:128px;display:flex;flex-direction:column;justify-content:space-between"><div class="num" style="font-size:44px">12<span style="font-size:20px;margin-left:3px">weeks</span></div><div class="cap">3단계 · 주간 리뷰</div></div>
+    <div class="tile k" style="height:128px;display:flex;flex-direction:column;justify-content:space-between"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></div><div class="cap">전담 4인<br>주 1회 보고</div></div>
+    <div class="tile s" style="height:128px;grid-column:span 2;display:flex;justify-content:space-between;align-items:flex-end"><div><div class="num" style="font-size:48px">+38%</div><div class="cap" style="margin-top:8px">목표 재방문율 · 리뉴얼 후 3개월</div></div><div class="ico"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></div></div>
+  </div>
+  <div class="ft"><span class="micro">한 줄 소개 · 대상 · 기간</span><span class="micro"></span></div>
+</div></section>
+
+<!-- 02 CONTENTS — 라이트 · 좌측 디스플레이 + 우측 헤어라인 목차 -->
+<section class="slide"><div class="p l">
+  <div class="hd"><span class="wm">PROJECT NAME</span><span class="micro">02 / 08</span></div>
+  <div style="position:absolute;left:56px;top:96px;width:340px">
+    <div class="disp" style="font-size:96px">Contents</div>
+    <span class="pill" style="margin-top:28px">3 Parts · 8 Pages</span>
+    <p class="sub" style="margin-top:22px">문서 제목<br>부제 한 줄</p>
+  </div>
+  <div class="rows" style="position:absolute;left:470px;right:56px;top:100px">
+    <div style="grid-template-columns:80px 1fr 1fr 70px;padding:34px 0"><span class="num" style="font-size:34px;color:var(--blue)">01</span><b style="font-size:23px;letter-spacing:-.04em;font-weight:600">제안 개요</b><span class="cap" style="font-size:13.5px">배경 · 목표</span><span class="micro" style="text-align:right">p.03–05</span></div>
+    <div style="grid-template-columns:80px 1fr 1fr 70px;padding:34px 0"><span class="num" style="font-size:34px;color:var(--blue)">02</span><b style="font-size:23px;letter-spacing:-.04em;font-weight:600">실행 계획</b><span class="cap" style="font-size:13.5px">일정 · 비교</span><span class="micro" style="text-align:right">p.06–07</span></div>
+    <div style="grid-template-columns:80px 1fr 1fr 70px;padding:34px 0"><span class="num" style="font-size:34px;color:var(--blue)">03</span><b style="font-size:23px;letter-spacing:-.04em;font-weight:600">마무리</b><span class="cap" style="font-size:13.5px">연락처</span><span class="micro" style="text-align:right">p.08</span></div>
+  </div>
+  <div class="ft"><span class="micro">문서 제목</span><span class="micro">Proposal · 2026</span></div>
+</div></section>
+
+<!-- 03 DIVIDER — 다크 · 거대한 파트 번호(sky2) + 파트 내 목차 -->
+<section class="slide"><div class="p d">
+  <div class="hd"><span class="wm">PROJECT NAME</span><span class="micro">03 / 08</span></div>
+  <div style="position:absolute;left:56px;bottom:64px">
+    <span class="pill sm" style="color:rgba(255,255,255,.7)">Part 01</span>
+    <div class="disp" style="font-size:120px;margin-top:22px">Proposal<br>Overview</div>
+    <div style="font-size:19px;color:rgba(255,255,255,.7);margin-top:22px;letter-spacing:-.02em">파트를 요약하는 한 문장</div>
+  </div>
+  <div class="num" style="position:absolute;right:48px;top:40px;font-size:300px;font-weight:300;color:var(--sky2)">01</div>
+  <div class="rows" style="position:absolute;right:56px;bottom:64px;width:340px;font-size:14px">
+    <div style="grid-template-columns:40px 1fr;padding:13px 0"><span class="micro">04</span>문제와 해법</div>
+    <div style="grid-template-columns:40px 1fr;padding:13px 0"><span class="micro">05</span>핵심 지표</div>
+  </div>
+</div></section>
+
+<!-- 04 PROBLEM → SOLUTION — 라이트 · 3열, 위 흰 타일(문제) + 아래 다크/액센트 타일(해법) -->
+<section class="slide"><div class="p l">
+  <div class="hd"><span class="wm">PROJECT NAME</span><span class="micro">01 Overview · 04 / 08</span></div>
+  <div class="body">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <h2 class="h">방문은 많은데,<br><span class="a">다시 오는 사람</span>이 없습니다</h2>
+      <p class="sub" style="width:330px">헤드라인을 받쳐 주는 근거 한두 줄. 숫자나 현상 위주로 짧게.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div class="tile w" style="height:176px"><div style="display:flex;justify-content:space-between"><span class="micro">Problem 01</span><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></div></div><div style="font-size:23px;font-weight:600;letter-spacing:-.04em;margin-top:18px">첫인상이 약하다</div><div class="cap" style="margin-top:8px;font-size:13.5px">문제 설명 1~2줄</div></div>
+        <div class="tile k" style="height:134px"><span class="micro" style="color:var(--sky2)">Solution</span><div style="font-size:17px;font-weight:500;letter-spacing:-.03em;margin-top:12px;line-height:1.45">해법 한 줄<br>짧고 단정하게</div></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div class="tile w" style="height:176px"><div style="display:flex;justify-content:space-between"><span class="micro">Problem 02</span><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M7 14l3-3 3 2 4-4"/></svg></div></div><div style="font-size:23px;font-weight:600;letter-spacing:-.04em;margin-top:18px">메시지가 흩어진다</div><div class="cap" style="margin-top:8px;font-size:13.5px">문제 설명 1~2줄</div></div>
+        <div class="tile s" style="height:134px"><span class="micro">Solution</span><div style="font-size:17px;font-weight:500;letter-spacing:-.03em;margin-top:12px;line-height:1.45">가장 중요한 해법만<br>액센트 타일로</div></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div class="tile w" style="height:176px"><div style="display:flex;justify-content:space-between"><span class="micro">Problem 03</span><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3M18 3v4h-4M6 21v-4h4"/></svg></div></div><div style="font-size:23px;font-weight:600;letter-spacing:-.04em;margin-top:18px">관리가 안 된다</div><div class="cap" style="margin-top:8px;font-size:13.5px">문제 설명 1~2줄</div></div>
+        <div class="tile k" style="height:134px"><span class="micro" style="color:var(--sky2)">Solution</span><div style="font-size:17px;font-weight:500;letter-spacing:-.03em;margin-top:12px;line-height:1.45">해법 한 줄<br>짧고 단정하게</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft"><span class="micro">출처 · 각주 · 한 줄 요약</span><span class="micro">Proposal · 2026</span></div>
+</div></section>
+
+<!-- 05 METRICS — 다크 · 대형 숫자 타일 + 도트 차트 + 그라데이션 막대 -->
+<section class="slide"><div class="p d">
+  <div class="hd"><span class="wm">PROJECT NAME</span><span class="micro">01 Overview · 05 / 08</span></div>
+  <div class="body">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <div><span class="micro">Key Metrics</span><div class="disp" style="font-size:72px;margin-top:12px">By the Numbers</div></div>
+      <p class="sub" style="width:300px;text-align:right">숫자는 Inter Tight, 단위는 작게, 설명은 cap.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:10px;margin-top:30px;height:380px">
+      <div class="tile g" style="display:flex;flex-direction:column;justify-content:space-between"><span class="micro">Visitors / mo</span><div><div class="num" style="font-size:72px">48<span style="font-size:28px">k</span></div><div class="cap" style="margin-top:10px">월 방문자 · 최근 3개월 평균</div></div></div>
+      <div class="tile s" style="display:flex;flex-direction:column;justify-content:space-between"><span class="micro">Return rate</span><div><div class="num" style="font-size:72px">12<span style="font-size:28px">%</span></div><div class="cap" style="margin-top:10px">재방문율 · 업계 평균 31%</div></div></div>
+      <div class="tile g" style="display:flex;flex-direction:column;gap:22px">
+        <span class="micro">100명 중 다시 오는 사람</span>
+        <div class="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i><i class="o"></i></div>
+        <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px">
+          <div><div style="display:flex;justify-content:space-between" class="cap"><span>우리</span><span class="num" style="font-size:13px">12%</span></div><div class="bar" style="margin-top:6px"><i style="width:12%"></i></div></div>
+          <div><div style="display:flex;justify-content:space-between" class="cap"><span>업계 평균</span><span class="num" style="font-size:13px">31%</span></div><div class="bar" style="margin-top:6px"><i style="width:31%"></i></div></div>
+          <div><div style="display:flex;justify-content:space-between" class="cap"><span>목표</span><span class="num" style="font-size:13px">50%</span></div><div class="bar" style="margin-top:6px"><i style="width:50%"></i></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ft"><span class="micro">데이터 기준일 · 출처</span><span class="micro">Proposal · 2026</span></div>
+</div></section>
+
+<!-- 06 TIMETABLE — 라이트 · 좌측 대형 라벨 + 우측 흰 표(시그니처 행 하이라이트) -->
+<section class="slide"><div class="p l">
+  <div class="hd"><span class="wm">PROJECT NAME</span><span class="micro">02 Plan · 06 / 08</span></div>
+  <div style="position:absolute;left:56px;top:96px;bottom:64px;width:330px;display:flex;flex-direction:column">
+    <span class="pill sm" style="align-self:flex-start">Phase 01 · Week 1–4</span>
+    <div class="disp" style="font-size:96px;margin-top:20px">4w</div>
+    <div style="font-size:22px;font-weight:600;letter-spacing:-.04em;margin-top:14px;line-height:1.3">진단 → 설계 → 시안,<br>첫 달에 방향 확정</div>
+    <div style="margin-top:auto" class="tile k"><span class="micro" style="color:var(--sky2)">Deliverable</span><div style="font-size:14px;font-weight:500;margin-top:4px">브랜드 가이드 v1</div></div>
+  </div>
+  <div class="tile w" style="position:absolute;left:420px;right:56px;top:96px;bottom:64px;padding:18px 28px">
+    <div class="rows" style="font-size:14.5px">
+      <div style="grid-template-columns:120px 230px 1fr;padding:10px 0;border-top:0"><span class="micro">Week</span><span class="micro">Step</span><span class="micro">주요 내용</span></div>
+      <div class="trow" style="grid-template-columns:120px 230px 1fr;padding:22px 0"><span class="num" style="font-size:15px">W1</span><b style="font-weight:600">현황 진단</b><span class="cap">고객 인터뷰 · 데이터 분석</span></div>
+      <div class="trow sig" style="grid-template-columns:120px 230px 1fr;padding:22px 0"><span class="num" style="font-size:15px">W2</span><div><b style="font-weight:600">핵심 메시지 설계</b><div style="margin-top:6px"><span class="sigb"><i></i>Signature</span></div></div><span class="cap">차별점이 되는 단계는 시그니처 행으로</span></div>
+      <div class="trow" style="grid-template-columns:120px 230px 1fr;padding:22px 0"><span class="num" style="font-size:15px;color:var(--blue)">W3</span><b style="font-weight:600;color:var(--blue)">시안 제작</b><span class="cap">강조할 행 하나는 블루 텍스트(HL)</span></div>
+      <div class="trow" style="grid-template-columns:120px 230px 1fr;padding:22px 0"><span class="num" style="font-size:15px">W4</span><b style="font-weight:600">리뷰 · 확정</b><span class="cap">피드백 2회 · 최종안</span></div>
+    </div>
+  </div>
+  <div class="ft"><span class="micro">각주 한 줄</span><span class="micro">Proposal · 2026</span></div>
+</div></section>
+
+<!-- 07 COMPARE — 라이트 · 라벨 열 + 흰 타일 vs 다크 타일 -->
+<section class="slide"><div class="p l">
+  <div class="hd"><span class="wm">PROJECT NAME</span><span class="micro">02 Plan · 07 / 08</span></div>
+  <div class="body">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <h2 class="h">예산과 목적에 맞춘<br><span class="a">두 가지 옵션</span></h2>
+      <p class="sub" style="width:330px">비교표는 라벨 열 + 두 타일. 추천안은 다크 타일.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:150px 1fr 1fr;gap:12px;margin-top:26px">
+      <div style="padding-top:92px" class="rows"><div style="height:52px"><span class="micro">기간</span></div><div style="height:52px"><span class="micro">범위</span></div><div style="height:52px"><span class="micro">산출물</span></div><div style="height:52px"><span class="micro">추천 대상</span></div></div>
+      <div class="tile w" style="padding:20px 24px"><div style="display:flex;justify-content:space-between;align-items:center;height:56px"><div class="disp" style="font-size:38px">Basic</div><span class="pill sm">Option A</span></div><div class="rows" style="margin-top:16px;font-size:14px"><div style="height:52px">6주</div><div style="height:52px">로고 · 컬러</div><div style="height:52px">가이드 v1</div><div style="height:52px">빠른 정비가 필요한 팀</div></div></div>
+      <div class="tile k" style="padding:20px 24px"><div style="display:flex;justify-content:space-between;align-items:center;height:56px"><div class="disp" style="font-size:38px">Full</div><span class="pill sm blue">추천</span></div><div class="rows" style="margin-top:16px;font-size:14px"><div style="height:52px">12주</div><div style="height:52px">전체 리뉴얼</div><div style="height:52px">가이드 · 웹 · 템플릿</div><div style="height:52px">장기 성장을 노리는 팀</div></div></div>
+    </div>
+  </div>
+  <div class="ft"><span class="micro">옵션 혼합 가능</span><span class="micro">Proposal · 2026</span></div>
+</div></section>
+
+<!-- 08 CLOSING — 다크 · Thank you + 연락 타일 -->
+<section class="slide"><div class="p d">
+  <div class="hd"><span class="wm">PROJECT NAME</span><span class="micro">08 / 08</span></div>
+  <div style="position:absolute;left:56px;top:150px">
+    <div class="disp" style="font-size:168px">Thank you</div>
+    <div style="font-size:20px;color:rgba(255,255,255,.75);margin-top:26px;letter-spacing:-.02em">마무리 한 문장.</div>
+  </div>
+  <div style="position:absolute;left:56px;bottom:56px;width:760px;display:grid;grid-template-columns:1.4fr 1fr;gap:10px">
+    <div class="tile k" style="height:130px;display:flex;flex-direction:column;justify-content:space-between"><span class="micro">담당 · 이름 직함</span><div class="num" style="font-size:34px">010-0000-0000</div></div>
+    <div class="tile s" style="height:130px;display:flex;justify-content:space-between;align-items:flex-end"><div><span class="micro">Next</span><div style="font-size:18px;font-weight:600;letter-spacing:-.03em;margin-top:8px">다음 단계 한 줄</div></div><div class="ico"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></div></div>
+  </div>
+</div></section>
+</body>
+</html>

@@ -1,0 +1,128 @@
+/* ============================================================
+   Mono Panel Design System — mono.css
+   다크 차콜 페이지 위에 라운드 패널(라이트 그레이 / 블랙)을 얹고,
+   얇은 영문 디스플레이 + 한글 본문 + 단 하나의 페일 블루 액센트.
+   사용: <body class="deck"> (1280×720 슬라이드) | <body class="doc"> (900px 웹뷰/롱 PDF)
+   폰트: Pretendard(한글·본문) + Inter Tight(영문 디스플레이·숫자) — <head>에 아래 2줄 필수
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+   ============================================================ */
+
+:root{
+  /* surface */
+  --page:#151515;   /* 가장 바깥 배경(패널 사이 틈) */
+  --light:#ebebe9;  /* 라이트 패널 */
+  --black:#0b0b0b;  /* 다크 패널 */
+  --white:#ffffff;  /* 라이트 패널 위 흰 타일 */
+  --tile:#171717;   /* 다크 타일 (라이트/다크 패널 모두 위) */
+  --tile2:#222222;  /* 다크 패널 위 한 단계 밝은 타일 */
+  /* text */
+  --ink:#0d0d0d; --sub:#6b6b68;
+  --hair:rgba(0,0,0,.12); --hairD:rgba(255,255,255,.14);
+  /* accent — 이 3개 외 색 금지 */
+  --blue:#2f6bff;   /* 텍스트 강조(라이트 위) */
+  --sky:#c8dbfb;    /* 액센트 타일 · 필 배경 (한 화면 1개) */
+  --sky2:#9dbdf3;   /* 다크 위 텍스트 강조 · 큰 숫자 */
+  --sigbg:#e7effd;  /* 표에서 '시그니처' 행 하이라이트 */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Pretendard",sans-serif;color:var(--ink);background:var(--page);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;word-break:keep-all}
+
+/* ---------- 1. 레이아웃: DECK (1280×720) ---------- */
+@page{size:1280px 720px;margin:0}
+.deck .slide{width:1280px;height:720px;position:relative;overflow:hidden;background:var(--page);break-after:page}
+.deck .slide:last-child{break-after:auto}
+.deck .p{position:absolute;inset:18px;border-radius:30px;overflow:hidden;padding:44px 56px}
+.deck .hd{position:absolute;left:56px;right:56px;top:34px;display:flex;align-items:center;justify-content:space-between;z-index:4}
+.deck .hd .sec{display:flex;gap:10px;align-items:center}
+.deck .ft{position:absolute;left:56px;right:56px;bottom:26px;display:flex;justify-content:space-between;align-items:center;z-index:4}
+.deck .body{position:absolute;left:56px;right:56px;top:92px;bottom:64px}
+
+/* ---------- 2. 레이아웃: DOC (900px 세로 롱페이지) ---------- */
+.doc{font-size:14.5px;line-height:1.55}
+.doc .wrap{width:900px;margin:0 auto;padding:14px;display:flex;flex-direction:column;gap:12px}
+.doc .p{border-radius:28px;overflow:hidden;padding:40px;position:relative}
+.doc .top{display:flex;justify-content:space-between;align-items:center}
+
+/* ---------- 3. 패널 ---------- */
+.p.l{background:var(--light);color:var(--ink)}
+.p.d{background:var(--black);color:#f3f3f1}
+
+/* ---------- 4. 타이포 ---------- */
+.disp{font-family:"Inter Tight",sans-serif;font-weight:400;letter-spacing:-.045em;line-height:.92}   /* 영문 대형 */
+.num{font-family:"Inter Tight",sans-serif;font-weight:500;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.h{font-weight:600;font-size:40px;letter-spacing:-.045em;line-height:1.18}   /* 한글 헤드라인(덱) */
+.doc .h{font-size:30px}
+.h .a{color:var(--blue)} .d .h .a{color:var(--sky2)}
+.ko{font-weight:600;letter-spacing:-.04em}
+.micro{font-family:"Inter Tight","Pretendard",sans-serif;font-size:12px;font-weight:500;letter-spacing:.02em;color:var(--sub)}
+.wm{font-family:"Inter Tight",sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--sub)}  /* 워드마크 */
+.sub{color:var(--sub);font-size:15px;line-height:1.6;letter-spacing:-.01em}
+.cap{color:var(--sub);font-size:12.5px;line-height:1.45;letter-spacing:-.01em}
+.d .micro,.k .micro,.g .micro,.d .wm{color:rgba(255,255,255,.5)}
+.d .sub,.d .cap,.k .cap,.g .cap{color:rgba(255,255,255,.55)}
+.s .cap{color:rgba(0,0,0,.6)} .s .micro{color:rgba(0,0,0,.5)}
+
+/* ---------- 5. 필(아웃라인 라벨) ---------- */
+.pill{display:inline-flex;align-items:center;gap:7px;height:32px;padding:0 16px;border:1px solid currentColor;border-radius:999px;font-size:14px;font-weight:500;letter-spacing:-.01em;white-space:nowrap}
+.pill.sm{height:24px;padding:0 11px;font-size:11.5px}
+.pill.fill{background:var(--ink);color:#fff;border-color:var(--ink)}
+.d .pill.fill,.k .pill.fill{background:#fff;color:var(--ink);border-color:#fff}
+.pill.blue{background:var(--sky);border-color:var(--sky);color:var(--ink)}
+.pill .dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+/* ---------- 6. 타일 ---------- */
+.tile{border-radius:20px;padding:22px 24px;position:relative;overflow:hidden}
+.doc .tile{border-radius:18px;padding:20px 22px}
+.tile.k{background:var(--tile);color:#f3f3f1}
+.tile.g{background:var(--tile2);color:#f3f3f1}
+.tile.w{background:var(--white)}
+.tile.s{background:var(--sky);color:var(--ink)}
+.box{border-radius:26px;overflow:hidden} .box.k{background:var(--black);color:#f3f3f1}
+
+/* ---------- 7. 아이콘 칩 (선 아이콘 1.6px) ---------- */
+.ico{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;flex:none}
+.k .ico,.g .ico,.d .ico{background:rgba(255,255,255,.08)} .w .ico{background:var(--light)} .s .ico{background:rgba(255,255,255,.55)}
+.ico svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- 8. 헤어라인 행 리스트 (목차·표·스펙) ---------- */
+.rows>div{display:grid;border-top:1px solid var(--hair);align-items:center}
+.rows>div:last-child{border-bottom:1px solid var(--hair)}
+.d .rows>div,.k .rows>div{border-color:var(--hairD)}
+
+/* ---------- 9. 시그니처 배지 / 하이라이트 행 ---------- */
+.sigb{display:inline-flex;align-items:center;gap:6px;height:22px;padding:0 10px;border-radius:999px;background:var(--ink);color:#fff;font-size:11px;font-weight:600;letter-spacing:-.01em;white-space:nowrap;vertical-align:2px}
+.sigb i{width:6px;height:6px;border-radius:50%;background:var(--sky2)}
+.d .sigb,.k .sigb{background:#fff;color:var(--ink)}
+.trow.sig{background:var(--sigbg);border-radius:12px;margin:0 -12px;padding-left:12px!important;padding-right:12px!important;border-top-color:transparent!important}
+.trow.sig + .trow{border-top-color:transparent!important}
+.why{margin-top:10px;font-size:13.5px;line-height:1.55;border-left:2px solid var(--blue);padding-left:12px}
+
+/* ---------- 10. 세션/타임라인 리스트 (doc) ---------- */
+.ses{background:#fff;border-radius:20px;padding:6px 24px}
+.row{display:grid;grid-template-columns:112px 1fr;gap:18px;padding:18px 0;border-top:1px solid var(--hair)}
+.row:first-child{border-top:0}
+.row .t{font-family:"Inter Tight";font-weight:500;font-size:15px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.row .t small{display:block;font-family:"Pretendard";font-size:11.5px;color:var(--sub);font-weight:500;margin-top:4px}
+.row h4{font-size:17px;font-weight:600;letter-spacing:-.035em}
+.row ul{list-style:none;margin-top:6px;color:#3d3d3b;font-size:14px}
+.row li{position:relative;padding-left:13px;margin-top:2px}
+.row li::before{content:"";position:absolute;left:0;top:.68em;width:5px;height:1.5px;background:#9a9a96}
+.row.hl .t,.row.hl h4{color:var(--blue)}
+.row.sig{background:var(--sigbg);border-radius:14px;margin:6px -12px;padding:20px 12px;border-top:0}
+.row.sig + .row{border-top:0}
+.tg{display:inline-flex;align-items:center;gap:6px;font-size:12px;border-radius:999px;padding:4px 11px 4px 5px;background:var(--light)}
+.tg b{font-size:10.5px;font-weight:600;border-radius:999px;padding:1px 7px;background:#fff}
+.tg.pd{background:var(--ink);color:#fff} .tg.pd b{background:var(--sky);color:var(--ink)}
+.brk{display:flex;align-items:center;gap:14px;padding:11px 0;border-top:1px solid var(--hair);font-size:12.5px;color:var(--sub)}
+.brk::after{content:"";flex:1;border-top:1px dashed rgba(0,0,0,.18)}
+
+/* ---------- 11. 데이터 시각 (막대 · 도트) ---------- */
+.bar{height:10px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden}
+.l .bar,.w .bar{background:rgba(0,0,0,.07)}
+.bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--sky2),var(--blue))}
+.dots{display:grid;grid-template-columns:repeat(10,9px);gap:5px}
+.dots i{display:block;width:9px;height:9px;border-radius:50%;background:#fff}
+.dots i.o{background:rgba(255,255,255,.16)}
+.l .dots i,.w .dots i{background:var(--ink)} .l .dots i.o,.w .dots i.o{background:rgba(0,0,0,.1)}

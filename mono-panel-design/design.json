@@ -1,0 +1,8 @@
+{
+  "name": "Mono Panel",
+  "slug": "mono-panel-design",
+  "summary": "다크 패널 · 얇은 영문 디스플레이 · 페일 블루 단일 액센트의 에디토리얼 IR덱",
+  "formats": ["deck 1280×720", "doc 900px"],
+  "best_for": ["제안서", "소개서", "커리큘럼", "보고서"],
+  "added": "2026-11-06"
+}

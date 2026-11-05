@@ -1,0 +1,4 @@
+_check_*/
+.DS_Store
+__pycache__/
+*.zip
